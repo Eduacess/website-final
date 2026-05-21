@@ -8,30 +8,25 @@ export default function StudyPage() {
 
       {/* WORLD MAP BACKGROUND */}
 
-      <div className="absolute inset-0 overflow-hidden">
-
-        {/* MAP */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.06]"
+          src="https://upload.wikimedia.org/wikipedia/commons/1/17/World_map_2004_CIA_large_two-color.svg"
+          className="absolute inset-0 w-full h-full object-contain opacity-[0.06]"
         />
 
-        {/* GLOWING COUNTRIES */}
+        {/* GLOW DOTS */}
 
-        <div className="absolute top-[28%] left-[22%] w-5 h-5 bg-[#D4AF37] rounded-full animate-ping" />
-
-        <div className="absolute top-[24%] left-[48%] w-5 h-5 bg-[#D4AF37] rounded-full animate-ping delay-1000" />
-
-        <div className="absolute top-[40%] left-[73%] w-5 h-5 bg-[#D4AF37] rounded-full animate-ping delay-2000" />
-
-        <div className="absolute top-[48%] left-[66%] w-5 h-5 bg-[#D4AF37] rounded-full animate-ping delay-3000" />
-
-        <div className="absolute top-[34%] left-[80%] w-5 h-5 bg-[#D4AF37] rounded-full animate-ping delay-500" />
-
-        <div className="absolute top-[52%] left-[35%] w-5 h-5 bg-[#D4AF37] rounded-full animate-ping delay-1500" />
-
-        <div className="absolute top-[62%] left-[57%] w-5 h-5 bg-[#D4AF37] rounded-full animate-ping delay-2500" />
+        <div className="glow glow1" />
+        <div className="glow glow2" />
+        <div className="glow glow3" />
+        <div className="glow glow4" />
+        <div className="glow glow5" />
+        <div className="glow glow6" />
+        <div className="glow glow7" />
+        <div className="glow glow8" />
+        <div className="glow glow9" />
+        <div className="glow glow10" />
 
       </div>
 
@@ -171,7 +166,7 @@ export default function StudyPage() {
             >
 
               <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1600&auto=format&fit=crop"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
               />
 
@@ -261,110 +256,105 @@ export default function StudyPage() {
         </div>
 
       </section>
+
       {/* CONTACT SECTION */}
 
-<section
-  id="contact"
-  className="relative z-10 py-24 bg-[#F7FAFC]"
->
+      <section
+        id="contact"
+        className="relative z-10 py-24 bg-[#F7FAFC]"
+      >
 
-  <div className="max-w-7xl mx-auto px-5 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
-    <div className="text-center mb-16">
+          <div className="text-center mb-16">
 
-      <h2 className="text-5xl font-bold text-[#0B1F4D]">
-        Connect With Eduaccess
-      </h2>
+            <h2 className="text-5xl font-bold text-[#0B1F4D]">
+              Connect With Eduaccess
+            </h2>
 
-      <p className="text-gray-600 mt-5 text-lg">
-        Start your global journey with premium guidance.
-      </p>
-
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-10">
-
-      {/* CONTACT CARD */}
-
-      <div className="bg-white rounded-[35px] p-10 shadow-xl border border-gray-100">
-
-        <div className="space-y-10">
-
-          {/* PHONE */}
-
-          <div>
-
-            <h3 className="text-2xl font-bold text-[#0B1F4D]">
-              Phone
-            </h3>
-
-            <a
-              href="tel:+919998920644"
-              className="text-gray-600 mt-3 block hover:text-[#D4AF37]"
-            >
-              +91 99989 20644
-            </a>
-
-          </div>
-
-          {/* EMAIL */}
-
-          <div>
-
-            <h3 className="text-2xl font-bold text-[#0B1F4D]">
-              Email
-            </h3>
-
-            <a
-              href="mailto:connect.eduaccessess@outlook.com"
-              className="text-gray-600 mt-3 block hover:text-[#D4AF37]"
-            >
-              connect.eduaccessess@outlook.com
-            </a>
-
-          </div>
-
-          {/* ADDRESS */}
-
-          <div>
-
-            <h3 className="text-2xl font-bold text-[#0B1F4D]">
-              Address
-            </h3>
-
-            <p className="text-gray-600 mt-3 leading-relaxed">
-
-              KB House, Third Floor,
-              Next to Gopinathji Honda Showroom,
-              Vadodara, Gujarat
-
+            <p className="text-gray-600 mt-5 text-lg">
+              Start your global journey with premium guidance.
             </p>
+
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10">
+
+            {/* CONTACT CARD */}
+
+            <div className="bg-white rounded-[35px] p-10 shadow-xl border border-gray-100">
+
+              <div className="space-y-10">
+
+                <div>
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D]">
+                    Phone
+                  </h3>
+
+                  <a
+                    href="tel:+919998920644"
+                    className="text-gray-600 mt-3 block hover:text-[#D4AF37]"
+                  >
+                    +91 99989 20644
+                  </a>
+
+                </div>
+
+                <div>
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D]">
+                    Email
+                  </h3>
+
+                  <a
+                    href="mailto:connect.eduaccessess@outlook.com"
+                    className="text-gray-600 mt-3 block hover:text-[#D4AF37]"
+                  >
+                    connect.eduaccessess@outlook.com
+                  </a>
+
+                </div>
+
+                <div>
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D]">
+                    Address
+                  </h3>
+
+                  <p className="text-gray-600 mt-3 leading-relaxed">
+
+                    KB House, Third Floor,
+                    Next to Gopinathji Honda Showroom,
+                    Vadodara, Gujarat
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* MAP */}
+
+            <div className="rounded-[35px] overflow-hidden shadow-xl border border-gray-200 h-[500px]">
+
+              <iframe
+                src="https://www.google.com/maps?q=KB%20House%20Vadodara&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+              />
+
+            </div>
 
           </div>
 
         </div>
 
-      </div>
-
-      {/* MAP */}
-
-      <div className="rounded-[35px] overflow-hidden shadow-xl border border-gray-200 h-[500px]">
-
-        <iframe
-          src="https://www.google.com/maps?q=KB%20House%20Vadodara&output=embed"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          loading="lazy"
-        />
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+      </section>
 
       {/* FOOTER */}
 
@@ -373,7 +363,7 @@ export default function StudyPage() {
         <p>
           © 2026 EDUACCESS. All Rights Reserved.
         </p>
-        
+
       </footer>
 
       {/* WHATSAPP */}
@@ -392,7 +382,106 @@ export default function StudyPage() {
 
       </a>
 
-    </main>
+      {/* ANIMATIONS */}
 
+      <style jsx>{`
+
+        .glow{
+          position:absolute;
+          width:18px;
+          height:18px;
+          background:#D4AF37;
+          border-radius:999px;
+          opacity:0;
+          box-shadow:0 0 25px #D4AF37;
+          animation:glowAnimation 10s infinite;
+        }
+
+        .glow1{
+          top:28%;
+          left:22%;
+          animation-delay:0s;
+        }
+
+        .glow2{
+          top:24%;
+          left:48%;
+          animation-delay:1s;
+        }
+
+        .glow3{
+          top:40%;
+          left:73%;
+          animation-delay:2s;
+        }
+
+        .glow4{
+          top:52%;
+          left:66%;
+          animation-delay:3s;
+        }
+
+        .glow5{
+          top:34%;
+          left:80%;
+          animation-delay:4s;
+        }
+
+        .glow6{
+          top:58%;
+          left:35%;
+          animation-delay:5s;
+        }
+
+        .glow7{
+          top:65%;
+          left:55%;
+          animation-delay:6s;
+        }
+
+        .glow8{
+          top:45%;
+          left:15%;
+          animation-delay:7s;
+        }
+
+        .glow9{
+          top:22%;
+          left:65%;
+          animation-delay:8s;
+        }
+
+        .glow10{
+          top:70%;
+          left:75%;
+          animation-delay:9s;
+        }
+
+        @keyframes glowAnimation {
+
+          0%{
+            opacity:0;
+            transform:scale(0.6);
+          }
+
+          10%{
+            opacity:1;
+            transform:scale(1.4);
+          }
+
+          20%{
+            opacity:0;
+            transform:scale(0.6);
+          }
+
+          100%{
+            opacity:0;
+          }
+
+        }
+
+      `}</style>
+
+    </main>
   );
 }
