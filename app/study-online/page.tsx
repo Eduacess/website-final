@@ -156,7 +156,7 @@ export default function StudyOnlinePage() {
           </p>
 
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/919998920644"
             target="_blank"
             className="inline-block mt-6 bg-[#0f172a] text-white px-8 py-3 rounded-2xl font-semibold"
           >
