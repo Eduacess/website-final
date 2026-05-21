@@ -208,9 +208,10 @@ export default function VisitorVisaPage() {
               Visitor Visa
             </a>
 
-            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
-              Connect
-            </a>
+            <a href="/connect-us">
+  Connect Us
+</a>
+
 
           </div>
 

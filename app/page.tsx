@@ -96,9 +96,10 @@ export default function Home() {
   Visitor Visa
 </a>
 
-            <a href="#contact" className="hover:text-[#D4AF37] transition">
-              Connect
-            </a>
+<a href="/connect-us">
+  Connect Us
+</a>
+
 
           </div>
 
