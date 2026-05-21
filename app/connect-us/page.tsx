@@ -1,69 +1,41 @@
 'use client';
 
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 
 export default function ConnectUsPage() {
 
-  const [submitted, setSubmitted] = useState(false);
-
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
+    number: '',
     email: '',
-    service: '',
+    assistance: '',
     country: '',
-    message: '',
   });
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-
   };
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
+    alert('Form Submitted Successfully');
 
-      await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        {
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          service: formData.service,
-          country: formData.country,
-          message: formData.message,
-        },
-        'YOUR_PUBLIC_KEY'
-      );
-
-      setSubmitted(true);
-
-    } catch (error) {
-
-      console.log(error);
-      alert('Something went wrong.');
-
-    }
-
+    setFormData({
+      name: '',
+      number: '',
+      email: '',
+      assistance: '',
+      country: '',
+    });
   };
 
   return (
-
     <main className="bg-[#F7FAFC] min-h-screen">
 
       {/* NAVBAR */}
@@ -71,6 +43,8 @@ export default function ConnectUsPage() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
+
+          {/* LOGO */}
 
           <a href="/" className="flex items-center gap-4">
 
@@ -93,6 +67,8 @@ export default function ConnectUsPage() {
             </div>
 
           </a>
+
+          {/* NAVIGATION */}
 
           <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
 
@@ -128,153 +104,264 @@ export default function ConnectUsPage() {
 
         <h1 className="text-5xl lg:text-7xl font-bold text-[#0B1F4D] mt-6 leading-tight">
 
-          Start Your
+          Let’s Build Your
           <span className="block text-[#D4AF37]">
-            Global Journey
+            Global Future
           </span>
 
         </h1>
 
         <p className="text-gray-600 text-lg mt-8 max-w-3xl mx-auto leading-relaxed">
 
-          Our team will help you with Study Abroad, Visitor Visa,
-          Study Online and Study In India guidance.
+          Connect with our expert team for Study Abroad,
+          Visitor Visa, Study Online and Study In India guidance.
 
         </p>
 
       </section>
 
-      {/* FORM */}
+      {/* FORM SECTION */}
 
       <section className="pb-24">
 
         <div className="max-w-3xl mx-auto px-5">
 
-          <div className="bg-white rounded-[40px] p-10 shadow-xl border border-gray-100">
+          <div className="bg-white rounded-[40px] p-10 shadow-2xl border border-gray-100">
 
-            {!submitted ? (
+            <h2 className="text-4xl font-bold text-[#0B1F4D] mb-10 text-center">
+              Get Free Consultation
+            </h2>
 
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-6"
-              >
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-7"
+            >
 
-                {/* NAME */}
+              {/* NAME */}
+
+              <div>
+
+                <label className="block text-[#0B1F4D] font-semibold mb-3">
+                  Full Name
+                </label>
 
                 <input
                   type="text"
                   name="name"
                   required
-                  placeholder="Full Name"
+                  value={formData.name}
                   onChange={handleChange}
-                  className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
+                  placeholder="Enter your full name"
+                  className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#D4AF37]"
                 />
 
-                {/* PHONE */}
+              </div>
+
+              {/* NUMBER */}
+
+              <div>
+
+                <label className="block text-[#0B1F4D] font-semibold mb-3">
+                  Phone Number
+                </label>
 
                 <input
                   type="tel"
-                  name="phone"
+                  name="number"
                   required
-                  placeholder="Phone Number"
+                  value={formData.number}
                   onChange={handleChange}
-                  className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
+                  placeholder="Enter your phone number"
+                  className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#D4AF37]"
                 />
 
-                {/* EMAIL */}
+              </div>
+
+              {/* EMAIL */}
+
+              <div>
+
+                <label className="block text-[#0B1F4D] font-semibold mb-3">
+                  Email Address
+                </label>
 
                 <input
                   type="email"
                   name="email"
                   required
-                  placeholder="Email Address"
+                  value={formData.email}
                   onChange={handleChange}
-                  className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
+                  placeholder="Enter your email address"
+                  className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#D4AF37]"
                 />
 
-                {/* SERVICE */}
+              </div>
+
+              {/* ASSISTANCE */}
+
+              <div>
+
+                <label className="block text-[#0B1F4D] font-semibold mb-3">
+                  Assistance In
+                </label>
 
                 <select
-                  name="service"
+                  name="assistance"
                   required
+                  value={formData.assistance}
                   onChange={handleChange}
-                  className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
+                  className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#D4AF37]"
                 >
 
                   <option value="">
-                    Assistance In
+                    Select Assistance
                   </option>
 
-                  <option>
-                    Visitor Visa
-                  </option>
-
-                  <option>
+                  <option value="Study Abroad">
                     Study Abroad
                   </option>
 
-                  <option>
+                  <option value="Study Online">
+                    Study Online
+                  </option>
+
+                  <option value="Study In India">
                     Study In India
                   </option>
 
-                  <option>
-                    Study Online
+                  <option value="Visitor Visa">
+                    Visitor Visa
                   </option>
 
                 </select>
 
-                {/* COUNTRY */}
+              </div>
 
-                {(formData.service === 'Visitor Visa' ||
-                  formData.service === 'Study Abroad') && (
+              {/* COUNTRY */}
+
+              {(formData.assistance === 'Study Abroad' ||
+                formData.assistance === 'Visitor Visa') && (
+
+                <div>
+
+                  <label className="block text-[#0B1F4D] font-semibold mb-3">
+                    Preferred Country
+                  </label>
 
                   <input
                     type="text"
                     name="country"
                     required
-                    placeholder="Preferred Country"
+                    value={formData.country}
                     onChange={handleChange}
-                    className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
+                    placeholder="Enter preferred country"
+                    className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#D4AF37]"
                   />
 
-                )}
+                </div>
 
-                {/* MESSAGE */}
+              )}
 
-                <textarea
-                  rows={5}
-                  name="message"
-                  placeholder="Your Message"
-                  onChange={handleChange}
-                  className="w-full rounded-2xl border border-gray-300 p-5 outline-none focus:border-[#D4AF37]"
-                />
+              {/* BUTTON */}
 
-                {/* BUTTON */}
+              <button
+                type="submit"
+                className="w-full bg-[#0B1F4D] hover:bg-[#102A63] text-white py-5 rounded-full text-lg font-semibold transition shadow-xl"
+              >
+                Submit Inquiry
+              </button>
 
-                <button
-                  type="submit"
-                  className="w-full bg-[#0B1F4D] hover:bg-[#102A63] text-white py-5 rounded-full text-lg font-semibold transition shadow-xl"
-                >
-                  Submit Inquiry
-                </button>
+            </form>
 
-              </form>
+          </div>
 
-            ) : (
+        </div>
 
-              <div className="text-center py-10">
+      </section>
 
-                <h2 className="text-4xl font-bold text-green-600">
-                  Inquiry Submitted
-                </h2>
+      {/* CONTACT INFO */}
 
-                <p className="text-gray-600 mt-5 text-lg">
-                  Our Eduaccess team will contact you shortly.
-                </p>
+      <section className="pb-24">
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8">
+
+          <div className="grid lg:grid-cols-2 gap-10">
+
+            {/* CONTACT CARD */}
+
+            <div className="bg-white rounded-[35px] p-10 shadow-xl border border-gray-100">
+
+              <div className="space-y-10">
+
+                {/* PHONE */}
+
+                <div>
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D]">
+                    Phone
+                  </h3>
+
+                  <a
+                    href="tel:+919998920644"
+                    className="text-gray-600 mt-3 block hover:text-[#D4AF37]"
+                  >
+                    +91 99989 20644
+                  </a>
+
+                </div>
+
+                {/* EMAIL */}
+
+                <div>
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D]">
+                    Email
+                  </h3>
+
+                  <a
+                    href="mailto:connect.eduaccessess@outlook.com"
+                    className="text-gray-600 mt-3 block hover:text-[#D4AF37]"
+                  >
+                    connect.eduaccessess@outlook.com
+                  </a>
+
+                </div>
+
+                {/* ADDRESS */}
+
+                <div>
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D]">
+                    Address
+                  </h3>
+
+                  <p className="text-gray-600 mt-3 leading-relaxed">
+
+                    KB House, Third Floor,
+                    Next to Gopinathji Honda Showroom,
+                    Vadodara, Gujarat
+
+                  </p>
+
+                </div>
 
               </div>
 
-            )}
+            </div>
+
+            {/* MAP */}
+
+            <div className="rounded-[35px] overflow-hidden shadow-xl border border-gray-200 h-[500px]">
+
+              <iframe
+                src="https://www.google.com/maps?q=KB%20House%20Vadodara&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+              />
+
+            </div>
 
           </div>
 
@@ -292,7 +379,7 @@ export default function ConnectUsPage() {
 
       </footer>
 
-      {/* WHATSAPP */}
+      {/* FLOATING WHATSAPP */}
 
       <a
         href="https://wa.me/919998920644"
@@ -309,6 +396,5 @@ export default function ConnectUsPage() {
       </a>
 
     </main>
-
   );
 }
