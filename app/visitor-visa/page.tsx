@@ -1,6 +1,11 @@
 'use client';
 
+import { useState } from 'react';
+
 export default function VisitorVisaPage() {
+
+  const [selectedVisa, setSelectedVisa] = useState<any>(null);
+
   const visas = [
     {
       country: 'United States',
@@ -9,16 +14,16 @@ export default function VisitorVisaPage() {
         'https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=1400&auto=format&fit=crop',
       visa: 'B1/B2 Visitor Visa',
       validity: 'Up to 10 Years',
-      stay: 'Up to 6 Months Per Visit',
+      stay: 'Up to 6 Months',
       processing: 'Depends on Interview Slot',
       interview: 'Mandatory',
       travel: 'April to June & September to November',
       description:
-        'Experience iconic cities, luxury shopping, business travel, entertainment hubs and unforgettable tourism experiences.',
+        'Luxury tourism, business travel, shopping and world-famous attractions.',
       why:
-        'Visit New York, Las Vegas, Miami, Los Angeles and explore world-famous attractions and premium lifestyle destinations.',
+        'Visit New York, Las Vegas, Miami and Los Angeles for unforgettable experiences.',
       assistance:
-        'We assist with DS-160 guidance, interview slot bookings, profile review and premium visa consultation.',
+        'We assist with DS-160 guidance, interview slots and complete consultation.',
     },
 
     {
@@ -33,11 +38,11 @@ export default function VisitorVisaPage() {
       interview: 'Usually Not Required',
       travel: 'May to September',
       description:
-        'Explore breathtaking mountains, luxury tourism, vibrant multicultural cities and natural beauty.',
+        'Premium tourism, scenic nature, luxury cities and family travel.',
       why:
-        'Visit Toronto, Vancouver, Niagara Falls and enjoy premium tourism experiences and family visits.',
+        'Explore Toronto, Vancouver, Niagara Falls and breathtaking landscapes.',
       assistance:
-        'We provide application guidance, profile review and complete visitor visa assistance.',
+        'Complete visitor visa guidance and profile consultation.',
     },
 
     {
@@ -52,11 +57,11 @@ export default function VisitorVisaPage() {
       interview: 'Not Required',
       travel: 'September to November & March to May',
       description:
-        'Enjoy beaches, luxury lifestyle, vibrant cities and unforgettable adventure tourism.',
+        'Luxury beaches, premium lifestyle and adventure experiences.',
       why:
-        'Visit Sydney Opera House, Melbourne, Gold Coast and Australia’s world-famous coastlines.',
+        'Visit Sydney, Melbourne and Gold Coast for world-class tourism.',
       assistance:
-        'Eduaccess helps with visitor visa filing, profile assistance and documentation guidance.',
+        'Eduaccess assists with visa filing and consultation.',
     },
 
     {
@@ -71,11 +76,11 @@ export default function VisitorVisaPage() {
       interview: 'Usually Not Required',
       travel: 'May to September',
       description:
-        'Explore royal heritage, luxury shopping, iconic architecture and historic destinations.',
+        'Historic destinations, luxury shopping and royal experiences.',
       why:
-        'Visit London, Scotland and premium European travel gateways through the UK.',
+        'Explore London, Scotland and iconic UK landmarks.',
       assistance:
-        'We assist with complete visitor visa filing and application support.',
+        'Premium visitor visa assistance and consultation.',
     },
 
     {
@@ -90,11 +95,11 @@ export default function VisitorVisaPage() {
       interview: 'Not Required',
       travel: 'March to May & October to November',
       description:
-        'Experience cherry blossoms, advanced cities, rich culture and luxury tourism.',
+        'Cherry blossoms, advanced cities and premium tourism.',
       why:
-        'Visit Tokyo, Osaka, Kyoto and explore Japan’s world-famous culture and technology.',
+        'Visit Tokyo, Osaka and Kyoto for unforgettable experiences.',
       assistance:
-        'Eduaccess provides complete tourist visa assistance and consultation.',
+        'Complete tourist visa guidance and application support.',
     },
 
     {
@@ -109,68 +114,11 @@ export default function VisitorVisaPage() {
       interview: 'Depends on Embassy',
       travel: 'April to June & September to October',
       description:
-        'Travel across multiple European countries with one Schengen Visa.',
+        'Travel multiple European countries with one visa.',
       why:
-        'Explore Paris, Switzerland, Italy, Germany and Europe’s luxury tourism experiences.',
+        'Explore Paris, Switzerland, Italy and luxury European tourism.',
       assistance:
-        'We help with visa filing, itinerary guidance and profile consultation.',
-    },
-
-    {
-      country: 'New Zealand',
-      flag: 'https://flagcdn.com/w80/nz.png',
-      image:
-        'https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=1400&auto=format&fit=crop',
-      visa: 'Visitor Visa',
-      validity: 'Up to 12 Months',
-      stay: 'Up to 6 Months',
-      processing: '20–40 Days',
-      interview: 'Not Required',
-      travel: 'December to March',
-      description:
-        'Experience nature, adventure tourism and premium travel experiences.',
-      why:
-        'Visit Auckland, Queenstown and New Zealand’s scenic landscapes.',
-      assistance:
-        'Eduaccess offers complete visitor visa consultation and filing support.',
-    },
-
-    {
-      country: 'China',
-      flag: 'https://flagcdn.com/w80/cn.png',
-      image:
-        'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=1400&auto=format&fit=crop',
-      visa: 'Tourist Visa',
-      validity: '30–90 Days',
-      stay: 'Up to 30 Days',
-      processing: '5–10 Days',
-      interview: 'Usually Not Required',
-      travel: 'April to May & September to October',
-      description:
-        'Explore rich heritage, advanced cities and luxury shopping experiences.',
-      why:
-        'Visit Beijing, Shanghai and the Great Wall of China.',
-      assistance:
-        'We assist with complete tourist visa application guidance.',
-    },
-
-    {
-      country: 'Vietnam',
-      flag: 'https://flagcdn.com/w80/vn.png',
-      image:
-        'https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1400&auto=format&fit=crop',
-      visa: 'Tourist Visa',
-      validity: '30–90 Days',
-      stay: 'Up to 30 Days',
-      processing: '5–7 Days',
-      interview: 'Not Required',
-      travel: 'November to April',
-      description:
-        'Enjoy beaches, luxury resorts, nightlife and affordable tourism.',
-      why:
-        'Visit Hanoi, Ho Chi Minh City and Vietnam’s stunning coastal destinations.',
-      assistance:
-        'Eduaccess provides complete visa filing support and consultation.',
+        'Visa filing, itinerary guidance and profile consultation.',
     },
   ];
 
@@ -196,9 +144,7 @@ export default function VisitorVisaPage() {
             <div>
 
               <h1 className="text-2xl font-bold tracking-wide text-[#0B1F4D]">
-
                 EDU<span className="text-[#D4AF37]">ACCESS</span>
-
               </h1>
 
               <p className="text-xs text-gray-500">
@@ -273,140 +219,37 @@ export default function VisitorVisaPage() {
 
               <div
                 key={index}
-                className="group [perspective:2000px] h-[650px]"
+                onClick={() => setSelectedVisa(visa)}
+                className="group cursor-pointer bg-white rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl transition duration-500"
               >
 
-                <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="relative h-[500px] overflow-hidden">
 
-                  {/* FRONT */}
+                  <img
+                    src={visa.image}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  />
 
-                  <div className="absolute inset-0 rounded-[35px] overflow-hidden shadow-2xl [backface-visibility:hidden]">
+                  <div className="absolute inset-0 bg-black/45" />
 
-                    <img
-                      src={visa.image}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="absolute bottom-8 left-8 right-8 text-white">
 
-                    <div className="absolute inset-0 bg-black/50" />
-
-                    <div className="absolute bottom-8 left-8 right-8 text-white">
-
-                      <div className="flex items-center gap-3 mb-5">
-
-                        <img
-                          src={visa.flag}
-                          className="w-12 h-12 rounded-full border-2 border-white"
-                        />
-
-                        <h2 className="text-4xl font-bold">
-                          {visa.country}
-                        </h2>
-
-                      </div>
-
-                      <p className="text-lg leading-relaxed text-gray-200">
-
-                        {visa.description}
-
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                  {/* BACK */}
-
-                  <div className="absolute inset-0 rounded-[35px] bg-white p-8 shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-
-                    <div className="flex items-center gap-3 mb-6">
+                    <div className="flex items-center gap-3 mb-5">
 
                       <img
                         src={visa.flag}
-                        className="w-12 h-12 rounded-full"
+                        className="w-12 h-12 rounded-full border-2 border-white"
                       />
 
-                      <h2 className="text-3xl font-bold text-[#0B1F4D]">
+                      <h2 className="text-4xl font-bold">
                         {visa.country}
                       </h2>
 
                     </div>
 
-                    <div className="space-y-4 text-gray-600">
-
-                      <p>
-                        <span className="font-semibold text-[#0B1F4D]">
-                          Visa Type:
-                        </span> {visa.visa}
-                      </p>
-
-                      <p>
-                        <span className="font-semibold text-[#0B1F4D]">
-                          Visa Validity:
-                        </span> {visa.validity}
-                      </p>
-
-                      <p>
-                        <span className="font-semibold text-[#0B1F4D]">
-                          Stay Duration:
-                        </span> {visa.stay}
-                      </p>
-
-                      <p>
-                        <span className="font-semibold text-[#0B1F4D]">
-                          Processing Time:
-                        </span> {visa.processing}
-                      </p>
-
-                      <p>
-                        <span className="font-semibold text-[#0B1F4D]">
-                          Interview:
-                        </span> {visa.interview}
-                      </p>
-
-                      <p>
-                        <span className="font-semibold text-[#0B1F4D]">
-                          Best Time To Travel:
-                        </span> {visa.travel}
-                      </p>
-
-                    </div>
-
-                    {/* WHY VISIT */}
-
-                    <div className="mt-8 bg-[#F7FAFC] rounded-2xl p-5">
-
-                      <h4 className="font-bold text-[#0B1F4D] mb-3">
-                        Why Visit?
-                      </h4>
-
-                      <p className="text-gray-600 leading-relaxed">
-                        {visa.why}
-                      </p>
-
-                    </div>
-
-                    {/* ASSISTANCE */}
-
-                    <div className="mt-6 bg-blue-50 rounded-2xl p-5">
-
-                      <h4 className="font-bold text-[#0B1F4D] mb-3">
-                        Eduaccess Assistance
-                      </h4>
-
-                      <p className="text-gray-600 leading-relaxed">
-                        {visa.assistance}
-                      </p>
-
-                    </div>
-
-                    {/* BUTTON */}
-
-                    <a
-                      href="/#contact"
-                      className="mt-8 inline-block bg-[#0B1F4D] hover:bg-[#102A63] text-white px-6 py-3 rounded-full font-semibold transition"
-                    >
-                      Apply Now
-                    </a>
+                    <p className="text-lg leading-relaxed text-gray-200">
+                      {visa.description}
+                    </p>
 
                   </div>
 
@@ -421,6 +264,152 @@ export default function VisitorVisaPage() {
         </div>
 
       </section>
+
+      {/* POPUP */}
+
+      {selectedVisa && (
+
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md p-5">
+
+          <div className="bg-white max-w-3xl w-full rounded-[40px] overflow-hidden shadow-2xl relative max-h-[95vh] overflow-y-auto">
+
+            {/* CLOSE */}
+
+            <button
+              onClick={() => setSelectedVisa(null)}
+              className="absolute top-5 right-5 bg-white w-10 h-10 rounded-full shadow-lg text-2xl z-20"
+            >
+              ×
+            </button>
+
+            {/* IMAGE */}
+
+            <div className="relative h-[320px]">
+
+              <img
+                src={selectedVisa.image}
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-black/40" />
+
+              <div className="absolute bottom-8 left-8 text-white">
+
+                <div className="flex items-center gap-4 mb-4">
+
+                  <img
+                    src={selectedVisa.flag}
+                    className="w-14 h-14 rounded-full border-2 border-white"
+                  />
+
+                  <h2 className="text-5xl font-bold">
+                    {selectedVisa.country}
+                  </h2>
+
+                </div>
+
+                <p className="text-lg text-gray-200 max-w-2xl">
+                  {selectedVisa.description}
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* CONTENT */}
+
+            <div className="p-10">
+
+              <div className="grid md:grid-cols-2 gap-6">
+
+                <div className="bg-[#F7FAFC] rounded-3xl p-6">
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D] mb-5">
+                    Visa Information
+                  </h3>
+
+                  <div className="space-y-4 text-gray-600">
+
+                    <p><span className="font-semibold text-[#0B1F4D]">Visa Type:</span> {selectedVisa.visa}</p>
+
+                    <p><span className="font-semibold text-[#0B1F4D]">Visa Validity:</span> {selectedVisa.validity}</p>
+
+                    <p><span className="font-semibold text-[#0B1F4D]">Stay Duration:</span> {selectedVisa.stay}</p>
+
+                    <p><span className="font-semibold text-[#0B1F4D]">Processing Time:</span> {selectedVisa.processing}</p>
+
+                    <p><span className="font-semibold text-[#0B1F4D]">Interview:</span> {selectedVisa.interview}</p>
+
+                    <p><span className="font-semibold text-[#0B1F4D]">Best Time To Travel:</span> {selectedVisa.travel}</p>
+
+                  </div>
+
+                </div>
+
+                <div className="bg-blue-50 rounded-3xl p-6">
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D] mb-5">
+                    Why Visit?
+                  </h3>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    {selectedVisa.why}
+                  </p>
+
+                  <h3 className="text-2xl font-bold text-[#0B1F4D] mt-8 mb-5">
+                    Eduaccess Assistance
+                  </h3>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    {selectedVisa.assistance}
+                  </p>
+
+                </div>
+
+              </div>
+
+              {/* BUTTON */}
+
+              <a
+                href="/#contact"
+                className="mt-10 inline-block bg-[#0B1F4D] hover:bg-[#102A63] text-white px-8 py-4 rounded-full font-semibold transition"
+              >
+                Apply Now
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      )}
+
+      {/* FOOTER */}
+
+      <footer className="bg-[#0B1F4D] text-white py-10 text-center">
+
+        <p>
+          © 2026 EDUACCESS. All Rights Reserved.
+        </p>
+
+      </footer>
+
+      {/* FLOATING WHATSAPP */}
+
+      <a
+        href="https://wa.me/919998920644"
+        target="_blank"
+        className="fixed bottom-6 right-6 z-50"
+      >
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt="WhatsApp"
+          className="w-16 h-16 hover:scale-110 transition"
+        />
+
+      </a>
 
     </main>
   );
