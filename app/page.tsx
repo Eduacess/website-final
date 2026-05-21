@@ -90,7 +90,9 @@ export default function Home() {
               Study
             </a>
 
-        
+            <a href="#visa" className="hover:text-[#D4AF37] transition">
+              Visitor Visa
+            </a>
 
             <a href="#contact" className="hover:text-[#D4AF37] transition">
               Connect
