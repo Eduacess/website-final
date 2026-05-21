@@ -10,12 +10,20 @@ export default function StudyPage() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/17/World_map_2004_CIA_large_two-color.svg"
-          className="absolute inset-0 w-full h-full object-contain opacity-[0.06]"
+        {/* OUTLINE WORLD MAP */}
+
+        <div
+          className="absolute inset-0 opacity-[0.12]"
+          style={{
+            backgroundImage:
+              "url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')",
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}
         />
 
-        {/* GLOW DOTS */}
+        {/* GLOWING COUNTRIES */}
 
         <div className="glow glow1" />
         <div className="glow glow2" />
@@ -166,7 +174,7 @@ export default function StudyPage() {
             >
 
               <img
-                src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1600&auto=format&fit=crop"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
               />
 
@@ -197,7 +205,7 @@ export default function StudyPage() {
             >
 
               <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
               />
 
@@ -228,7 +236,7 @@ export default function StudyPage() {
             >
 
               <img
-                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1400&auto=format&fit=crop"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
               />
 
