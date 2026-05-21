@@ -3,7 +3,8 @@ export const universities = [
   {
     name: 'Amity University',
     type: 'UG + PG',
-    flag: '🇮🇳',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
     image:
       'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -14,11 +15,11 @@ export const universities = [
     benefits: [
       {
         title: 'UGC Approved',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135755.png',
+        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
       {
         title: 'NAAC A+',
-        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+        icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
       },
       {
         title: 'Global Degrees',
@@ -34,7 +35,8 @@ export const universities = [
   {
     name: 'Manipal University',
     type: 'UG + PG',
-    flag: '🇮🇳',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
     image:
       'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -45,7 +47,7 @@ export const universities = [
     benefits: [
       {
         title: 'UGC Approved',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135755.png',
+        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
       {
         title: 'Top Ranked',
@@ -65,7 +67,8 @@ export const universities = [
   {
     name: 'NMIMS University',
     type: 'PG',
-    flag: '🇮🇳',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
     image:
       'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -96,7 +99,8 @@ export const universities = [
   {
     name: 'Jain University',
     type: 'UG + PG',
-    flag: '🇮🇳',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
     image:
       'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -127,7 +131,8 @@ export const universities = [
   {
     name: 'Liverpool John Moores University',
     type: 'PG',
-    flag: '🇬🇧',
+    flag: 'https://flagcdn.com/w40/gb.png',
+    location: 'United Kingdom',
     image:
       'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -158,7 +163,8 @@ export const universities = [
   {
     name: 'Golden Gate University',
     type: 'PG',
-    flag: '🇺🇸',
+    flag: 'https://flagcdn.com/w40/us.png',
+    location: 'USA',
     image:
       'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -187,40 +193,10 @@ export const universities = [
   },
 
   {
-    name: 'UPES University',
-    type: 'UG + PG',
-    flag: '🇮🇳',
-    image:
-      'https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1400&auto=format&fit=crop',
-    programs: {
-      ug: ['BBA', 'BCA'],
-      pg: ['MBA'],
-      more: '30+ More Programs',
-    },
-    benefits: [
-      {
-        title: 'Industry Aligned',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
-      },
-      {
-        title: 'UGC Approved',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135755.png',
-      },
-      {
-        title: 'Career Ready',
-        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
-      },
-      {
-        title: 'Modern Learning',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-      },
-    ],
-  },
-
-  {
     name: 'DY Patil University',
     type: 'UG + PG',
-    flag: '🇮🇳',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
     image:
       'https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -251,7 +227,8 @@ export const universities = [
   {
     name: 'LPU University',
     type: 'UG + PG',
-    flag: '🇮🇳',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
     image:
       'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -282,7 +259,8 @@ export const universities = [
   {
     name: 'Chandigarh University',
     type: 'UG + PG',
-    flag: '🇮🇳',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
     image:
       'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop',
     programs: {
@@ -301,45 +279,13 @@ export const universities = [
       },
       {
         title: 'UGC Approved',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135755.png',
+        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
       {
         title: 'Career Ready',
         icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
       },
     ],
-  },
-
-  {
-    name: 'Others',
-    type: 'UG + PG',
-    flag: '🌍',
-    image:
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop',
-    programs: {
-      ug: ['200+ Universities'],
-      pg: ['Global Online Degrees'],
-      more: 'Find Your Right University',
-    },
-    benefits: [
-      {
-        title: 'Global Universities',
-        icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
-      },
-      {
-        title: 'Flexible Learning',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-      },
-      {
-        title: 'Affordable Degrees',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3063/3063822.png',
-      },
-      {
-        title: 'Expert Counseling',
-        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
-      },
-    ],
-    others: true,
-  },
+  }
 
 ];
