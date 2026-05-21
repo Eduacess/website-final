@@ -7,6 +7,7 @@ export default function VisitorVisaPage() {
   const [selectedVisa, setSelectedVisa] = useState<any>(null);
 
   const visas = [
+
     {
       country: 'United States',
       flag: 'https://flagcdn.com/w80/us.png',
@@ -19,13 +20,13 @@ export default function VisitorVisaPage() {
       interview: 'Mandatory',
       travel: 'April to June & September to November',
       description:
-        'Luxury tourism, business travel, shopping and world-famous attractions.',
+        'Luxury tourism, business travel and world-famous attractions.',
       why:
-        'Visit New York, Las Vegas, Miami and Los Angeles for unforgettable experiences.',
+        'Visit New York, Miami, Las Vegas and Los Angeles.',
       assistance:
-        'We assist with DS-160 guidance, interview slots and complete consultation.',
+        'DS-160 guidance, interview slot assistance and premium consultation.',
     },
-
+  
     {
       country: 'Canada',
       flag: 'https://flagcdn.com/w80/ca.png',
@@ -38,13 +39,13 @@ export default function VisitorVisaPage() {
       interview: 'Usually Not Required',
       travel: 'May to September',
       description:
-        'Premium tourism, scenic nature, luxury cities and family travel.',
+        'Luxury tourism, nature and premium lifestyle.',
       why:
-        'Explore Toronto, Vancouver, Niagara Falls and breathtaking landscapes.',
+        'Explore Toronto, Vancouver and Niagara Falls.',
       assistance:
-        'Complete visitor visa guidance and profile consultation.',
+        'Complete visitor visa guidance and consultation.',
     },
-
+  
     {
       country: 'Australia',
       flag: 'https://flagcdn.com/w80/au.png',
@@ -57,13 +58,13 @@ export default function VisitorVisaPage() {
       interview: 'Not Required',
       travel: 'September to November & March to May',
       description:
-        'Luxury beaches, premium lifestyle and adventure experiences.',
+        'Luxury beaches and premium tourism experiences.',
       why:
-        'Visit Sydney, Melbourne and Gold Coast for world-class tourism.',
+        'Visit Sydney, Melbourne and Gold Coast.',
       assistance:
-        'Eduaccess assists with visa filing and consultation.',
+        'Premium visa filing and consultation support.',
     },
-
+  
     {
       country: 'United Kingdom',
       flag: 'https://flagcdn.com/w80/gb.png',
@@ -76,13 +77,13 @@ export default function VisitorVisaPage() {
       interview: 'Usually Not Required',
       travel: 'May to September',
       description:
-        'Historic destinations, luxury shopping and royal experiences.',
+        'Historic destinations and luxury shopping.',
       why:
-        'Explore London, Scotland and iconic UK landmarks.',
+        'Explore London and iconic UK landmarks.',
       assistance:
-        'Premium visitor visa assistance and consultation.',
+        'Premium visitor visa consultation.',
     },
-
+  
     {
       country: 'Japan',
       flag: 'https://flagcdn.com/w80/jp.png',
@@ -95,13 +96,13 @@ export default function VisitorVisaPage() {
       interview: 'Not Required',
       travel: 'March to May & October to November',
       description:
-        'Cherry blossoms, advanced cities and premium tourism.',
+        'Cherry blossoms and futuristic cities.',
       why:
-        'Visit Tokyo, Osaka and Kyoto for unforgettable experiences.',
+        'Visit Tokyo, Osaka and Kyoto.',
       assistance:
-        'Complete tourist visa guidance and application support.',
+        'Complete tourist visa support.',
     },
-
+  
     {
       country: 'Europe',
       flag: 'https://flagcdn.com/w80/eu.png',
@@ -116,14 +117,50 @@ export default function VisitorVisaPage() {
       description:
         'Travel multiple European countries with one visa.',
       why:
-        'Explore Paris, Switzerland, Italy and luxury European tourism.',
+        'Explore Paris, Switzerland and Italy.',
       assistance:
-        'Visa filing, itinerary guidance and profile consultation.',
+        'Visa filing and itinerary guidance.',
     },
+  
+    {
+      country: 'Vietnam',
+      flag: 'https://flagcdn.com/w80/vn.png',
+      image:
+        'https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1400&auto=format&fit=crop',
+      visa: 'Tourist Visa',
+      validity: '30 Days',
+      stay: '30 Days',
+      processing: '5–7 Days',
+      interview: 'Not Required',
+      travel: 'November to April',
+      description:
+        'Affordable luxury travel and vibrant culture.',
+      why:
+        'Visit Hanoi and Ho Chi Minh City.',
+      assistance:
+        'Tourist visa filing and support.',
+    },
+  
+    {
+      country: 'China',
+      flag: 'https://flagcdn.com/w80/cn.png',
+      image:
+        'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=1400&auto=format&fit=crop',
+      visa: 'Tourist Visa',
+      validity: '30–90 Days',
+      stay: '30 Days',
+      processing: '7–15 Days',
+      interview: 'Depends on Embassy',
+      travel: 'April to May & September to October',
+      description:
+        'Historic culture and futuristic cities.',
+      why:
+        'Visit Beijing, Shanghai and the Great Wall.',
+      assistance:
+        'Premium tourist visa guidance.',
+    },
+  
   ];
-
-  return (
-    <main className="bg-[#F7FAFC] min-h-screen">
 
       {/* NAVBAR */}
 
@@ -265,56 +302,145 @@ export default function VisitorVisaPage() {
 
       </section>
 
-      {/* POPUP */}
+     {/* POPUP */}
 
-      {selectedVisa && (
+{selectedVisa && (
 
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md p-5">
+  <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md flex items-center justify-center p-5">
 
-          <div className="bg-white max-w-3xl w-full rounded-[40px] overflow-hidden shadow-2xl relative max-h-[95vh] overflow-y-auto">
+    <div className="relative bg-white w-full max-w-6xl h-[88vh] rounded-[40px] overflow-hidden shadow-2xl grid lg:grid-cols-2">
 
-            {/* CLOSE */}
+      {/* CLOSE */}
 
-            <button
-              onClick={() => setSelectedVisa(null)}
-              className="absolute top-5 right-5 bg-white w-10 h-10 rounded-full shadow-lg text-2xl z-20"
-            >
-              ×
-            </button>
+      <button
+        onClick={() => setSelectedVisa(null)}
+        className="absolute top-5 right-5 z-50 bg-white text-[#0B1F4D] w-12 h-12 rounded-full shadow-xl text-3xl hover:scale-110 transition"
+      >
+        ×
+      </button>
 
-            {/* IMAGE */}
+      {/* LEFT */}
 
-            <div className="relative h-[320px]">
+      <div className="relative h-full">
 
-              <img
-                src={selectedVisa.image}
-                className="w-full h-full object-cover"
-              />
+        <img
+          src={selectedVisa.image}
+          className="w-full h-full object-cover"
+        />
 
-              <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40" />
 
-              <div className="absolute bottom-8 left-8 text-white">
+        <div className="absolute bottom-10 left-10 right-10 text-white">
 
-                <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center gap-4 mb-5">
 
-                  <img
-                    src={selectedVisa.flag}
-                    className="w-14 h-14 rounded-full border-2 border-white"
-                  />
+            <img
+              src={selectedVisa.flag}
+              className="w-14 h-14 rounded-full border-2 border-white"
+            />
 
-                  <h2 className="text-5xl font-bold">
-                    {selectedVisa.country}
-                  </h2>
+            <h2 className="text-5xl font-bold">
+              {selectedVisa.country}
+            </h2>
 
-                </div>
+          </div>
 
-                <p className="text-lg text-gray-200 max-w-2xl">
-                  {selectedVisa.description}
-                </p>
+          <p className="text-lg leading-relaxed text-gray-200">
 
-              </div>
+            {selectedVisa.description}
+
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT */}
+
+      <div className="h-full overflow-y-auto p-10 flex flex-col justify-between">
+
+        <div>
+
+          {/* VISA INFO */}
+
+          <div className="bg-[#F7FAFC] rounded-[30px] p-7">
+
+            <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
+              Visa Information
+            </h3>
+
+            <div className="space-y-4 text-gray-700 text-[16px]">
+
+              <p><span className="font-bold text-[#0B1F4D]">Visa Type:</span> {selectedVisa.visa}</p>
+
+              <p><span className="font-bold text-[#0B1F4D]">Visa Validity:</span> {selectedVisa.validity}</p>
+
+              <p><span className="font-bold text-[#0B1F4D]">Stay Duration:</span> {selectedVisa.stay}</p>
+
+              <p><span className="font-bold text-[#0B1F4D]">Processing Time:</span> {selectedVisa.processing}</p>
+
+              <p><span className="font-bold text-[#0B1F4D]">Interview:</span> {selectedVisa.interview}</p>
+
+              <p><span className="font-bold text-[#0B1F4D]">Best Time To Travel:</span> {selectedVisa.travel}</p>
 
             </div>
+
+          </div>
+
+          {/* WHY VISIT */}
+
+          <div className="mt-6 bg-blue-50 rounded-[30px] p-7">
+
+            <h3 className="text-3xl font-bold text-[#0B1F4D] mb-4">
+              Why Visit?
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed text-[16px]">
+
+              {selectedVisa.why}
+
+            </p>
+
+          </div>
+
+          {/* ASSISTANCE */}
+
+          <div className="mt-6 bg-yellow-50 rounded-[30px] p-7">
+
+            <h3 className="text-3xl font-bold text-[#0B1F4D] mb-4">
+              Eduaccess Assistance
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed text-[16px]">
+
+              {selectedVisa.assistance}
+
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* BUTTON */}
+
+        <div className="pt-6">
+
+          <a
+            href="/connect-us"
+            className="w-full block text-center bg-[#0B1F4D] hover:bg-[#102A63] text-white py-5 rounded-full text-lg font-semibold transition shadow-xl"
+          >
+            Apply Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+)}
 
             {/* CONTENT */}
 
