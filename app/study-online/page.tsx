@@ -31,13 +31,13 @@ export default function StudyOnlinePage() {
 
     if (search.trim() !== '') {
 
-      const found = universities.filter((u) =>
+      const found = universities.filter((u: any) =>
         u.name.toLowerCase().includes(search.toLowerCase())
       );
 
       if (found.length > 0) return found;
 
-      return universities.filter((u) => u.others);
+      return universities.filter((u: any) => u.others);
 
     }
 
@@ -149,7 +149,7 @@ export default function StudyOnlinePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-700">
 
-            {displayedUniversities.map((university, index) => (
+            {displayedUniversities.map((university: any, index) => (
 
               <div
                 key={index}
@@ -180,35 +180,17 @@ export default function StudyOnlinePage() {
                       {university.name}
                     </h2>
 
-                    <p className="text-gray-200 mt-3 text-lg">
-                      {university.location}
-                    </p>
+                    <div className="flex items-center gap-3 mt-4">
 
-                    <div className="mt-5 flex flex-wrap gap-2">
+                      <img
+                        src={university.flag}
+                        alt="flag"
+                        className="w-7 h-5 rounded-sm object-cover"
+                      />
 
-                      {university.programs.ug.length > 0 && (
-
-                        <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm">
-
-                          {university.programs.ug.slice(0, 3).join(', ')}
-
-                          {university.programs.ug.length > 3 && ' + More'}
-
-                        </div>
-
-                      )}
-
-                      {university.programs.pg.length > 0 && (
-
-                        <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm">
-
-                          {university.programs.pg.slice(0, 3).join(', ')}
-
-                          {university.programs.pg.length > 3 && ' + More'}
-
-                        </div>
-
-                      )}
+                      <p className="text-gray-200 text-lg">
+                        {university.location}
+                      </p>
 
                     </div>
 
@@ -260,9 +242,18 @@ export default function StudyOnlinePage() {
                   {selectedUniversity.name}
                 </h2>
 
-                <p className="mt-4 text-xl text-gray-200">
-                  {selectedUniversity.location}
-                </p>
+                <div className="flex items-center gap-4 mt-5">
+
+                  <img
+                    src={selectedUniversity.flag}
+                    className="w-8 h-6 rounded-sm object-cover"
+                  />
+
+                  <p className="text-xl text-gray-200">
+                    {selectedUniversity.location}
+                  </p>
+
+                </div>
 
               </div>
 
@@ -307,7 +298,7 @@ export default function StudyOnlinePage() {
 
                         <div className="bg-[#0B1F4D] text-white px-5 py-3 rounded-full shadow font-medium">
 
-                          + More Programs
+                          {selectedUniversity.programs.more}
 
                         </div>
 
@@ -340,12 +331,6 @@ export default function StudyOnlinePage() {
 
                         ))}
 
-                        <div className="bg-[#0B1F4D] text-white px-5 py-3 rounded-full shadow font-medium">
-
-                          + More Programs
-
-                        </div>
-
                       </div>
 
                     </div>
@@ -368,8 +353,14 @@ export default function StudyOnlinePage() {
 
                       <div
                         key={i}
-                        className="bg-white rounded-2xl p-5 shadow flex items-center justify-center text-center"
+                        className="bg-white rounded-2xl p-5 shadow flex flex-col items-center justify-center text-center"
                       >
+
+                        <img
+                          src={benefit.icon}
+                          alt={benefit.title}
+                          className="w-14 h-14 object-contain mb-4"
+                        />
 
                         <p className="font-semibold text-[#0B1F4D]">
                           {benefit.title}
