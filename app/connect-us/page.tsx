@@ -17,7 +17,9 @@ export default function ConnectUsPage() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
 
     setFormData({
@@ -27,7 +29,9 @@ export default function ConnectUsPage() {
 
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
 
     e.preventDefault();
 
@@ -51,6 +55,7 @@ export default function ConnectUsPage() {
 
     } catch (error) {
 
+      console.log(error);
       alert('Something went wrong.');
 
     }
@@ -130,6 +135,13 @@ export default function ConnectUsPage() {
 
         </h1>
 
+        <p className="text-gray-600 text-lg mt-8 max-w-3xl mx-auto leading-relaxed">
+
+          Our team will help you with Study Abroad, Visitor Visa,
+          Study Online and Study In India guidance.
+
+        </p>
+
       </section>
 
       {/* FORM */}
@@ -147,32 +159,40 @@ export default function ConnectUsPage() {
                 className="space-y-6"
               >
 
+                {/* NAME */}
+
                 <input
                   type="text"
                   name="name"
-                  placeholder="Full Name"
                   required
+                  placeholder="Full Name"
                   onChange={handleChange}
                   className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
                 />
+
+                {/* PHONE */}
 
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number"
                   required
+                  placeholder="Phone Number"
                   onChange={handleChange}
                   className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
                 />
 
+                {/* EMAIL */}
+
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email Address"
                   required
+                  placeholder="Email Address"
                   onChange={handleChange}
                   className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
                 />
+
+                {/* SERVICE */}
 
                 <select
                   name="service"
@@ -203,19 +223,23 @@ export default function ConnectUsPage() {
 
                 </select>
 
+                {/* COUNTRY */}
+
                 {(formData.service === 'Visitor Visa' ||
                   formData.service === 'Study Abroad') && (
 
                   <input
                     type="text"
                     name="country"
-                    placeholder="Preferred Country"
                     required
+                    placeholder="Preferred Country"
                     onChange={handleChange}
                     className="w-full h-14 rounded-2xl border border-gray-300 px-5 outline-none focus:border-[#D4AF37]"
                   />
 
                 )}
+
+                {/* MESSAGE */}
 
                 <textarea
                   rows={5}
@@ -224,6 +248,8 @@ export default function ConnectUsPage() {
                   onChange={handleChange}
                   className="w-full rounded-2xl border border-gray-300 p-5 outline-none focus:border-[#D4AF37]"
                 />
+
+                {/* BUTTON */}
 
                 <button
                   type="submit"
