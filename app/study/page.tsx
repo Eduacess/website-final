@@ -6,35 +6,49 @@ export default function StudyPage() {
 
     <main className="bg-[#F7FAFC] min-h-screen overflow-hidden text-[#0B1F4D] relative">
 
-      {/* WORLD MAP BACKGROUND */}
+      {/* SMALL WORLD MAP */}
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute top-[120px] left-1/2 -translate-x-1/2 w-[700px] h-[380px] opacity-[0.08] pointer-events-none">
 
-        {/* OUTLINE WORLD MAP */}
-
-        <div
-          className="absolute inset-0 opacity-[0.12]"
-          style={{
-            backgroundImage:
-              "url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')",
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-          }}
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+          className="w-full h-full object-contain"
         />
 
         {/* GLOWING COUNTRIES */}
 
-        <div className="glow glow1" />
-        <div className="glow glow2" />
-        <div className="glow glow3" />
-        <div className="glow glow4" />
-        <div className="glow glow5" />
-        <div className="glow glow6" />
-        <div className="glow glow7" />
-        <div className="glow glow8" />
-        <div className="glow glow9" />
-        <div className="glow glow10" />
+        {/* CANADA */}
+        <div className="glow canada" />
+
+        {/* USA */}
+        <div className="glow usa" />
+
+        {/* UK */}
+        <div className="glow uk" />
+
+        {/* EUROPE */}
+        <div className="glow europe" />
+
+        {/* DUBAI */}
+        <div className="glow dubai" />
+
+        {/* INDIA */}
+        <div className="glow india" />
+
+        {/* SINGAPORE */}
+        <div className="glow singapore" />
+
+        {/* MALAYSIA */}
+        <div className="glow malaysia" />
+
+        {/* JAPAN */}
+        <div className="glow japan" />
+
+        {/* AUSTRALIA */}
+        <div className="glow australia" />
+
+        {/* NEW ZEALAND */}
+        <div className="glow nz" />
 
       </div>
 
@@ -174,7 +188,7 @@ export default function StudyPage() {
             >
 
               <img
-                src="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1400&auto=format&fit=crop"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
               />
 
@@ -366,7 +380,7 @@ export default function StudyPage() {
 
       {/* FOOTER */}
 
-      <footer className="relative z-10 bg-white text-[#0B1F4D] py-10 text-center border-t border-gray-200">
+      <footer className="bg-[#0B1F4D] text-white py-10 text-center">
 
         <p>
           © 2026 EDUACCESS. All Rights Reserved.
@@ -396,90 +410,107 @@ export default function StudyPage() {
 
         .glow{
           position:absolute;
-          width:18px;
-          height:18px;
+          width:12px;
+          height:12px;
           background:#D4AF37;
           border-radius:999px;
           opacity:0;
-          box-shadow:0 0 25px #D4AF37;
-          animation:glowAnimation 10s infinite;
+          box-shadow:0 0 18px #D4AF37;
+          animation:glowAnimation 11s infinite;
         }
 
-        .glow1{
-          top:28%;
-          left:22%;
+        /* CANADA */
+        .canada{
+          top:23%;
+          left:18%;
           animation-delay:0s;
         }
 
-        .glow2{
-          top:24%;
-          left:48%;
+        /* USA */
+        .usa{
+          top:32%;
+          left:20%;
           animation-delay:1s;
         }
 
-        .glow3{
-          top:40%;
-          left:73%;
+        /* UK */
+        .uk{
+          top:28%;
+          left:43%;
           animation-delay:2s;
         }
 
-        .glow4{
-          top:52%;
-          left:66%;
+        /* EUROPE */
+        .europe{
+          top:31%;
+          left:47%;
           animation-delay:3s;
         }
 
-        .glow5{
-          top:34%;
-          left:80%;
+        /* DUBAI */
+        .dubai{
+          top:39%;
+          left:54%;
           animation-delay:4s;
         }
 
-        .glow6{
-          top:58%;
-          left:35%;
+        /* INDIA */
+        .india{
+          top:44%;
+          left:60%;
           animation-delay:5s;
         }
 
-        .glow7{
-          top:65%;
-          left:55%;
+        /* SINGAPORE */
+        .singapore{
+          top:55%;
+          left:66%;
           animation-delay:6s;
         }
 
-        .glow8{
-          top:45%;
-          left:15%;
+        /* MALAYSIA */
+        .malaysia{
+          top:58%;
+          left:69%;
           animation-delay:7s;
         }
 
-        .glow9{
-          top:22%;
-          left:65%;
+        /* JAPAN */
+        .japan{
+          top:37%;
+          left:79%;
           animation-delay:8s;
         }
 
-        .glow10{
-          top:70%;
-          left:75%;
+        /* AUSTRALIA */
+        .australia{
+          top:72%;
+          left:78%;
           animation-delay:9s;
+        }
+
+        /* NEW ZEALAND */
+        .nz{
+          top:82%;
+          left:88%;
+          animation-delay:10s;
         }
 
         @keyframes glowAnimation {
 
           0%{
             opacity:0;
-            transform:scale(0.6);
+            transform:scale(0.5);
           }
 
-          10%{
+          8%{
             opacity:1;
-            transform:scale(1.4);
+            transform:scale(1.5);
           }
 
-          20%{
+          16%{
             opacity:0;
-            transform:scale(0.6);
+            transform:scale(0.5);
           }
 
           100%{
