@@ -86,7 +86,7 @@ export default function Home() {
               Home
             </a>
 
-            <a href="#study" className="hover:text-[#D4AF37] transition">
+            <a href="/study" className="hover:text-[#D4AF37] transition">
               Study
             </a>
 
