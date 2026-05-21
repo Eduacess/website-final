@@ -8,19 +8,17 @@ export default function StudyOnlinePage() {
   const [search, setSearch] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto Rotate Every 12 Seconds
+  // Auto Rotate
   useEffect(() => {
     if (search.trim() !== '') return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => {
-        const next = prev + 6;
-
-        if (next >= universities.length) {
+        if (prev + 6 >= universities.length) {
           return 0;
         }
 
-        return next;
+        return prev + 6;
       });
     }, 12000);
 
@@ -35,7 +33,7 @@ export default function StudyOnlinePage() {
           u.name.toLowerCase().includes(search.toLowerCase())
         );
 
-  // Show 6 Universities At A Time
+  // Display 6 Universities
   const displayedUniversities =
     search.trim() === ''
       ? filteredUniversities.slice(currentIndex, currentIndex + 6)
@@ -50,11 +48,11 @@ export default function StudyOnlinePage() {
         </h1>
 
         <p className="text-gray-500 mt-3 text-lg">
-          Explore Top Online Universities In India & Abroad
+          Explore Top Online Universities
         </p>
       </div>
 
-      {/* Search Bar */}
+      {/* Search */}
       <div className="flex justify-center mb-14">
         <input
           type="text"
@@ -65,14 +63,14 @@ export default function StudyOnlinePage() {
         />
       </div>
 
-      {/* University Cards */}
+      {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {displayedUniversities.map((uni, index) => (
           <div
             key={index}
             className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
           >
-            {/* University Image */}
+            {/* Image */}
             <div className="relative h-[240px] w-full">
               <Image
                 src={uni.image}
@@ -86,8 +84,8 @@ export default function StudyOnlinePage() {
                 <Image
                   src={uni.flag}
                   alt="flag"
-                  width={32}
-                  height={32}
+                  width={30}
+                  height={30}
                   className="rounded-full"
                 />
               </div>
@@ -95,27 +93,24 @@ export default function StudyOnlinePage() {
 
             {/* Content */}
             <div className="p-6">
-              {/* University Name */}
               <h2 className="text-2xl font-bold text-[#0f172a]">
                 {uni.name}
               </h2>
 
-              {/* Type */}
-              <div className="mt-3 inline-block bg-[#facc15] text-black text-sm font-semibold px-4 py-1 rounded-full">
+              <div className="mt-3 inline-block bg-yellow-400 text-black text-sm font-semibold px-4 py-1 rounded-full">
                 {uni.type}
               </div>
 
-              {/* Location */}
               <p className="text-gray-500 mt-4">
                 {uni.location}
               </p>
 
-              {/* More Programs */}
+              {/* Programs */}
               <p className="mt-5 text-sm text-gray-700 font-medium">
                 {uni.programs.more}
               </p>
 
-              {/* Highlights */}
+              {/* Benefits */}
               <div className="grid grid-cols-2 gap-4 mt-6">
                 {uni.benefits.map((benefit, i) => (
                   <div
@@ -136,7 +131,7 @@ export default function StudyOnlinePage() {
                 ))}
               </div>
 
-              {/* Apply Button */}
+              {/* Button */}
               <a
                 href="https://wa.me/919999999999"
                 target="_blank"
@@ -149,7 +144,7 @@ export default function StudyOnlinePage() {
         ))}
       </div>
 
-      {/* No Results */}
+      {/* No Result */}
       {displayedUniversities.length === 0 && (
         <div className="text-center mt-20">
           <h2 className="text-2xl font-semibold text-gray-700">
