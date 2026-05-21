@@ -1,113 +1,657 @@
+'use client';
+
 import Image from 'next/image';
+import {
+  GraduationCap,
+  Globe2,
+  Laptop2,
+  Quote,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+} from 'lucide-react';
+
+const reviews = [
+  {
+    name: 'Priya Shah',
+    flag: 'https://flagcdn.com/w80/in.png',
+    review:
+      'Eduaccess made my international admission journey smooth, transparent and stress-free. The counseling support was exceptional.',
+  },
+
+  {
+    name: 'Rahul Mehta',
+    flag: 'https://flagcdn.com/w80/in.png',
+    review:
+      'I enrolled into an online MBA through Eduaccess and the entire process was handled professionally from start to finish.',
+  },
+
+  {
+    name: 'Ayesha Khan',
+    flag: 'https://flagcdn.com/w80/gb.png',
+    review:
+      'The visa guidance and university shortlisting support helped me secure my dream opportunity abroad.',
+  },
+
+  {
+    name: 'Rohan Patel',
+    flag: 'https://flagcdn.com/w80/ca.png',
+    review:
+      'Eduaccess genuinely cares about students. Their premium guidance and support gave me confidence throughout.',
+  },
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main className="bg-[#F7FAFC] text-[#0B1F4D] overflow-hidden">
+
+      {/* NAVBAR */}
+
+      <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
+
+          {/* LEFT SIDE LOGO */}
+
+          <div className="flex items-center gap-4">
+
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/logo.png"
+              alt="Eduaccess"
+              width={65}
+              height={65}
+              className="object-contain"
             />
-          </a>
+
+            <div>
+
+              <h1 className="text-2xl font-bold tracking-wide">
+                EDU<span className="text-[#D4AF37]">ACCESS</span>
+              </h1>
+
+              <p className="text-xs text-gray-500">
+                Your Access To Education
+              </p>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT SIDE NAVIGATION */}
+
+          <div className="hidden lg:flex items-center gap-12 font-medium text-[16px]">
+
+            <a href="#" className="hover:text-[#D4AF37] transition">
+              Home
+            </a>
+
+            <a href="#study" className="hover:text-[#D4AF37] transition">
+              Study
+            </a>
+
+            <a href="#visa" className="hover:text-[#D4AF37] transition">
+              Visitor Visa
+            </a>
+
+            <a href="#contact" className="hover:text-[#D4AF37] transition">
+              Connect
+            </a>
+
+          </div>
+
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      </nav>
+
+      {/* HERO */}
+
+      <section className="relative pt-36 pb-24 overflow-hidden">
+
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-yellow-50" />
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-20 items-center relative z-10">
+
+          {/* LEFT */}
+
+          <div>
+
+            <div className="inline-flex items-center gap-2 bg-white border border-yellow-200 px-5 py-2 rounded-full shadow-sm mb-8">
+
+              <span className="h-2 w-2 bg-[#D4AF37] rounded-full" />
+
+              <p className="text-sm font-medium text-gray-700">
+                Study Globally. Grow Limitlessly.
+              </p>
+
+            </div>
+
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+
+              Your Future
+
+              <span className="block text-[#D4AF37]">
+                Starts Here
+              </span>
+
+            </h1>
+
+            <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-xl">
+
+              Eduaccess helps students achieve international education dreams
+              through Study Abroad, Online Degrees and International Programs.
+
+            </p>
+
+            {/* BUTTONS */}
+
+            <div className="flex flex-wrap gap-5 mt-10">
+
+              <button className="bg-[#0B1F4D] hover:bg-[#102A63] text-white px-8 py-4 rounded-full font-semibold flex items-center gap-3 transition shadow-xl">
+
+                Explore Programs
+
+                <ArrowRight size={18} />
+
+              </button>
+
+              <button className="border border-[#0B1F4D] px-8 py-4 rounded-full font-semibold hover:bg-[#0B1F4D] hover:text-white transition">
+
+                Talk To Counselor
+
+              </button>
+
+            </div>
+
+          </div>
+
+          {/* HERO IMAGE */}
+
+          <div className="relative">
+
+            <div className="absolute inset-0 bg-yellow-300/20 blur-[120px]" />
+
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-gray-200 bg-white">
+
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop"
+                alt="Students"
+                className="w-full h-[650px] object-cover"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* STUDY SECTION */}
+
+      <section id="study" className="py-24 bg-white">
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8">
+
+          <div className="text-center mb-16">
+
+            <h2 className="text-5xl font-bold">
+              What We Provide
+            </h2>
+
+            <p className="text-gray-600 mt-5 text-lg">
+              Explore premium global education opportunities.
+            </p>
+
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+
+            {/* CARD 1 */}
+
+            <div className="group [perspective:1000px] h-[500px]">
+
+              <div className="relative h-full w-full rounded-[35px] transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+                {/* FRONT */}
+
+                <div className="absolute inset-0 rounded-[35px] overflow-hidden shadow-xl [backface-visibility:hidden]">
+
+                  <img
+                    src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1400&auto=format&fit=crop"
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 bg-black/40" />
+
+                  <div className="absolute bottom-8 left-8 text-white">
+
+                    <Globe2 size={45} className="mb-5 text-yellow-400" />
+
+                    <h3 className="text-4xl font-bold">
+                      Study Abroad
+                    </h3>
+
+                  </div>
+
+                </div>
+
+                {/* BACK */}
+
+                <div className="absolute inset-0 rounded-[35px] bg-[#0B1F4D] text-white p-10 shadow-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
+
+                  <h3 className="text-4xl font-bold mb-6">
+                    Study Abroad
+                  </h3>
+
+                  <p className="text-gray-300 leading-relaxed">
+
+                    Admissions, scholarships, SOPs, visa support and
+                    global universities across UK, USA, Canada and more.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* CARD 2 */}
+
+            <div className="group [perspective:1000px] h-[500px]">
+
+              <div className="relative h-full w-full rounded-[35px] transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+                <div className="absolute inset-0 rounded-[35px] overflow-hidden shadow-xl [backface-visibility:hidden]">
+
+                  <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 bg-black/40" />
+
+                  <div className="absolute bottom-8 left-8 text-white">
+
+                    <Laptop2 size={45} className="mb-5 text-yellow-400" />
+
+                    <h3 className="text-4xl font-bold">
+                      Study Online
+                    </h3>
+
+                  </div>
+
+                </div>
+
+                <div className="absolute inset-0 rounded-[35px] bg-[#0B1F4D] text-white p-10 shadow-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
+
+                  <h3 className="text-4xl font-bold mb-6">
+                    Study Online
+                  </h3>
+
+                  <p className="text-gray-300 leading-relaxed">
+
+                    UGC-approved online degree programs from India’s
+                    top universities with flexible learning support.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* CARD 3 */}
+
+            <div className="group [perspective:1000px] h-[500px]">
+
+              <div className="relative h-full w-full rounded-[35px] transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+                <div className="absolute inset-0 rounded-[35px] overflow-hidden shadow-xl [backface-visibility:hidden]">
+
+                  <img
+                    src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1400&auto=format&fit=crop"
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 bg-black/40" />
+
+                  <div className="absolute bottom-8 left-8 text-white">
+
+                    <GraduationCap size={45} className="mb-5 text-yellow-400" />
+
+                    <h3 className="text-4xl font-bold">
+                      Study In India
+                    </h3>
+
+                  </div>
+
+                </div>
+
+                <div className="absolute inset-0 rounded-[35px] bg-[#0B1F4D] text-white p-10 shadow-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
+
+                  <h3 className="text-4xl font-bold mb-6">
+                    Study In India
+                  </h3>
+
+                  <p className="text-gray-300 leading-relaxed">
+
+                    International degree programs and global university
+                    pathways within India.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* REVIEWS */}
+
+      <section className="py-24 bg-[#F7FAFC] overflow-hidden">
+
+        <div className="text-center mb-16">
+
+          <h2 className="text-5xl font-bold">
+            Student Reviews
+          </h2>
+
+        </div>
+
+        <div className="relative overflow-hidden">
+
+          <div className="flex gap-8 animate-[scroll_35s_linear_infinite] w-max">
+
+            {[...reviews, ...reviews].map((review, index) => (
+
+              <div
+                key={index}
+                className="bg-white rounded-[35px] p-10 shadow-lg border border-gray-100 w-[420px] flex-shrink-0"
+              >
+
+                <div className="flex items-center justify-between mb-6">
+
+                  <Quote className="text-[#D4AF37]" size={40} />
+
+                  <img
+                    src={review.flag}
+                    alt="flag"
+                    className="w-10 h-10 rounded-full object-cover border"
+                  />
+
+                </div>
+
+                <p className="text-gray-600 leading-relaxed text-lg">
+
+                  {review.review}
+
+                </p>
+
+                <div className="mt-8">
+
+                  <h4 className="font-bold text-xl">
+                    {review.name}
+                  </h4>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FOUNDER */}
+
+      <section className="py-24 bg-white">
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-20 items-center">
+
+          {/* ROUND IMAGE */}
+
+          <div className="flex justify-center">
+
+            <div className="relative w-[420px] h-[420px] rounded-full overflow-hidden border-[10px] border-white shadow-2xl">
+
+              <img
+                src="/founder.png"
+                alt="Founder"
+                className="w-full h-full object-cover"
+              />
+
+            </div>
+
+          </div>
+
+          {/* CONTENT */}
+
+          <div>
+
+            <p className="text-[#D4AF37] font-semibold uppercase tracking-[3px]">
+              Founder’s Message
+            </p>
+
+            <h2 className="text-5xl font-bold mt-5 leading-tight">
+
+              Empowering Students To Build Global Careers
+
+            </h2>
+
+            <p className="mt-8 text-lg text-gray-600 leading-relaxed">
+
+              At Eduaccess, our mission is to simplify international education
+              and help students unlock opportunities worldwide with trusted guidance,
+              transparency and premium support.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* VISITOR VISA */}
+
+      <section id="visa" className="py-24 bg-[#0B1F4D] text-white">
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 text-center">
+
+          <h2 className="text-5xl font-bold">
+            Visitor Visa Assistance
+          </h2>
+
+          <p className="text-gray-300 mt-6 text-lg max-w-3xl mx-auto leading-relaxed">
+
+            Premium visitor visa guidance for international travel,
+            documentation support and end-to-end consultation services.
+
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* CONTACT */}
+
+      <section id="contact" className="py-24 bg-[#F7FAFC]">
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8">
+
+          <div className="text-center mb-16">
+
+            <h2 className="text-5xl font-bold">
+              Connect With Eduaccess
+            </h2>
+
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10">
+
+            {/* CONTACT */}
+
+            <div className="bg-white rounded-[35px] p-10 shadow-xl border border-gray-100">
+
+              <div className="space-y-10">
+
+                {/* PHONE */}
+
+                <div className="flex gap-5">
+
+                  <div className="bg-yellow-100 p-4 rounded-2xl h-fit">
+
+                    <Phone className="text-[#D4AF37]" />
+
+                  </div>
+
+                  <div>
+
+                    <h3 className="text-2xl font-bold">
+                      Phone
+                    </h3>
+
+                    <a
+                      href="tel:+919998920644"
+                      className="text-gray-600 mt-2 block hover:text-[#D4AF37]"
+                    >
+                      +91 99989 20644
+                    </a>
+
+                  </div>
+
+                </div>
+
+                {/* EMAIL */}
+
+                <div className="flex gap-5">
+
+                  <div className="bg-blue-100 p-4 rounded-2xl h-fit">
+
+                    <Mail className="text-[#0B1F4D]" />
+
+                  </div>
+
+                  <div>
+
+                    <h3 className="text-2xl font-bold">
+                      Email
+                    </h3>
+
+                    <a
+                      href="mailto:connect.eduaccessess@outlook.com"
+                      className="text-gray-600 mt-2 block hover:text-[#D4AF37]"
+                    >
+                      connect.eduaccessess@outlook.com
+                    </a>
+
+                  </div>
+
+                </div>
+
+                {/* ADDRESS */}
+
+                <div className="flex gap-5">
+
+                  <div className="bg-yellow-100 p-4 rounded-2xl h-fit">
+
+                    <MapPin className="text-[#D4AF37]" />
+
+                  </div>
+
+                  <div>
+
+                    <h3 className="text-2xl font-bold">
+                      Address
+                    </h3>
+
+                    <p className="text-gray-600 mt-2 leading-relaxed">
+
+                      KB House, Third Floor,
+                      Next to Gopinathji Honda Showroom,
+                      Vadodara, Gujarat
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* GOOGLE MAP */}
+
+            <div className="rounded-[35px] overflow-hidden shadow-xl border border-gray-200 h-[500px]">
+
+              <iframe
+                src="https://www.google.com/maps?q=KB%20House%20Vadodara&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FOOTER */}
+
+      <footer className="bg-[#0B1F4D] text-white py-10 text-center">
+
+        <p>
+          © 2026 EDUACCESS. All Rights Reserved.
+        </p>
+
+      </footer>
+
+      {/* FLOATING WHATSAPP */}
+
+      <a
+        href="https://wa.me/919998920644"
+        target="_blank"
+        className="fixed bottom-6 right-6 z-50"
+      >
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt="WhatsApp"
+          className="w-14 h-14 hover:scale-110 transition"
         />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* ANIMATION */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
