@@ -8,46 +8,25 @@ export default function StudyPage() {
 
       {/* SMALL WORLD MAP */}
 
-      <div className="absolute top-[120px] left-1/2 -translate-x-1/2 w-[700px] h-[380px] opacity-[0.08] pointer-events-none">
+      <div className="absolute top-[110px] left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none z-0">
 
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain opacity-[0.12]"
         />
 
         {/* GLOWING COUNTRIES */}
 
-        {/* CANADA */}
         <div className="glow canada" />
-
-        {/* USA */}
         <div className="glow usa" />
-
-        {/* UK */}
         <div className="glow uk" />
-
-        {/* EUROPE */}
         <div className="glow europe" />
-
-        {/* DUBAI */}
         <div className="glow dubai" />
-
-        {/* INDIA */}
         <div className="glow india" />
-
-        {/* SINGAPORE */}
         <div className="glow singapore" />
-
-        {/* MALAYSIA */}
         <div className="glow malaysia" />
-
-        {/* JAPAN */}
         <div className="glow japan" />
-
-        {/* AUSTRALIA */}
         <div className="glow australia" />
-
-        {/* NEW ZEALAND */}
         <div className="glow nz" />
 
       </div>
@@ -57,8 +36,6 @@ export default function StudyPage() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
-
-          {/* LOGO */}
 
           <a href="/" className="flex items-center gap-4">
 
@@ -89,8 +66,6 @@ export default function StudyPage() {
             <a href="/" className="hover:text-[#D4AF37] transition">
               Home
             </a>
-
-            {/* STUDY DROPDOWN */}
 
             <div className="relative group">
 
@@ -279,7 +254,7 @@ export default function StudyPage() {
 
       </section>
 
-      {/* CONTACT SECTION */}
+      {/* CONTACT */}
 
       <section
         id="contact"
@@ -294,15 +269,9 @@ export default function StudyPage() {
               Connect With Eduaccess
             </h2>
 
-            <p className="text-gray-600 mt-5 text-lg">
-              Start your global journey with premium guidance.
-            </p>
-
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10">
-
-            {/* CONTACT CARD */}
 
             <div className="bg-white rounded-[35px] p-10 shadow-xl border border-gray-100">
 
@@ -404,92 +373,84 @@ export default function StudyPage() {
 
       </a>
 
-      {/* ANIMATIONS */}
+      {/* ANIMATION */}
 
       <style jsx>{`
 
         .glow{
           position:absolute;
-          width:12px;
-          height:12px;
+          width:18px;
+          height:18px;
           background:#D4AF37;
           border-radius:999px;
           opacity:0;
-          box-shadow:0 0 18px #D4AF37;
+          box-shadow:
+            0 0 12px #D4AF37,
+            0 0 25px #D4AF37,
+            0 0 40px #D4AF37;
           animation:glowAnimation 11s infinite;
         }
 
-        /* CANADA */
         .canada{
           top:23%;
           left:18%;
           animation-delay:0s;
         }
 
-        /* USA */
         .usa{
           top:32%;
           left:20%;
           animation-delay:1s;
         }
 
-        /* UK */
         .uk{
           top:28%;
           left:43%;
           animation-delay:2s;
         }
 
-        /* EUROPE */
         .europe{
           top:31%;
           left:47%;
           animation-delay:3s;
         }
 
-        /* DUBAI */
         .dubai{
           top:39%;
           left:54%;
           animation-delay:4s;
         }
 
-        /* INDIA */
         .india{
           top:44%;
           left:60%;
           animation-delay:5s;
         }
 
-        /* SINGAPORE */
         .singapore{
           top:55%;
           left:66%;
           animation-delay:6s;
         }
 
-        /* MALAYSIA */
         .malaysia{
           top:58%;
           left:69%;
           animation-delay:7s;
         }
 
-        /* JAPAN */
         .japan{
           top:37%;
           left:79%;
           animation-delay:8s;
         }
 
-        /* AUSTRALIA */
         .australia{
           top:72%;
           left:78%;
           animation-delay:9s;
         }
 
-        /* NEW ZEALAND */
         .nz{
           top:82%;
           left:88%;
@@ -500,17 +461,17 @@ export default function StudyPage() {
 
           0%{
             opacity:0;
-            transform:scale(0.5);
+            transform:scale(0.3);
           }
 
           8%{
             opacity:1;
-            transform:scale(1.5);
+            transform:scale(2);
           }
 
           16%{
             opacity:0;
-            transform:scale(0.5);
+            transform:scale(0.3);
           }
 
           100%{
