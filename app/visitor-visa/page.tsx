@@ -26,7 +26,7 @@ export default function VisitorVisaPage() {
       assistance:
         'DS-160 guidance, interview slot assistance and premium consultation.',
     },
-  
+
     {
       country: 'Canada',
       flag: 'https://flagcdn.com/w80/ca.png',
@@ -39,13 +39,13 @@ export default function VisitorVisaPage() {
       interview: 'Usually Not Required',
       travel: 'May to September',
       description:
-        'Luxury tourism, nature and premium lifestyle.',
+        'Luxury tourism, scenic landscapes and premium lifestyle.',
       why:
         'Explore Toronto, Vancouver and Niagara Falls.',
       assistance:
         'Complete visitor visa guidance and consultation.',
     },
-  
+
     {
       country: 'Australia',
       flag: 'https://flagcdn.com/w80/au.png',
@@ -64,7 +64,7 @@ export default function VisitorVisaPage() {
       assistance:
         'Premium visa filing and consultation support.',
     },
-  
+
     {
       country: 'United Kingdom',
       flag: 'https://flagcdn.com/w80/gb.png',
@@ -83,7 +83,7 @@ export default function VisitorVisaPage() {
       assistance:
         'Premium visitor visa consultation.',
     },
-  
+
     {
       country: 'Japan',
       flag: 'https://flagcdn.com/w80/jp.png',
@@ -102,7 +102,7 @@ export default function VisitorVisaPage() {
       assistance:
         'Complete tourist visa support.',
     },
-  
+
     {
       country: 'Europe',
       flag: 'https://flagcdn.com/w80/eu.png',
@@ -121,7 +121,7 @@ export default function VisitorVisaPage() {
       assistance:
         'Visa filing and itinerary guidance.',
     },
-  
+
     {
       country: 'Vietnam',
       flag: 'https://flagcdn.com/w80/vn.png',
@@ -140,7 +140,7 @@ export default function VisitorVisaPage() {
       assistance:
         'Tourist visa filing and support.',
     },
-  
+
     {
       country: 'China',
       flag: 'https://flagcdn.com/w80/cn.png',
@@ -159,16 +159,18 @@ export default function VisitorVisaPage() {
       assistance:
         'Premium tourist visa guidance.',
     },
-  
+
   ];
+
+  return (
+
+    <main className="bg-[#F7FAFC] min-h-screen">
 
       {/* NAVBAR */}
 
       <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
-
-          {/* LOGO */}
 
           <a href="/" className="flex items-center gap-4">
 
@@ -192,8 +194,6 @@ export default function VisitorVisaPage() {
 
           </a>
 
-          {/* NAVIGATION */}
-
           <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
 
             <a href="/" className="hover:text-[#D4AF37] transition">
@@ -208,7 +208,7 @@ export default function VisitorVisaPage() {
               Visitor Visa
             </a>
 
-            <a href="/#contact" className="hover:text-[#D4AF37] transition">
+            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
               Connect
             </a>
 
@@ -302,191 +302,106 @@ export default function VisitorVisaPage() {
 
       </section>
 
-     {/* POPUP */}
+      {/* POPUP */}
 
-{selectedVisa && (
+      {selectedVisa && (
 
-  <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md flex items-center justify-center p-5">
+        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md flex items-center justify-center p-5">
 
-    <div className="relative bg-white w-full max-w-6xl h-[88vh] rounded-[40px] overflow-hidden shadow-2xl grid lg:grid-cols-2">
+          <div className="relative bg-white w-full max-w-6xl h-[88vh] rounded-[40px] overflow-hidden shadow-2xl grid lg:grid-cols-2">
 
-      {/* CLOSE */}
+            {/* CLOSE */}
 
-      <button
-        onClick={() => setSelectedVisa(null)}
-        className="absolute top-5 right-5 z-50 bg-white text-[#0B1F4D] w-12 h-12 rounded-full shadow-xl text-3xl hover:scale-110 transition"
-      >
-        ×
-      </button>
+            <button
+              onClick={() => setSelectedVisa(null)}
+              className="absolute top-5 right-5 z-50 bg-white text-[#0B1F4D] w-12 h-12 rounded-full shadow-xl text-3xl hover:scale-110 transition"
+            >
+              ×
+            </button>
 
-      {/* LEFT */}
+            {/* LEFT */}
 
-      <div className="relative h-full">
+            <div className="relative h-full">
 
-        <img
-          src={selectedVisa.image}
-          className="w-full h-full object-cover"
-        />
+              <img
+                src={selectedVisa.image}
+                className="w-full h-full object-cover"
+              />
 
-        <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/40" />
 
-        <div className="absolute bottom-10 left-10 right-10 text-white">
+              <div className="absolute bottom-10 left-10 right-10 text-white">
 
-          <div className="flex items-center gap-4 mb-5">
+                <div className="flex items-center gap-4 mb-5">
 
-            <img
-              src={selectedVisa.flag}
-              className="w-14 h-14 rounded-full border-2 border-white"
-            />
+                  <img
+                    src={selectedVisa.flag}
+                    className="w-14 h-14 rounded-full border-2 border-white"
+                  />
 
-            <h2 className="text-5xl font-bold">
-              {selectedVisa.country}
-            </h2>
+                  <h2 className="text-5xl font-bold">
+                    {selectedVisa.country}
+                  </h2>
 
-          </div>
+                </div>
 
-          <p className="text-lg leading-relaxed text-gray-200">
+                <p className="text-lg leading-relaxed text-gray-200">
+                  {selectedVisa.description}
+                </p>
 
-            {selectedVisa.description}
-
-          </p>
-
-        </div>
-
-      </div>
-
-      {/* RIGHT */}
-
-      <div className="h-full overflow-y-auto p-10 flex flex-col justify-between">
-
-        <div>
-
-          {/* VISA INFO */}
-
-          <div className="bg-[#F7FAFC] rounded-[30px] p-7">
-
-            <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
-              Visa Information
-            </h3>
-
-            <div className="space-y-4 text-gray-700 text-[16px]">
-
-              <p><span className="font-bold text-[#0B1F4D]">Visa Type:</span> {selectedVisa.visa}</p>
-
-              <p><span className="font-bold text-[#0B1F4D]">Visa Validity:</span> {selectedVisa.validity}</p>
-
-              <p><span className="font-bold text-[#0B1F4D]">Stay Duration:</span> {selectedVisa.stay}</p>
-
-              <p><span className="font-bold text-[#0B1F4D]">Processing Time:</span> {selectedVisa.processing}</p>
-
-              <p><span className="font-bold text-[#0B1F4D]">Interview:</span> {selectedVisa.interview}</p>
-
-              <p><span className="font-bold text-[#0B1F4D]">Best Time To Travel:</span> {selectedVisa.travel}</p>
+              </div>
 
             </div>
 
-          </div>
+            {/* RIGHT */}
 
-          {/* WHY VISIT */}
+            <div className="h-full overflow-y-auto p-10 flex flex-col justify-between">
 
-          <div className="mt-6 bg-blue-50 rounded-[30px] p-7">
+              <div>
 
-            <h3 className="text-3xl font-bold text-[#0B1F4D] mb-4">
-              Why Visit?
-            </h3>
+                <div className="bg-[#F7FAFC] rounded-[30px] p-7">
 
-            <p className="text-gray-700 leading-relaxed text-[16px]">
-
-              {selectedVisa.why}
-
-            </p>
-
-          </div>
-
-          {/* ASSISTANCE */}
-
-          <div className="mt-6 bg-yellow-50 rounded-[30px] p-7">
-
-            <h3 className="text-3xl font-bold text-[#0B1F4D] mb-4">
-              Eduaccess Assistance
-            </h3>
-
-            <p className="text-gray-700 leading-relaxed text-[16px]">
-
-              {selectedVisa.assistance}
-
-            </p>
-
-          </div>
-
-        </div>
-
-        {/* BUTTON */}
-
-        <div className="pt-6">
-
-          <a
-            href="/connect-us"
-            className="w-full block text-center bg-[#0B1F4D] hover:bg-[#102A63] text-white py-5 rounded-full text-lg font-semibold transition shadow-xl"
-          >
-            Apply Now
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-)}
-
-            {/* CONTENT */}
-
-            <div className="p-10">
-
-              <div className="grid md:grid-cols-2 gap-6">
-
-                <div className="bg-[#F7FAFC] rounded-3xl p-6">
-
-                  <h3 className="text-2xl font-bold text-[#0B1F4D] mb-5">
+                  <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
                     Visa Information
                   </h3>
 
-                  <div className="space-y-4 text-gray-600">
+                  <div className="space-y-4 text-gray-700 text-[16px]">
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Visa Type:</span> {selectedVisa.visa}</p>
+                    <p><span className="font-bold text-[#0B1F4D]">Visa Type:</span> {selectedVisa.visa}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Visa Validity:</span> {selectedVisa.validity}</p>
+                    <p><span className="font-bold text-[#0B1F4D]">Visa Validity:</span> {selectedVisa.validity}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Stay Duration:</span> {selectedVisa.stay}</p>
+                    <p><span className="font-bold text-[#0B1F4D]">Stay Duration:</span> {selectedVisa.stay}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Processing Time:</span> {selectedVisa.processing}</p>
+                    <p><span className="font-bold text-[#0B1F4D]">Processing Time:</span> {selectedVisa.processing}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Interview:</span> {selectedVisa.interview}</p>
+                    <p><span className="font-bold text-[#0B1F4D]">Interview:</span> {selectedVisa.interview}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Best Time To Travel:</span> {selectedVisa.travel}</p>
+                    <p><span className="font-bold text-[#0B1F4D]">Best Time To Travel:</span> {selectedVisa.travel}</p>
 
                   </div>
 
                 </div>
 
-                <div className="bg-blue-50 rounded-3xl p-6">
+                <div className="mt-6 bg-blue-50 rounded-[30px] p-7">
 
-                  <h3 className="text-2xl font-bold text-[#0B1F4D] mb-5">
+                  <h3 className="text-3xl font-bold text-[#0B1F4D] mb-4">
                     Why Visit?
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-[16px]">
                     {selectedVisa.why}
                   </p>
 
-                  <h3 className="text-2xl font-bold text-[#0B1F4D] mt-8 mb-5">
+                </div>
+
+                <div className="mt-6 bg-yellow-50 rounded-[30px] p-7">
+
+                  <h3 className="text-3xl font-bold text-[#0B1F4D] mb-4">
                     Eduaccess Assistance
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-[16px]">
                     {selectedVisa.assistance}
                   </p>
 
@@ -494,14 +409,16 @@ export default function VisitorVisaPage() {
 
               </div>
 
-              {/* BUTTON */}
+              <div className="pt-6">
 
-              <a
-                href="/#contact"
-                className="mt-10 inline-block bg-[#0B1F4D] hover:bg-[#102A63] text-white px-8 py-4 rounded-full font-semibold transition"
-              >
-                Apply Now
-              </a>
+                <a
+                  href="/connect-us"
+                  className="w-full block text-center bg-[#0B1F4D] hover:bg-[#102A63] text-white py-5 rounded-full text-lg font-semibold transition shadow-xl"
+                >
+                  Apply Now
+                </a>
+
+              </div>
 
             </div>
 
@@ -510,188 +427,6 @@ export default function VisitorVisaPage() {
         </div>
 
       )}
-
-      {/* CONTACT */}
-
-<section
-  id="contact"
-  className="py-24 bg-[#F7FAFC]"
->
-
-  <div className="max-w-7xl mx-auto px-5 lg:px-8">
-
-    <div className="text-center mb-16">
-
-      <h2 className="text-5xl font-bold text-[#0B1F4D]">
-        Connect With Eduaccess
-      </h2>
-
-      <p className="text-gray-600 mt-5 text-lg">
-        Start your global journey with premium guidance.
-      </p>
-
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-10">
-
-      {/* CONTACT CARD */}
-
-      <div className="bg-white rounded-[35px] p-10 shadow-xl border border-gray-100">
-
-        <div className="space-y-10">
-
-          {/* PHONE */}
-
-          <div className="flex gap-5">
-
-            <div className="bg-yellow-100 p-4 rounded-2xl h-fit">
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-[#D4AF37]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-
-            </div>
-
-            <div>
-
-              <h3 className="text-2xl font-bold text-[#0B1F4D]">
-                Phone
-              </h3>
-
-              <a
-                href="tel:+919998920644"
-                className="text-gray-600 mt-2 block hover:text-[#D4AF37]"
-              >
-                +91 99989 20644
-              </a>
-
-            </div>
-
-          </div>
-
-          {/* EMAIL */}
-
-          <div className="flex gap-5">
-
-            <div className="bg-blue-100 p-4 rounded-2xl h-fit">
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-[#0B1F4D]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M16 12H8m8 0l-8 0m8 0l4-4m-4 4l4 4"
-                />
-              </svg>
-
-            </div>
-
-            <div>
-
-              <h3 className="text-2xl font-bold text-[#0B1F4D]">
-                Email
-              </h3>
-
-              <a
-                href="mailto:connect.eduaccessess@outlook.com"
-                className="text-gray-600 mt-2 block hover:text-[#D4AF37]"
-              >
-                connect.eduaccessess@outlook.com
-              </a>
-
-            </div>
-
-          </div>
-
-          {/* ADDRESS */}
-
-          <div className="flex gap-5">
-
-            <div className="bg-yellow-100 p-4 rounded-2xl h-fit">
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-[#D4AF37]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.243-4.243a8 8 0 1111.313 0z"
-                />
-
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-
-            </div>
-
-            <div>
-
-              <h3 className="text-2xl font-bold text-[#0B1F4D]">
-                Address
-              </h3>
-
-              <p className="text-gray-600 mt-2 leading-relaxed">
-
-                KB House, Third Floor,
-                Next to Gopinathji Honda Showroom,
-                Vadodara, Gujarat
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* GOOGLE MAP */}
-
-      <div className="rounded-[35px] overflow-hidden shadow-xl border border-gray-200 h-[500px]">
-
-        <iframe
-          src="https://www.google.com/maps?q=KB%20House%20Vadodara&output=embed"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          loading="lazy"
-        />
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
 
       {/* FOOTER */}
 
@@ -703,7 +438,7 @@ export default function VisitorVisaPage() {
 
       </footer>
 
-      {/* FLOATING WHATSAPP */}
+      {/* WHATSAPP */}
 
       <a
         href="https://wa.me/919998920644"
@@ -720,5 +455,6 @@ export default function VisitorVisaPage() {
       </a>
 
     </main>
+
   );
 }
