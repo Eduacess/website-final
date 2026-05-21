@@ -19,11 +19,11 @@ export default function VisitorVisaPage() {
       interview: 'Mandatory',
       travel: 'April to June & September to November',
       description:
-        'Luxury tourism, business travel, shopping and world-famous attractions.',
+        'Luxury tourism, business travel and world-famous attractions.',
       why:
-        'Visit New York, Las Vegas, Miami and Los Angeles for unforgettable experiences.',
+        'Visit New York, Miami, Las Vegas and Los Angeles for unforgettable experiences.',
       assistance:
-        'We assist with DS-160 guidance, interview slots and complete consultation.',
+        'We assist with DS-160 guidance, interview slots and premium consultation.',
     },
 
     {
@@ -38,9 +38,9 @@ export default function VisitorVisaPage() {
       interview: 'Usually Not Required',
       travel: 'May to September',
       description:
-        'Premium tourism, scenic nature, luxury cities and family travel.',
+        'Premium tourism, scenic nature and luxury cities.',
       why:
-        'Explore Toronto, Vancouver, Niagara Falls and breathtaking landscapes.',
+        'Explore Toronto, Vancouver and Niagara Falls.',
       assistance:
         'Complete visitor visa guidance and profile consultation.',
     },
@@ -57,11 +57,11 @@ export default function VisitorVisaPage() {
       interview: 'Not Required',
       travel: 'September to November & March to May',
       description:
-        'Luxury beaches, premium lifestyle and adventure experiences.',
+        'Luxury beaches, premium lifestyle and adventure tourism.',
       why:
-        'Visit Sydney, Melbourne and Gold Coast for world-class tourism.',
+        'Visit Sydney, Melbourne and Gold Coast.',
       assistance:
-        'Eduaccess assists with visa filing and consultation.',
+        'Complete visa filing and consultation support.',
     },
 
     {
@@ -76,11 +76,11 @@ export default function VisitorVisaPage() {
       interview: 'Usually Not Required',
       travel: 'May to September',
       description:
-        'Historic destinations, luxury shopping and royal experiences.',
+        'Historic destinations and luxury experiences.',
       why:
         'Explore London, Scotland and iconic UK landmarks.',
       assistance:
-        'Premium visitor visa assistance and consultation.',
+        'Premium visitor visa filing and consultation.',
     },
 
     {
@@ -97,7 +97,7 @@ export default function VisitorVisaPage() {
       description:
         'Cherry blossoms, advanced cities and premium tourism.',
       why:
-        'Visit Tokyo, Osaka and Kyoto for unforgettable experiences.',
+        'Visit Tokyo, Osaka and Kyoto.',
       assistance:
         'Complete tourist visa guidance and application support.',
     },
@@ -116,7 +116,7 @@ export default function VisitorVisaPage() {
       description:
         'Travel multiple European countries with one visa.',
       why:
-        'Explore Paris, Switzerland, Italy and luxury European tourism.',
+        'Explore Paris, Switzerland, Italy and Europe’s luxury tourism.',
       assistance:
         'Visa filing, itinerary guidance and profile consultation.',
     },
@@ -171,7 +171,7 @@ export default function VisitorVisaPage() {
               Visitor Visa
             </a>
 
-            <a href="/#contact" className="hover:text-[#D4AF37] transition">
+            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
               Connect
             </a>
 
@@ -271,7 +271,7 @@ export default function VisitorVisaPage() {
 
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md p-5">
 
-          <div className="bg-white max-w-3xl w-full rounded-[40px] overflow-hidden shadow-2xl relative max-h-[95vh] overflow-y-auto">
+          <div className="bg-white w-full max-w-5xl rounded-[40px] overflow-hidden shadow-2xl relative">
 
             {/* CLOSE */}
 
@@ -282,100 +282,114 @@ export default function VisitorVisaPage() {
               ×
             </button>
 
-            {/* IMAGE */}
+            <div className="grid lg:grid-cols-2">
 
-            <div className="relative h-[320px]">
+              {/* LEFT IMAGE */}
 
-              <img
-                src={selectedVisa.image}
-                className="w-full h-full object-cover"
-              />
+              <div className="relative h-[750px]">
 
-              <div className="absolute inset-0 bg-black/40" />
+                <img
+                  src={selectedVisa.image}
+                  className="w-full h-full object-cover"
+                />
 
-              <div className="absolute bottom-8 left-8 text-white">
+                <div className="absolute inset-0 bg-black/40" />
 
-                <div className="flex items-center gap-4 mb-4">
+                <div className="absolute bottom-10 left-10 right-10 text-white">
 
-                  <img
-                    src={selectedVisa.flag}
-                    className="w-14 h-14 rounded-full border-2 border-white"
-                  />
+                  <div className="flex items-center gap-4 mb-5">
 
-                  <h2 className="text-5xl font-bold">
-                    {selectedVisa.country}
-                  </h2>
+                    <img
+                      src={selectedVisa.flag}
+                      className="w-14 h-14 rounded-full border-2 border-white"
+                    />
+
+                    <h2 className="text-5xl font-bold">
+                      {selectedVisa.country}
+                    </h2>
+
+                  </div>
+
+                  <p className="text-lg text-gray-200 leading-relaxed">
+                    {selectedVisa.description}
+                  </p>
 
                 </div>
 
-                <p className="text-lg text-gray-200 max-w-2xl">
-                  {selectedVisa.description}
-                </p>
-
               </div>
 
-            </div>
+              {/* RIGHT CONTENT */}
 
-            {/* CONTENT */}
+              <div className="p-10 flex flex-col justify-between">
 
-            <div className="p-10">
+                <div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+                  {/* VISA INFO */}
 
-                <div className="bg-[#F7FAFC] rounded-3xl p-6">
+                  <div className="bg-[#F7FAFC] rounded-3xl p-6">
 
-                  <h3 className="text-2xl font-bold text-[#0B1F4D] mb-5">
-                    Visa Information
-                  </h3>
+                    <h3 className="text-2xl font-bold text-[#0B1F4D] mb-6">
+                      Visa Information
+                    </h3>
 
-                  <div className="space-y-4 text-gray-600">
+                    <div className="space-y-4 text-gray-600 text-[15px]">
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Visa Type:</span> {selectedVisa.visa}</p>
+                      <p><span className="font-semibold text-[#0B1F4D]">Visa Type:</span> {selectedVisa.visa}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Visa Validity:</span> {selectedVisa.validity}</p>
+                      <p><span className="font-semibold text-[#0B1F4D]">Visa Validity:</span> {selectedVisa.validity}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Stay Duration:</span> {selectedVisa.stay}</p>
+                      <p><span className="font-semibold text-[#0B1F4D]">Stay Duration:</span> {selectedVisa.stay}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Processing Time:</span> {selectedVisa.processing}</p>
+                      <p><span className="font-semibold text-[#0B1F4D]">Processing Time:</span> {selectedVisa.processing}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Interview:</span> {selectedVisa.interview}</p>
+                      <p><span className="font-semibold text-[#0B1F4D]">Interview:</span> {selectedVisa.interview}</p>
 
-                    <p><span className="font-semibold text-[#0B1F4D]">Best Time To Travel:</span> {selectedVisa.travel}</p>
+                      <p><span className="font-semibold text-[#0B1F4D]">Best Time To Travel:</span> {selectedVisa.travel}</p>
+
+                    </div>
+
+                  </div>
+
+                  {/* WHY VISIT */}
+
+                  <div className="mt-6 bg-blue-50 rounded-3xl p-6">
+
+                    <h3 className="text-2xl font-bold text-[#0B1F4D] mb-4">
+                      Why Visit?
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed">
+                      {selectedVisa.why}
+                    </p>
+
+                  </div>
+
+                  {/* ASSISTANCE */}
+
+                  <div className="mt-6 bg-yellow-50 rounded-3xl p-6">
+
+                    <h3 className="text-2xl font-bold text-[#0B1F4D] mb-4">
+                      Eduaccess Assistance
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed">
+                      {selectedVisa.assistance}
+                    </p>
 
                   </div>
 
                 </div>
 
-                <div className="bg-blue-50 rounded-3xl p-6">
+                {/* BUTTON */}
 
-                  <h3 className="text-2xl font-bold text-[#0B1F4D] mb-5">
-                    Why Visit?
-                  </h3>
-
-                  <p className="text-gray-600 leading-relaxed">
-                    {selectedVisa.why}
-                  </p>
-
-                  <h3 className="text-2xl font-bold text-[#0B1F4D] mt-8 mb-5">
-                    Eduaccess Assistance
-                  </h3>
-
-                  <p className="text-gray-600 leading-relaxed">
-                    {selectedVisa.assistance}
-                  </p>
-
-                </div>
+                <a
+                  href="/connect-us"
+                  className="mt-8 inline-block bg-[#0B1F4D] hover:bg-[#102A63] text-white px-8 py-4 rounded-full font-semibold transition text-center"
+                >
+                  Apply Now
+                </a>
 
               </div>
-
-              {/* BUTTON */}
-
-              <a
-                href="/#contact"
-                className="mt-10 inline-block bg-[#0B1F4D] hover:bg-[#102A63] text-white px-8 py-4 rounded-full font-semibold transition"
-              >
-                Apply Now
-              </a>
 
             </div>
 
