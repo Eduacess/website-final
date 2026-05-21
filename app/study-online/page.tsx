@@ -21,7 +21,7 @@ export default function StudyOnlinePage() {
           : prev + 6
       );
 
-    }, 30000);
+    }, 12000);
 
     return () => clearInterval(interval);
 
