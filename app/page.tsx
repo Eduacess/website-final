@@ -90,9 +90,7 @@ export default function Home() {
               Study
             </a>
 
-            <a href="#visa" className="hover:text-[#D4AF37] transition">
-              Visitor Visa
-            </a>
+        
 
             <a href="#contact" className="hover:text-[#D4AF37] transition">
               Connect
@@ -464,28 +462,7 @@ export default function Home() {
 
       </section>
 
-      {/* VISITOR VISA */}
-
-      <section id="visa" className="py-24 bg-[#0B1F4D] text-white">
-
-        <div className="max-w-7xl mx-auto px-5 lg:px-8 text-center">
-
-          <h2 className="text-5xl font-bold">
-            Visitor Visa Assistance
-          </h2>
-
-          <p className="text-gray-300 mt-6 text-lg max-w-3xl mx-auto leading-relaxed">
-
-            Premium visitor visa guidance for international travel,
-            documentation support and end-to-end consultation services.
-
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* CONTACT */}
+            {/* CONTACT */}
 
       <section id="contact" className="py-24 bg-[#F7FAFC]">
 
