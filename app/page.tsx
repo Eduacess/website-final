@@ -150,19 +150,21 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-5 mt-10">
 
-              <button className="bg-[#0B1F4D] hover:bg-[#102A63] text-white px-8 py-4 rounded-full font-semibold flex items-center gap-3 transition shadow-xl">
+            <a
+  href="/study"
+  className="bg-[#0B1F4D] hover:bg-[#102A63] text-white px-8 py-4 rounded-full font-semibold flex items-center gap-3 transition shadow-xl"
+>
+  Explore Programs
+  <ArrowRight size={18} />
+</a>
 
-                Explore Programs
 
-                <ArrowRight size={18} />
-
-              </button>
-
-              <button className="border border-[#0B1F4D] px-8 py-4 rounded-full font-semibold hover:bg-[#0B1F4D] hover:text-white transition">
-
-                Talk To Counselor
-
-              </button>
+<a
+  href="/connect-us"
+  className="border border-[#0B1F4D] px-8 py-4 rounded-full font-semibold hover:bg-[#0B1F4D] hover:text-white transition"
+>
+  Free Counseling
+</a>
 
             </div>
 
