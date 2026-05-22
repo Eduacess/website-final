@@ -10,7 +10,7 @@ export const universities = [
     location: 'India',
 
     image:
-      'https://images.shiksha.com/mediadata/images/1638249428phpQkZ5pP.jpeg',
+      'https://images.collegedunia.com/public/college_data/images/campusimage/14181978011412140322amity.jpg',
 
     programs: {
 
@@ -36,28 +36,28 @@ export const universities = [
         title: 'NAAC A+ Accredited',
 
         icon:
-          'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+          'https://i.postimg.cc/VL6nWBmD/naac.png',
       },
 
       {
         title: 'THE Ranked University',
 
         icon:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/THE_World_University_Rankings_logo.svg/512px-THE_World_University_Rankings_logo.svg.png',
+          'https://i.postimg.cc/jjR0Lw6T/the-ranking.png',
       },
 
       {
         title: 'QS Ranked University',
 
         icon:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/QS_World_University_Rankings_logo.svg/512px-QS_World_University_Rankings_logo.svg.png',
+          'https://i.postimg.cc/G2J0gq2m/qs-ranking.png',
       },
 
       {
         title: 'Placement Opportunities',
 
         icon:
-          'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
+          'https://cdn-icons-png.flaticon.com/512/2910/2910791.png',
       },
 
     ],
