@@ -36,21 +36,21 @@ export const universities = [
         title: 'NAAC A+ Accredited',
 
         icon:
-          'https://i.postimg.cc/VL6nWBmD/naac.png',
+          'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
 
       {
         title: 'THE Ranked University',
 
         icon:
-          'https://i.postimg.cc/jjR0Lw6T/the-ranking.png',
+          'https://upload.wikimedia.org/wikipedia/commons/8/82/THE_World_University_Rankings_logo.svg',
       },
 
       {
         title: 'QS Ranked University',
 
         icon:
-          'https://i.postimg.cc/G2J0gq2m/qs-ranking.png',
+          'https://upload.wikimedia.org/wikipedia/commons/0/02/QS_World_University_Rankings_logo.svg',
       },
 
       {
