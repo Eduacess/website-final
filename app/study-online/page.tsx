@@ -320,23 +320,18 @@ export default function StudyOnlinePage() {
 
                       <div className="flex flex-wrap gap-3">
 
-                        {selectedUniversity.programs.pg.map((program: string, i: number) => (
+  {selectedUniversity.programs.ug.map((program: string, i: number) => (
 
-                          <div
-                            key={i}
-                            className="bg-white px-5 py-3 rounded-full shadow text-[#0B1F4D] font-medium"
-                          >
-                            {program}
-                          </div>
+    <div
+      key={i}
+      className="bg-white px-5 py-3 rounded-full shadow text-[#0B1F4D] font-medium"
+    >
+      {program}
+    </div>
 
-                        ))}
+  ))}
 
-                      </div>
-
-                    </div>
-
-                  )}
-
+</div>
                 </div>
 
                 {/* HIGHLIGHTS */}
