@@ -5,8 +5,7 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/0/0f/Amity_University_logo.png',
+    image: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BBA', 'BCA', 'BCom'],
       pg: ['MBA', 'MCA', 'MCom'],
@@ -31,14 +30,13 @@ export const universities = [
       },
     ],
   },
-  
+
   {
     name: 'Manipal University',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/9/95/Manipal_University_Jaipur_Logo.png',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BBA', 'BCom', 'BCA'],
       pg: ['MBA', 'MCA'],
@@ -63,14 +61,13 @@ export const universities = [
       },
     ],
   },
-  
+
   {
     name: 'NMIMS University',
     type: 'PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/0/0d/NMIMS_Logo.png',
+    image: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: [],
       pg: ['MBA', 'PGDM', 'MCom'],
@@ -95,14 +92,13 @@ export const universities = [
       },
     ],
   },
-  
+
   {
     name: 'Jain University',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/e/e5/Jain_University_Logo.png',
+    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BBA', 'BCA', 'BA'],
       pg: ['MBA', 'MCA', 'MA'],
@@ -127,14 +123,13 @@ export const universities = [
       },
     ],
   },
-  
+
   {
     name: 'LPU University',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/3/32/Lovely_Professional_University_logo.png',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BCA', 'BBA', 'BA'],
       pg: ['MBA', 'MCA'],
@@ -159,14 +154,13 @@ export const universities = [
       },
     ],
   },
-  
+
   {
     name: 'Chandigarh University',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/9/92/Chandigarh_University_seal.png',
+    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BBA', 'BCA'],
       pg: ['MBA', 'MCA'],
@@ -191,14 +185,13 @@ export const universities = [
       },
     ],
   },
-  
+
   {
     name: 'DY Patil University',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/e/e0/DY_Patil_University_logo.png',
+    image: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BBA', 'BCA'],
       pg: ['MBA', 'MCA'],
@@ -223,14 +216,13 @@ export const universities = [
       },
     ],
   },
-  
+
   {
     name: 'UPES University',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/3/3b/UPES_Logo.png',
+    image: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BBA', 'BCA'],
       pg: ['MBA'],
@@ -255,69 +247,37 @@ export const universities = [
       },
     ],
   },
-  
+
   {
-    name: 'Shoolini University',
+    name: 'Others',
     type: 'UG + PG',
-    flag: 'https://flagcdn.com/w40/in.png',
-    location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/f/f8/Shoolini_University_logo.png',
+    flag: 'https://flagcdn.com/w40/un.png',
+    location: 'Global',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop',
     programs: {
-      ug: ['BBA', 'BA'],
-      pg: ['MBA', 'MA'],
-      more: '20+ More Programs',
+      ug: ['200+ Universities'],
+      pg: ['Global Online Degrees'],
+      more: 'Find Your Right University',
     },
     benefits: [
       {
-        title: 'Research Focused',
-        icon: 'https://cdn-icons-png.flaticon.com/512/4140/4140047.png',
-      },
-      {
-        title: 'Global Collaborations',
+        title: 'Global Universities',
         icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
-      },
-      {
-        title: 'NAAC Accredited',
-        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
-      },
-      {
-        title: 'Modern Learning',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-      },
-    ],
-  },
-  
-  {
-    name: 'Sikkim Manipal University',
-    type: 'UG + PG',
-    flag: 'https://flagcdn.com/w40/in.png',
-    location: 'India',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/3/3e/Sikkim_Manipal_University_logo.png',
-    programs: {
-      ug: ['BBA', 'BA'],
-      pg: ['MBA', 'MA'],
-      more: '25+ More Programs',
-    },
-    benefits: [
-      {
-        title: 'UGC Entitled',
-        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
       {
         title: 'Flexible Learning',
         icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
       },
       {
-        title: 'Affordable Programs',
+        title: 'Affordable Degrees',
         icon: 'https://cdn-icons-png.flaticon.com/512/3063/3063822.png',
       },
       {
-        title: 'Career Support',
+        title: 'Expert Counseling',
         icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
       },
     ],
+    others: true,
   },
-  
-  ];
+
+];
