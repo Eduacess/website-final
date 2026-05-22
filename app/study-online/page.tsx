@@ -37,8 +37,6 @@ export default function StudyOnlinePage() {
 
       if (found.length > 0) return found;
 
-      return [];
-
     }
 
     return universities.slice(startIndex, startIndex + 6);
@@ -77,26 +75,6 @@ export default function StudyOnlinePage() {
 
           </a>
 
-          <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
-
-            <a href="/" className="hover:text-[#D4AF37] transition">
-              Home
-            </a>
-
-            <a href="/study" className="text-[#D4AF37]">
-              Study
-            </a>
-
-            <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
-              Visitor Visa
-            </a>
-
-            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
-              Connect Us
-            </a>
-
-          </div>
-
         </div>
 
       </nav>
@@ -112,6 +90,7 @@ export default function StudyOnlinePage() {
         <h1 className="text-5xl lg:text-7xl font-bold mt-8 text-[#0B1F4D] leading-tight">
 
           Study Online
+
           <span className="block text-[#D4AF37]">
             From Anywhere
           </span>
@@ -147,7 +126,7 @@ export default function StudyOnlinePage() {
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-700">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
             {displayedUniversities.map((university: any, index) => (
 
@@ -157,18 +136,17 @@ export default function StudyOnlinePage() {
                 className="group cursor-pointer bg-white rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl transition duration-500"
               >
 
-                <div className="relative h-[500px] overflow-hidden bg-white">
+                <div className="relative h-[500px] overflow-hidden">
 
                   <img
                     src={university.image}
-                    className="w-full h-full object-contain bg-white p-10 group-hover:scale-110 transition duration-700"
+                    alt={university.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
 
-                  <div className="absolute inset-0 bg-black/10" />
+                  <div className="absolute inset-0 bg-black/45" />
 
-                  {/* CONTENT */}
-
-                  <div className="absolute bottom-8 left-8 right-8 text-[#0B1F4D]">
+                  <div className="absolute bottom-8 left-8 right-8 text-white">
 
                     <div className="inline-block bg-[#D4AF37] text-[#0B1F4D] px-4 py-2 rounded-full text-sm font-bold mb-4">
 
@@ -188,7 +166,7 @@ export default function StudyOnlinePage() {
                         className="w-7 h-5 rounded-sm object-cover"
                       />
 
-                      <p className="text-gray-700 text-lg">
+                      <p className="text-gray-200 text-lg">
                         {university.location}
                       </p>
 
@@ -227,14 +205,17 @@ export default function StudyOnlinePage() {
 
             {/* LEFT */}
 
-            <div className="relative h-full bg-white">
+            <div className="relative h-full">
 
               <img
                 src={selectedUniversity.image}
-                className="w-full h-full object-contain bg-white p-16"
+                alt={selectedUniversity.name}
+                className="w-full h-full object-cover"
               />
 
-              <div className="absolute bottom-10 left-10 right-10 text-[#0B1F4D]">
+              <div className="absolute inset-0 bg-black/50" />
+
+              <div className="absolute bottom-10 left-10 right-10 text-white">
 
                 <h2 className="text-5xl font-bold">
                   {selectedUniversity.name}
@@ -247,7 +228,7 @@ export default function StudyOnlinePage() {
                     className="w-8 h-6 rounded-sm object-cover"
                   />
 
-                  <p className="text-xl text-gray-700">
+                  <p className="text-xl text-gray-200">
                     {selectedUniversity.location}
                   </p>
 
@@ -259,110 +240,106 @@ export default function StudyOnlinePage() {
 
             {/* RIGHT */}
 
-            <div className="p-10 overflow-y-auto flex flex-col justify-between">
+            <div className="p-10 overflow-y-auto">
 
-              <div>
+              {/* PROGRAMS */}
 
-                {/* PROGRAMS */}
+              <div className="bg-[#F7FAFC] rounded-[30px] p-7">
 
-                <div className="bg-[#F7FAFC] rounded-[30px] p-7">
+                <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
+                  Programs Offered
+                </h3>
 
-                  <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
-                    Programs Offered
-                  </h3>
+                {/* UG */}
 
-                  {/* UG */}
+                {selectedUniversity.programs.ug.length > 0 && (
 
-                  {selectedUniversity.programs.ug.length > 0 && (
+                  <div className="mb-6">
 
-                    <div className="mb-6">
+                    <h4 className="text-xl font-bold text-[#D4AF37] mb-4">
+                      Undergraduate Programs
+                    </h4>
 
-                      <h4 className="text-xl font-bold text-[#D4AF37] mb-4">
-                        Undergraduate Programs
-                      </h4>
+                    <div className="flex flex-wrap gap-3">
 
-                      <div className="flex flex-wrap gap-3">
+                      {selectedUniversity.programs.ug.map((program: string, i: number) => (
 
-                        {selectedUniversity.programs.ug.map((program: string, i: number) => (
+                        <div
+                          key={i}
+                          className="bg-white px-5 py-3 rounded-full shadow text-[#0B1F4D] font-medium"
+                        >
+                          {program}
+                        </div>
 
-                          <div
-                            key={i}
-                            className="bg-white px-5 py-3 rounded-full shadow text-[#0B1F4D] font-medium"
-                          >
-                            {program}
-                          </div>
-
-                        ))}
-
-                      </div>
+                      ))}
 
                     </div>
-
-                  )}
-
-                  {/* PG */}
-
-                  {selectedUniversity.programs.pg.length > 0 && (
-
-                    <div>
-
-                      <h4 className="text-xl font-bold text-[#D4AF37] mb-4">
-                        Postgraduate Programs
-                      </h4>
-
-                      <div className="flex flex-wrap gap-3">
-
-                        {selectedUniversity.programs.pg.map((program: string, i: number) => (
-
-                          <div
-                            key={i}
-                            className="bg-white px-5 py-3 rounded-full shadow text-[#0B1F4D] font-medium"
-                          >
-                            {program}
-                          </div>
-
-                        ))}
-
-                      </div>
-
-                    </div>
-
-                  )}
-
-                </div>
-
-                {/* HIGHLIGHTS */}
-
-                <div className="mt-6 bg-yellow-50 rounded-[30px] p-7">
-
-                  <h3 className="text-3xl font-bold text-[#0B1F4D] mb-5">
-                    University Highlights
-                  </h3>
-
-                  <div className="grid grid-cols-2 gap-5">
-
-                    {selectedUniversity.benefits.map((benefit: any, i: number) => (
-
-                      <div
-                        key={i}
-                        className="bg-white rounded-2xl p-5 shadow flex flex-col items-center justify-center text-center"
-                      >
-
-                        <img
-                          src={benefit.icon}
-                          alt={benefit.title}
-                          className="w-16 h-16 object-contain mb-4"
-                        />
-
-                        <p className="font-semibold text-[#0B1F4D]">
-                          {benefit.title}
-                        </p>
-
-                      </div>
-
-                    ))}
 
                   </div>
+
+                )}
+
+                {/* PG */}
+
+                {selectedUniversity.programs.pg.length > 0 && (
+
+                  <div>
+
+                    <h4 className="text-xl font-bold text-[#D4AF37] mb-4">
+                      Postgraduate Programs
+                    </h4>
+
+                    <div className="flex flex-wrap gap-3">
+
+                      {selectedUniversity.programs.pg.map((program: string, i: number) => (
+
+                        <div
+                          key={i}
+                          className="bg-white px-5 py-3 rounded-full shadow text-[#0B1F4D] font-medium"
+                        >
+                          {program}
+                        </div>
+
+                      ))}
+
+                    </div>
+
+                  </div>
+
+                )}
+
+              </div>
+
+              {/* HIGHLIGHTS */}
+
+              <div className="mt-6 bg-yellow-50 rounded-[30px] p-7">
+
+                <h3 className="text-3xl font-bold text-[#0B1F4D] mb-5">
+                  University Highlights
+                </h3>
+
+                <div className="grid grid-cols-2 gap-5">
+
+                  {selectedUniversity.benefits.map((benefit: any, i: number) => (
+
+                    <div
+                      key={i}
+                      className="bg-white rounded-2xl p-5 shadow flex flex-col items-center justify-center text-center"
+                    >
+
+                      <img
+                        src={benefit.icon}
+                        alt={benefit.title}
+                        className="w-16 h-16 object-contain mb-4"
+                      />
+
+                      <p className="font-semibold text-[#0B1F4D]">
+                        {benefit.title}
+                      </p>
+
+                    </div>
+
+                  ))}
 
                 </div>
 
@@ -390,33 +367,8 @@ export default function StudyOnlinePage() {
 
       )}
 
-      {/* FOOTER */}
-
-      <footer className="bg-[#0B1F4D] text-white py-10 text-center">
-
-        <p>
-          © 2026 EDUACCESS. All Rights Reserved.
-        </p>
-
-      </footer>
-
-      {/* WHATSAPP */}
-
-      <a
-        href="https://wa.me/919998920644"
-        target="_blank"
-        className="fixed bottom-6 right-6 z-50"
-      >
-
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-          alt="WhatsApp"
-          className="w-16 h-16 hover:scale-110 transition"
-        />
-
-      </a>
-
     </main>
 
   );
+
 }
