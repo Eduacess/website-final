@@ -157,18 +157,18 @@ export default function StudyOnlinePage() {
                 className="group cursor-pointer bg-white rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl transition duration-500"
               >
 
-                <div className="relative h-[500px] overflow-hidden">
+                <div className="relative h-[500px] overflow-hidden bg-white">
 
                   <img
                     src={university.image}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    className="w-full h-full object-contain bg-white p-10 group-hover:scale-110 transition duration-700"
                   />
 
-                  <div className="absolute inset-0 bg-black/45" />
+                  <div className="absolute inset-0 bg-black/10" />
 
                   {/* CONTENT */}
 
-                  <div className="absolute bottom-8 left-8 right-8 text-white">
+                  <div className="absolute bottom-8 left-8 right-8 text-[#0B1F4D]">
 
                     <div className="inline-block bg-[#D4AF37] text-[#0B1F4D] px-4 py-2 rounded-full text-sm font-bold mb-4">
 
@@ -188,7 +188,7 @@ export default function StudyOnlinePage() {
                         className="w-7 h-5 rounded-sm object-cover"
                       />
 
-                      <p className="text-gray-200 text-lg">
+                      <p className="text-gray-700 text-lg">
                         {university.location}
                       </p>
 
@@ -227,16 +227,14 @@ export default function StudyOnlinePage() {
 
             {/* LEFT */}
 
-            <div className="relative h-full">
+            <div className="relative h-full bg-white">
 
               <img
                 src={selectedUniversity.image}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-white p-16"
               />
 
-              <div className="absolute inset-0 bg-black/50" />
-
-              <div className="absolute bottom-10 left-10 right-10 text-white">
+              <div className="absolute bottom-10 left-10 right-10 text-[#0B1F4D]">
 
                 <h2 className="text-5xl font-bold">
                   {selectedUniversity.name}
@@ -249,7 +247,7 @@ export default function StudyOnlinePage() {
                     className="w-8 h-6 rounded-sm object-cover"
                   />
 
-                  <p className="text-xl text-gray-200">
+                  <p className="text-xl text-gray-700">
                     {selectedUniversity.location}
                   </p>
 
