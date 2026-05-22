@@ -5,7 +5,7 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://www.google.com/imgres?q=amity%20university&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Ff%2Fff%2FAmity_University_logo.png&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAmity_University%2C_Noida&docid=fQdVXIAH8ENZHM&tbnid=A_bBt5p0xmOfVM&vet=12ahUKEwiR6K_YmsyUAxVx3TgGHYPMAywQnPAOegQIFRAB..i&w=290&h=343&hcb=2&ved=2ahUKEwiR6K_YmsyUAxVx3TgGHYPMAywQnPAOegQIFRAB',
+    image: 'https://www.google.com/imgres?q=amity%20university&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Ff%2Fff%2FAmity_University_logo.png&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAmity_University%2C_Noida&docid=fQdVXIAH8ENZHM&tbnid=A_bBt5p0xmOfVM&vet=12hUKEwiR6K_YmsyUAxVx3TgGHYPMAywQnPAOegQIFRAB..i&w=290&h=343&hcb=2&ved=2ahUKEwiR6K_YmsyUAxVx3TgGHYPMAywQnPAOegQIFRAB',
     programs: {
       ug: ['BBA', 'BCA', 'BCom'],
       pg: ['MBA', 'MCA', 'MCom'],
