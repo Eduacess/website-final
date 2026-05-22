@@ -36,7 +36,7 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400&auto=format&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwlmIos-ynn-YkPUUB_NYAjgd7spbmasT5g&s',
     programs: {
       ug: ['BBA', 'BCom', 'BCA'],
       pg: ['MBA', 'MCA'],
