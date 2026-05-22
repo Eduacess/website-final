@@ -37,7 +37,7 @@ export default function StudyOnlinePage() {
 
       if (found.length > 0) return found;
 
-      return universities.filter((u: any) => u.others);
+      return [];
 
     }
 
@@ -296,12 +296,6 @@ export default function StudyOnlinePage() {
 
                         ))}
 
-                        <div className="bg-[#0B1F4D] text-white px-5 py-3 rounded-full shadow font-medium">
-
-                          {selectedUniversity.programs.more}
-
-                        </div>
-
                       </div>
 
                     </div>
@@ -359,7 +353,7 @@ export default function StudyOnlinePage() {
                         <img
                           src={benefit.icon}
                           alt={benefit.title}
-                          className="w-14 h-14 object-contain mb-4"
+                          className="w-16 h-16 object-contain mb-4"
                         />
 
                         <p className="font-semibold text-[#0B1F4D]">
