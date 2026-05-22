@@ -1,54 +1,58 @@
-{
-  name: 'Amity Online',
+export const universities = [
 
-  type: 'UG + PG',
+  {
+    name: 'Amity Online',
 
-  flag: 'https://flagcdn.com/w40/in.png',
+    type: 'UG + PG',
 
-  location: 'India',
+    flag: 'https://flagcdn.com/w40/in.png',
 
-  image: '/amity-campus.png',
+    location: 'India',
 
-  programs: {
+    image: '/amity-campus.png',
 
-    ug: [
-      'BBA',
-      'BCA',
-      'B.Com',
-      'BA Journalism & Mass Communication',
-    ],
+    programs: {
 
-    pg: [
-      'MBA',
-      'MCA',
-      'M.Com',
-      'MA Journalism & Mass Communication',
+      ug: [
+        'BBA',
+        'BCA',
+        'B.Com',
+        'BA Journalism & Mass Communication',
+      ],
+
+      pg: [
+        'MBA',
+        'MCA',
+        'M.Com',
+        'MA Journalism & Mass Communication',
+      ],
+
+    },
+
+    benefits: [
+
+      {
+        title: 'NAAC A+ Accredited',
+        icon: '/naaca+.png',
+      },
+
+      {
+        title: 'THE Ranked University',
+        icon: '/the.png',
+      },
+
+      {
+        title: 'QS Ranked University',
+        icon: '/qs.png',
+      },
+
+      {
+        title: 'Placement Opportunities',
+        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
+      },
+
     ],
 
   },
 
-  benefits: [
-
-    {
-      title: 'NAAC A+ Accredited',
-      icon: '/naaca+.png',
-    },
-
-    {
-      title: 'THE Ranked University',
-      icon: '/the.png',
-    },
-
-    {
-      title: 'QS Ranked University',
-      icon: '/qs.png',
-    },
-
-    {
-      title: 'Placement Opportunities',
-      icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
-    },
-
-  ],
-
-},
+];
