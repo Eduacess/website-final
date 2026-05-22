@@ -322,7 +322,13 @@ export default function StudyOnlinePage() {
 
                         {selectedUniversity.programs.pg.map((program: string, i: number) => (
 
-                  
+                          <div
+                            key={i}
+                            className="bg-white px-5 py-3 rounded-full shadow text-[#0B1F4D] font-medium"
+                          >
+                            {program}
+                          </div>
+
                         ))}
 
                       </div>
