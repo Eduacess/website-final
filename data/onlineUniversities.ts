@@ -1,91 +1,146 @@
 export const universities = [
 
   {
-    name: 'Amity University',
+    name: 'Amity Online',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://etimg.etb2bimg.com/photo/111827311.cms',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Amity_University_logo.svg/1200px-Amity_University_logo.svg.png',
+
     programs: {
-      ug: ['BBA', 'BCA', 'BCom'],
-      pg: ['MBA', 'MCA', 'MCom'],
-      more: '50+ More Programs',
+      ug: ['BBA', 'BCA', 'B.Com', 'BA Journalism'],
+      pg: ['MBA', 'MCA', 'M.Com', 'MA Journalism'],
+      more: 'UG & PG Programs Available',
     },
+
     benefits: [
       {
-        title: 'UGC Approved',
+        title: 'UGC Entitled',
         icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
+
       {
         title: 'NAAC A+',
         icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
       },
+
       {
-        title: 'Global Degrees',
-        icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
+        title: 'Top Ranked Pvt University',
+        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
       },
+
       {
-        title: 'Industry Ready',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
+        title: 'Career Services',
+        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
       },
     ],
   },
 
   {
-    name: 'Manipal University',
+    name: 'LPU Online',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwlmIos-ynn-YkPUUB_NYAjgd7spbmasT5g&s',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Lovely_Professional_University_logo.png/250px-Lovely_Professional_University_logo.png',
+
     programs: {
-      ug: ['BBA', 'BCom', 'BCA'],
-      pg: ['MBA', 'MCA'],
-      more: '40+ More Programs',
+      ug: ['BBA', 'BCA', 'BA', 'B.Com'],
+      pg: ['MBA', 'MCA', 'M.Com', 'MA'],
+      more: 'Online UG & PG Degrees',
     },
+
     benefits: [
       {
-        title: 'UGC Approved',
+        title: 'NAAC A++',
         icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
+
       {
-        title: 'Top Ranked',
+        title: 'UGC Approved',
         icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
       },
+
+      {
+        title: 'Global Recognition',
+        icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
+      },
+
       {
         title: 'Placement Support',
         icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
       },
+    ],
+  },
+
+  {
+    name: 'Manipal Online',
+    type: 'UG + PG',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Manipal_University_Jaipur_logo.png/250px-Manipal_University_Jaipur_logo.png',
+
+    programs: {
+      ug: ['BBA', 'BCA', 'B.Com'],
+      pg: ['MBA', 'MCA', 'M.Com', 'MA JMC'],
+      more: 'Online Degree Programs',
+    },
+
+    benefits: [
       {
-        title: 'Digital Learning',
+        title: 'NAAC A+',
+        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+      },
+
+      {
+        title: 'UGC Entitled',
+        icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
+      },
+
+      {
+        title: 'Industry Mentors',
+        icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
+      },
+
+      {
+        title: 'Modern LMS',
         icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
       },
     ],
   },
 
   {
-    name: 'NMIMS University',
-    type: 'PG',
+    name: 'SRM Online',
+    type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1400&auto=format&fit=crop',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/SRM_Institute_of_Science_and_Technology_Logo.svg/1200px-SRM_Institute_of_Science_and_Technology_Logo.svg.png',
+
     programs: {
-      ug: [],
-      pg: ['MBA', 'PGDM', 'MCom'],
-      more: '25+ More Programs',
+      ug: ['BBA', 'BCA', 'B.Com'],
+      pg: ['MBA', 'MCA', 'M.Com'],
+      more: 'Online Degree Courses',
     },
+
     benefits: [
       {
-        title: 'AACSB Accredited',
+        title: 'NAAC A++',
+        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+      },
+
+      {
+        title: 'UGC Approved',
         icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
       },
+
       {
-        title: 'Premium Business School',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3063/3063822.png',
+        title: 'Digital Learning',
+        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
       },
-      {
-        title: 'Global Recognition',
-        icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
-      },
+
       {
         title: 'Industry Curriculum',
         icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
@@ -94,122 +149,35 @@ export const universities = [
   },
 
   {
-    name: 'Jain University',
+    name: 'DY Patil Online',
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1400&auto=format&fit=crop',
-    programs: {
-      ug: ['BBA', 'BCA', 'BA'],
-      pg: ['MBA', 'MCA', 'MA'],
-      more: '45+ More Programs',
-    },
-    benefits: [
-      {
-        title: 'NAAC A++',
-        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
-      },
-      {
-        title: 'Global Learning',
-        icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
-      },
-      {
-        title: 'Modern LMS',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-      },
-      {
-        title: 'Career Support',
-        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
-      },
-    ],
-  },
+    image:
+      'https://dypatiluniversityonline.com/wp-content/uploads/2023/01/dpu-logo.webp',
 
-  {
-    name: 'LPU University',
-    type: 'UG + PG',
-    flag: 'https://flagcdn.com/w40/in.png',
-    location: 'India',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop',
-    programs: {
-      ug: ['BCA', 'BBA', 'BA'],
-      pg: ['MBA', 'MCA'],
-      more: '60+ More Programs',
-    },
-    benefits: [
-      {
-        title: 'NAAC A++',
-        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
-      },
-      {
-        title: 'Global Recognition',
-        icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
-      },
-      {
-        title: 'Advanced LMS',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-      },
-      {
-        title: 'Career Support',
-        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
-      },
-    ],
-  },
-
-  {
-    name: 'Chandigarh University',
-    type: 'UG + PG',
-    flag: 'https://flagcdn.com/w40/in.png',
-    location: 'India',
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop',
     programs: {
       ug: ['BBA', 'BCA'],
       pg: ['MBA', 'MCA'],
-      more: '40+ More Programs',
+      more: 'Online Professional Degrees',
     },
-    benefits: [
-      {
-        title: 'International Collaborations',
-        icon: 'https://cdn-icons-png.flaticon.com/512/4140/4140048.png',
-      },
-      {
-        title: 'Modern Digital Learning',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-      },
-      {
-        title: 'UGC Approved',
-        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
-      },
-      {
-        title: 'Career Ready',
-        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
-      },
-    ],
-  },
 
-  {
-    name: 'DY Patil University',
-    type: 'UG + PG',
-    flag: 'https://flagcdn.com/w40/in.png',
-    location: 'India',
-    image: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1400&auto=format&fit=crop',
-    programs: {
-      ug: ['BBA', 'BCA'],
-      pg: ['MBA', 'MCA'],
-      more: '35+ More Programs',
-    },
     benefits: [
       {
         title: 'NAAC A++',
         icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
       },
+
       {
         title: 'Flexible Learning',
         icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
       },
+
       {
-        title: 'Industry Focused',
+        title: 'Industry Ready',
         icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
       },
+
       {
         title: 'Placement Assistance',
         icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
@@ -218,66 +186,114 @@ export const universities = [
   },
 
   {
-    name: 'UPES University',
-    type: 'UG + PG',
+    name: 'NMIMS Online',
+    type: 'PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1400&auto=format&fit=crop',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/5/55/NMIMS_Logo.svg/1200px-NMIMS_Logo.svg.png',
+
     programs: {
-      ug: ['BBA', 'BCA'],
-      pg: ['MBA'],
-      more: '30+ More Programs',
+      ug: [],
+      pg: ['MBA', 'Executive MBA', 'PG Diploma'],
+      more: 'Online PG Programs',
     },
+
     benefits: [
       {
-        title: 'Industry Aligned',
+        title: 'AACSB Accredited',
+        icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
+      },
+
+      {
+        title: 'Premium Business School',
+        icon: 'https://cdn-icons-png.flaticon.com/512/3063/3063822.png',
+      },
+
+      {
+        title: 'Corporate Learning',
         icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
       },
+
       {
-        title: 'UGC Approved',
-        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
-      },
-      {
-        title: 'Career Ready',
+        title: 'Career Growth',
         icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
-      },
-      {
-        title: 'Modern Learning',
-        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
       },
     ],
   },
 
   {
-    name: 'Others',
+    name: 'Chandigarh University Online',
     type: 'UG + PG',
-    flag: 'https://flagcdn.com/w40/un.png',
-    location: 'Global',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'India',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Chandigarh_University_seal.png/250px-Chandigarh_University_seal.png',
+
     programs: {
-      ug: ['200+ Universities'],
-      pg: ['Global Online Degrees'],
-      more: 'Find Your Right University',
+      ug: ['BBA', 'BCA', 'BA', 'B.Com'],
+      pg: ['MBA', 'MCA', 'M.Com', 'MA'],
+      more: 'Online Degree Programs',
     },
+
     benefits: [
       {
-        title: 'Global Universities',
+        title: 'NAAC A+',
+        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+      },
+
+      {
+        title: 'Global Partnerships',
         icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
       },
+
       {
-        title: 'Flexible Learning',
+        title: 'Modern LMS',
         icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
       },
+
+      {
+        title: 'Career Support',
+        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
+      },
+    ],
+  },
+
+  {
+    name: 'Guru Kashi University Online',
+    type: 'UG + PG',
+    flag: 'https://flagcdn.com/w40/in.png',
+    location: 'Punjab, India',
+    image:
+      'https://gku.ac.in/assets/images/logo.png',
+
+    programs: {
+      ug: ['BBA', 'BCA', 'BA'],
+      pg: ['MBA', 'MCA', 'MA'],
+      more: 'Online & Distance Programs',
+    },
+
+    benefits: [
+      {
+        title: 'UGC Approved',
+        icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+      },
+
       {
         title: 'Affordable Degrees',
         icon: 'https://cdn-icons-png.flaticon.com/512/3063/3063822.png',
       },
+
       {
-        title: 'Expert Counseling',
+        title: 'Flexible Learning',
+        icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
+      },
+
+      {
+        title: 'Career Focused',
         icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
       },
     ],
-    others: true,
   },
 
 ];
