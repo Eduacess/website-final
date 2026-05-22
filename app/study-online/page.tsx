@@ -6,9 +6,7 @@ import { universities } from '../../data/onlineUniversities';
 export default function StudyOnlinePage() {
 
   const [selectedUniversity, setSelectedUniversity] = useState<any>(null);
-
   const [search, setSearch] = useState('');
-
   const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
@@ -36,6 +34,8 @@ export default function StudyOnlinePage() {
       );
 
       if (found.length > 0) return found;
+
+      return universities.filter((u: any) => u.others);
 
     }
 
@@ -81,7 +81,7 @@ export default function StudyOnlinePage() {
 
       {/* HERO */}
 
-      <section className="pt-44 pb-20 text-center px-5">
+      <section className="pt-40 pb-20 text-center px-5">
 
         <p className="uppercase tracking-[5px] text-[#D4AF37] font-semibold">
           Global Online Degrees
@@ -90,7 +90,6 @@ export default function StudyOnlinePage() {
         <h1 className="text-5xl lg:text-7xl font-bold mt-8 text-[#0B1F4D] leading-tight">
 
           Study Online
-
           <span className="block text-[#D4AF37]">
             From Anywhere
           </span>
@@ -140,8 +139,7 @@ export default function StudyOnlinePage() {
 
                   <img
                     src={university.image}
-                    alt={university.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    className="w-full h-full object-cover"
                   />
 
                   <div className="absolute inset-0 bg-black/45" />
@@ -154,7 +152,7 @@ export default function StudyOnlinePage() {
 
                     </div>
 
-                    <h2 className="text-3xl font-bold leading-tight">
+                    <h2 className="text-3xl font-bold">
                       {university.name}
                     </h2>
 
@@ -209,13 +207,12 @@ export default function StudyOnlinePage() {
 
               <img
                 src={selectedUniversity.image}
-                alt={selectedUniversity.name}
                 className="w-full h-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-black/45" />
 
-              <div className="absolute bottom-10 left-10 right-10 text-white">
+              <div className="absolute bottom-14 left-10 right-10 text-white">
 
                 <h2 className="text-5xl font-bold">
                   {selectedUniversity.name}
@@ -324,16 +321,16 @@ export default function StudyOnlinePage() {
 
                     <div
                       key={i}
-                      className="bg-white rounded-2xl p-5 shadow flex flex-col items-center justify-center text-center"
+                      className="bg-white rounded-2xl p-5 shadow flex flex-col items-center justify-center text-center min-h-[190px]"
                     >
 
                       <img
                         src={benefit.icon}
                         alt={benefit.title}
-                        className="w-20 h-20 object-contain mb-4"
+                        className="w-16 h-16 object-contain mb-4"
                       />
 
-                      <p className="font-semibold text-[#0B1F4D]">
+                      <p className="font-semibold text-[#0B1F4D] text-lg leading-snug">
                         {benefit.title}
                       </p>
 
