@@ -332,8 +332,7 @@ export default function StudyOnlinePage() {
   ))}
 
 </div>
-                </div>
-
+              
                 {/* HIGHLIGHTS */}
 
                 <div className="mt-6 bg-yellow-50 rounded-[30px] p-7">
