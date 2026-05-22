@@ -5,13 +5,13 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
+
     image:
       'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Amity_University_logo.svg/1200px-Amity_University_logo.svg.png',
 
     programs: {
       ug: ['BBA', 'BCA', 'B.Com', 'BA Journalism'],
       pg: ['MBA', 'MCA', 'M.Com', 'MA Journalism'],
-      more: 'UG & PG Programs Available',
     },
 
     benefits: [
@@ -26,7 +26,7 @@ export const universities = [
       },
 
       {
-        title: 'Top Ranked Pvt University',
+        title: 'Top Ranked University',
         icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
       },
 
@@ -42,13 +42,13 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
+
     image:
       'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Lovely_Professional_University_logo.png/250px-Lovely_Professional_University_logo.png',
 
     programs: {
       ug: ['BBA', 'BCA', 'BA', 'B.Com'],
       pg: ['MBA', 'MCA', 'M.Com', 'MA'],
-      more: 'Online UG & PG Degrees',
     },
 
     benefits: [
@@ -79,13 +79,13 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
+
     image:
       'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Manipal_University_Jaipur_logo.png/250px-Manipal_University_Jaipur_logo.png',
 
     programs: {
       ug: ['BBA', 'BCA', 'B.Com'],
-      pg: ['MBA', 'MCA', 'M.Com', 'MA JMC'],
-      more: 'Online Degree Programs',
+      pg: ['MBA', 'MCA', 'M.Com'],
     },
 
     benefits: [
@@ -116,13 +116,13 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
+
     image:
       'https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/SRM_Institute_of_Science_and_Technology_Logo.svg/1200px-SRM_Institute_of_Science_and_Technology_Logo.svg.png',
 
     programs: {
       ug: ['BBA', 'BCA', 'B.Com'],
       pg: ['MBA', 'MCA', 'M.Com'],
-      more: 'Online Degree Courses',
     },
 
     benefits: [
@@ -153,13 +153,13 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
+
     image:
       'https://dypatiluniversityonline.com/wp-content/uploads/2023/01/dpu-logo.webp',
 
     programs: {
       ug: ['BBA', 'BCA'],
       pg: ['MBA', 'MCA'],
-      more: 'Online Professional Degrees',
     },
 
     benefits: [
@@ -190,13 +190,13 @@ export const universities = [
     type: 'PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
+
     image:
       'https://upload.wikimedia.org/wikipedia/en/thumb/5/55/NMIMS_Logo.svg/1200px-NMIMS_Logo.svg.png',
 
     programs: {
       ug: [],
       pg: ['MBA', 'Executive MBA', 'PG Diploma'],
-      more: 'Online PG Programs',
     },
 
     benefits: [
@@ -227,13 +227,13 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
+
     image:
       'https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Chandigarh_University_seal.png/250px-Chandigarh_University_seal.png',
 
     programs: {
       ug: ['BBA', 'BCA', 'BA', 'B.Com'],
       pg: ['MBA', 'MCA', 'M.Com', 'MA'],
-      more: 'Online Degree Programs',
     },
 
     benefits: [
@@ -264,19 +264,24 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'Punjab, India',
+
     image:
-      'https://gku.ac.in/assets/images/logo.png',
+      'https://gku.ac.in/assets/front/images/logo.png',
 
     programs: {
-      ug: ['BBA', 'BCA', 'BA'],
-      pg: ['MBA', 'MCA', 'MA'],
-      more: 'Online & Distance Programs',
+      ug: ['BA', 'BCA', 'B.Com'],
+      pg: ['MBA', 'MA English', 'M.Com'],
     },
 
     benefits: [
       {
         title: 'UGC Approved',
         icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+      },
+
+      {
+        title: 'NAAC Accredited',
+        icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
       },
 
       {
@@ -287,11 +292,6 @@ export const universities = [
       {
         title: 'Flexible Learning',
         icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-      },
-
-      {
-        title: 'Career Focused',
-        icon: 'https://cdn-icons-png.flaticon.com/512/1048/1048953.png',
       },
     ],
   },
