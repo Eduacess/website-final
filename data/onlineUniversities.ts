@@ -5,7 +5,7 @@ export const universities = [
     type: 'UG + PG',
     flag: 'https://flagcdn.com/w40/in.png',
     location: 'India',
-    image: 'https://education.economictimes.indiatimes.com/news/skills/amity-university-online-expands-with-new-age-online-degree-programs-to-elevate-indian-talent-with-industry-ready-skills/111827301',
+    image: 'https://pimwp.s3.ap-south-1.amazonaws.com/2024/04/Untitled-design-26-3-jpg.webp',
     programs: {
       ug: ['BBA', 'BCA', 'BCom'],
       pg: ['MBA', 'MCA', 'MCom'],
