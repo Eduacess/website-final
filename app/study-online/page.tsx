@@ -330,7 +330,7 @@ export default function StudyOnlinePage() {
                       <img
                         src={benefit.icon}
                         alt={benefit.title}
-                        className="w-16 h-16 object-contain mb-4"
+                        className="w-20 h-20 object-contain mb-4"
                       />
 
                       <p className="font-semibold text-[#0B1F4D]">
