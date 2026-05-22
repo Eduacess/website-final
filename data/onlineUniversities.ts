@@ -9,7 +9,7 @@ export const universities = [
 
     location: 'India',
 
-    image: '/universities/amity.png',
+    image: '/amity.png',
 
     programs: {
 
@@ -33,22 +33,22 @@ export const universities = [
 
       {
         title: 'NAAC A+ Accredited',
-        icon: 'https://cdn-icons-png.flaticon.com/512/1828/1828640.png',
+        icon: 'https://cdn-icons-png.flaticon.com/512/5610/5610944.png',
       },
 
       {
-        title: 'THE & QS Ranked University',
+        title: 'THE Ranked',
+        icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583344.png',
+      },
+
+      {
+        title: 'QS Ranked',
         icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
       },
 
       {
-        title: 'UGC Entitled Online Degrees',
-        icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
-      },
-
-      {
         title: 'Placement Opportunities',
-        icon: 'https://cdn-icons-png.flaticon.com/512/942/942748.png',
+        icon: 'https://cdn-icons-png.flaticon.com/512/942/942799.png',
       },
 
     ],
