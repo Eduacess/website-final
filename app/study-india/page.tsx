@@ -5,50 +5,60 @@ import { universities } from '../../data/studyIndiaUniversities';
 
 export default function StudyIndiaPage() {
 
-  const [current, setCurrent] = useState(0);
-
-  const groupedUniversities = useMemo(() => {
-
-    const groups = [];
-
-    for (let i = 0; i < universities.length; i += 6) {
-      groups.push(universities.slice(i, i + 6));
-    }
-
-    return groups;
-
-  }, []);
+  const [selectedUniversity, setSelectedUniversity] = useState<any>(null);
+  const [search, setSearch] = useState('');
+  const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
 
     const interval = setInterval(() => {
 
-      setCurrent((prev) =>
-        prev === groupedUniversities.length - 1 ? 0 : prev + 1
+      setStartIndex((prev) =>
+        prev + 6 >= universities.length
+          ? 0
+          : prev + 6
       );
 
     }, 12000);
 
     return () => clearInterval(interval);
 
-  }, [groupedUniversities.length]);
+  }, []);
+
+  const displayedUniversities = useMemo(() => {
+
+    if (search.trim() !== '') {
+
+      const found = universities.filter((u: any) =>
+        u.name.toLowerCase().includes(search.toLowerCase())
+      );
+
+      if (found.length > 0) return found;
+
+      return universities.filter((u: any) => u.others);
+
+    }
+
+    return universities.slice(startIndex, startIndex + 6);
+
+  }, [search, startIndex]);
 
   return (
 
-    <main className="min-h-screen bg-[#F7FAFC]">
+    <main className="bg-[#F7FAFC] min-h-screen">
 
       {/* NAVBAR */}
 
-      <nav className="fixed top-0 left-0 w-full bg-white border-b z-50">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
 
-        <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
 
-          <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-4">
 
             <img
               src="/logo.png"
-              alt="logo"
-              className="w-[55px] h-[55px] object-contain"
+              alt="Eduaccess"
+              className="w-[60px] h-[60px] object-contain"
             />
 
             <div>
@@ -65,15 +75,23 @@ export default function StudyIndiaPage() {
 
           </a>
 
-          <div className="hidden lg:flex gap-8 text-[#0B1F4D] font-medium">
+          <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
 
-            <a href="/">Home</a>
+            <a href="/" className="hover:text-[#D4AF37] transition">
+              Home
+            </a>
 
-            <a href="/study">Study</a>
+            <a href="/study" className="text-[#D4AF37]">
+              Study
+            </a>
 
-            <a href="/visitor-visa">Visitor Visa</a>
+            <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
+              Visitor Visa
+            </a>
 
-            <a href="/connect-us">Connect Us</a>
+            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
+              Connect Us
+            </a>
 
           </div>
 
@@ -81,111 +99,87 @@ export default function StudyIndiaPage() {
 
       </nav>
 
-      {/* HERO */}
+      <section className="pt-40 pb-16 px-5">
 
-      <section className="pt-36 pb-12 px-5 text-center">
+        <div className="max-w-7xl mx-auto">
 
-        <h1 className="text-5xl font-bold text-[#0B1F4D] mb-5">
-          Study In India
-        </h1>
+          <div className="text-center mb-12">
 
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Explore international universities and global pathway programs
-          available in India with world-class education opportunities.
-        </p>
+            <h1 className="text-5xl font-bold text-[#0B1F4D]">
+              Study In India
+            </h1>
 
-      </section>
+            <p className="text-gray-600 mt-4 text-lg">
+              Explore International Universities In India
+            </p>
 
-      {/* UNIVERSITY CARDS */}
+          </div>
 
-      <section className="max-w-7xl mx-auto px-5 pb-20">
+          <div className="max-w-2xl mx-auto mb-14">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <input
+              type="text"
+              placeholder="Search Universities..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full bg-white border border-gray-200 rounded-full px-8 py-5 text-lg outline-none shadow-lg"
+            />
 
-          {groupedUniversities[current]?.map((uni, index) => (
+          </div>
 
-            <div
-              key={index}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
-            >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
 
-              <div className="relative">
+            {displayedUniversities.map((university: any, index) => (
 
-                <img
-                  src={uni.image}
-                  alt={uni.name}
-                  className="w-full h-[220px] object-cover"
-                />
+              <div
+                key={index}
+                onClick={() => setSelectedUniversity(university)}
+                className="group cursor-pointer bg-white rounded-[28px] overflow-hidden shadow-xl hover:shadow-2xl transition duration-500"
+              >
 
-                <div className="absolute inset-0 bg-black/45 flex items-end p-5">
-
-                  <div>
-
-                    <h2 className="text-2xl font-bold text-[#FFD700]">
-                      {uni.name}
-                    </h2>
-
-                    <p className="text-white text-sm mt-1">
-                      {uni.location}
-                    </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div className="p-5">
-
-                <div className="flex items-center justify-between mb-4">
-
-                  <span className="bg-[#0B1F4D] text-white text-xs px-4 py-2 rounded-full">
-                    {uni.type}
-                  </span>
+                <div className="relative h-[340px] overflow-hidden">
 
                   <img
-                    src={uni.flag}
-                    alt="flag"
-                    className="w-7 h-5 object-cover rounded"
+                    src={university.image}
+                    alt={university.name}
+                    className="w-full h-full object-cover transition duration-700"
                   />
 
-                </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
 
-                <div className="mb-5">
+                  <div className="absolute bottom-5 left-5 right-5 text-white">
 
-                  <h3 className="font-semibold text-[#0B1F4D] mb-2">
-                    Popular Programs
-                  </h3>
+                    <div className="inline-block bg-[#D4AF37] text-[#0B1F4D] px-4 py-2 rounded-full text-sm font-bold mb-4">
+                      {university.type}
+                    </div>
 
-                  <div className="flex flex-wrap gap-2">
+                    <h2 className="text-2xl font-bold leading-tight text-white drop-shadow-2xl">
+                      {university.name}
+                    </h2>
 
-                    {uni.programs?.ug?.slice(0, 3).map((course, i) => (
+                    <div className="flex items-center gap-3 mt-4">
 
-                      <span
-                        key={i}
-                        className="text-xs bg-gray-100 px-3 py-2 rounded-full"
-                      >
-                        {course}
-                      </span>
+                      <img
+                        src={university.flag}
+                        alt="flag"
+                        className="w-7 h-5 rounded-sm object-cover"
+                      />
 
-                    ))}
+                      <p className="text-gray-100 text-base font-medium">
+                        {university.location}
+                      </p>
+
+                    </div>
 
                   </div>
 
                 </div>
 
-                <a
-                  href="/connect-us"
-                  className="block text-center bg-[#D4AF37] hover:bg-[#b8932e] text-white font-semibold py-3 rounded-xl transition"
-                >
-                  Apply Now
-                </a>
-
               </div>
 
-            </div>
+            ))}
 
-          ))}
+          </div>
 
         </div>
 
@@ -194,5 +188,4 @@ export default function StudyIndiaPage() {
     </main>
 
   );
-
 }
