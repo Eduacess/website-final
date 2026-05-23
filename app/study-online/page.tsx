@@ -49,36 +49,64 @@ export default function StudyOnlinePage() {
 
       {/* NAVBAR */}
 
-      <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
+<nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
 
-        <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
+  <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
 
-          <a href="/" className="flex items-center gap-4">
+    <a href="/" className="flex items-center gap-4">
 
-            <img
-              src="/logo.png"
-              alt="Eduaccess"
-              className="w-[60px] h-[60px] object-contain"
-            />
+      <img
+        src="/logo.png"
+        alt="Eduaccess"
+        className="w-[60px] h-[60px] object-contain"
+      />
 
-            <div>
+      <div>
 
-              <h1 className="text-2xl font-bold text-[#0B1F4D]">
-                EDU<span className="text-[#D4AF37]">ACCESS</span>
-              </h1>
+        <h1 className="text-2xl font-bold text-[#0B1F4D]">
+          EDU<span className="text-[#D4AF37]">ACCESS</span>
+        </h1>
 
-              <p className="text-xs text-gray-500">
-                Your Access To Education
-              </p>
+        <p className="text-xs text-gray-500">
+          Your Access To Education
+        </p>
 
-            </div>
+      </div>
 
-          </a>
+    </a>
 
-        </div>
+    <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
 
-      </nav>
+      <a href="/" className="hover:text-[#D4AF37] transition">
+        Home
+      </a>
 
+      <a href="/study-online" className="hover:text-[#D4AF37] transition">
+        Study Online
+      </a>
+
+      <a href="/study-india" className="hover:text-[#D4AF37] transition">
+        Study In India
+      </a>
+
+      <a href="/study-abroad" className="hover:text-[#D4AF37] transition">
+        Study Abroad
+      </a>
+
+      <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
+        Visitor Visa
+      </a>
+
+      <a href="/connect-us" className="hover:text-[#D4AF37] transition">
+        Connect Us
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>
+      
       {/* HERO */}
 
       <section className="pt-40 pb-20 text-center px-5">
