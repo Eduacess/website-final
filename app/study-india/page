@@ -49,12 +49,72 @@ export default function StudyIndiaPage() {
 
     <main className="bg-[#F7FAFC] min-h-screen">
 
+      {/* NAVBAR */}
+
+      <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
+
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
+
+          <a href="/" className="flex items-center gap-4">
+
+            <img
+              src="/logo.png"
+              alt="Eduaccess"
+              className="w-[60px] h-[60px] object-contain"
+            />
+
+            <div>
+
+              <h1 className="text-2xl font-bold text-[#0B1F4D]">
+                EDU<span className="text-[#D4AF37]">ACCESS</span>
+              </h1>
+
+              <p className="text-xs text-gray-500">
+                Your Access To Education
+              </p>
+
+            </div>
+
+          </a>
+
+          <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
+
+            <a href="/" className="hover:text-[#D4AF37] transition">
+              Home
+            </a>
+
+            <a href="/study-online" className="hover:text-[#D4AF37] transition">
+              Study Online
+            </a>
+
+            <a href="/study-india" className="text-[#D4AF37]">
+              Study In India
+            </a>
+
+            <a href="/study-abroad" className="hover:text-[#D4AF37] transition">
+              Study Abroad
+            </a>
+
+            <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
+              Visitor Visa
+            </a>
+
+            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
+              Connect Us
+            </a>
+
+          </div>
+
+        </div>
+
+      </nav>
+
       {/* HERO */}
 
       <section className="pt-44 pb-20 text-center px-5">
 
         <p className="uppercase tracking-[5px] text-[#D4AF37] font-semibold">
-          Global Universities In India
+          International Universities In India
         </p>
 
         <h1 className="text-5xl lg:text-7xl font-bold mt-8 text-[#0B1F4D] leading-tight">
@@ -68,8 +128,8 @@ export default function StudyIndiaPage() {
 
         <p className="max-w-3xl mx-auto text-gray-600 text-xl mt-10 leading-relaxed">
 
-          Explore premium Indian and international universities
-          offering globally recognized degrees and transfer opportunities.
+          Explore international universities offering globally recognised degrees
+          with study opportunities in India and abroad.
 
         </p>
 
@@ -95,28 +155,26 @@ export default function StudyIndiaPage() {
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-700">
 
             {displayedUniversities.map((university: any, index) => (
 
               <div
                 key={index}
                 onClick={() => setSelectedUniversity(university)}
-                className="group cursor-pointer bg-white rounded-[30px] overflow-hidden shadow-xl hover:shadow-2xl transition duration-500"
+                className="group cursor-pointer bg-white rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl transition duration-500"
               >
 
-                <div className="relative h-[360px] overflow-hidden">
+                <div className="relative h-[420px] overflow-hidden">
 
                   <img
                     src={university.image}
-                    className="w-full h-full object-cover transition duration-700"
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+                  <div className="absolute inset-0 bg-black/40" />
 
-                  {/* CONTENT */}
-
-                  <div className="absolute bottom-5 left-5 right-5 text-white">
+                  <div className="absolute bottom-8 left-8 right-8 text-white">
 
                     <div className="inline-block bg-[#D4AF37] text-[#0B1F4D] px-4 py-2 rounded-full text-sm font-bold mb-4">
 
@@ -124,10 +182,8 @@ export default function StudyIndiaPage() {
 
                     </div>
 
-                    <h2 className="text-2xl font-bold leading-tight text-white drop-shadow-2xl">
-
+                    <h2 className="text-3xl font-bold leading-tight">
                       {university.name}
-
                     </h2>
 
                     <div className="flex items-center gap-3 mt-4">
@@ -138,10 +194,8 @@ export default function StudyIndiaPage() {
                         className="w-7 h-5 rounded-sm object-cover"
                       />
 
-                      <p className="text-gray-100 text-base font-medium">
-
+                      <p className="text-gray-200 text-lg">
                         {university.location}
-
                       </p>
 
                     </div>
@@ -167,8 +221,6 @@ export default function StudyIndiaPage() {
         <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md flex items-center justify-center p-5">
 
           <div className="relative bg-white w-full max-w-6xl h-[88vh] rounded-[40px] overflow-hidden shadow-2xl grid lg:grid-cols-2">
-
-            {/* CLOSE */}
 
             <button
               onClick={() => setSelectedUniversity(null)}
@@ -217,17 +269,13 @@ export default function StudyIndiaPage() {
 
               <div>
 
-                {/* PROGRAMS */}
-
                 <div className="bg-[#F7FAFC] rounded-[30px] p-7">
 
                   <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
                     Programs Offered
                   </h3>
 
-                  {/* UG */}
-
-                  {selectedUniversity.programs?.ug?.length > 0 && (
+                  {selectedUniversity.programs.ug.length > 0 && (
 
                     <div className="mb-6">
 
@@ -254,9 +302,7 @@ export default function StudyIndiaPage() {
 
                   )}
 
-                  {/* PG */}
-
-                  {selectedUniversity.programs?.pg?.length > 0 && (
+                  {selectedUniversity.programs.pg.length > 0 && (
 
                     <div>
 
@@ -295,7 +341,7 @@ export default function StudyIndiaPage() {
 
                   <div className="grid grid-cols-2 gap-5">
 
-                    {selectedUniversity.benefits?.map((benefit: any, i: number) => (
+                    {selectedUniversity.benefits.map((benefit: any, i: number) => (
 
                       <div
                         key={i}
@@ -343,6 +389,16 @@ export default function StudyIndiaPage() {
         </div>
 
       )}
+
+      {/* FOOTER */}
+
+      <footer className="bg-[#0B1F4D] text-white py-10 text-center">
+
+        <p>
+          © 2026 EDUACCESS. All Rights Reserved.
+        </p>
+
+      </footer>
 
     </main>
 
