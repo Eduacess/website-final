@@ -183,9 +183,147 @@ export default function StudyIndiaPage() {
 
         </div>
 
-      </section>
+        </section>
 
-    </main>
+{/* POPUP */}
+
+{selectedUniversity && (
+
+  <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md overflow-y-auto p-5">
+
+    <div className="relative bg-white w-full max-w-6xl mx-auto rounded-[35px] overflow-hidden shadow-2xl grid lg:grid-cols-2 my-10">
+
+      {/* CLOSE BUTTON */}
+
+      <button
+        onClick={() => setSelectedUniversity(null)}
+        className="absolute top-5 right-5 z-50 bg-white w-12 h-12 rounded-full text-3xl shadow-xl"
+      >
+        ×
+      </button>
+
+      {/* LEFT */}
+
+      <div className="relative min-h-[750px]">
+
+        <img
+          src={selectedUniversity.image}
+          alt={selectedUniversity.name}
+          className="w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="absolute bottom-10 left-10 right-10 text-white">
+
+          <div className="flex items-center gap-4">
+
+            <img
+              src={selectedUniversity.flag}
+              alt="flag"
+              className="w-10 h-7 rounded-sm object-cover"
+            />
+
+            <h2 className="text-5xl font-bold">
+              {selectedUniversity.name}
+            </h2>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT */}
+
+      <div className="p-10 bg-white overflow-y-auto">
+
+        {/* PROGRAMS */}
+
+        <div>
+
+          <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
+            Programs Available
+          </h3>
+
+          <div className="flex flex-wrap gap-4">
+
+            {selectedUniversity.programs?.ug?.map((program: string, index: number) => (
+
+              <div
+                key={index}
+                className="bg-[#F7FAFC] px-6 py-3 rounded-full shadow font-semibold text-[#0B1F4D]"
+              >
+                {program}
+              </div>
+
+            ))}
+
+            {selectedUniversity.programs?.pg?.map((program: string, index: number) => (
+
+              <div
+                key={`pg-${index}`}
+                className="bg-[#D4AF37] text-[#0B1F4D] px-6 py-3 rounded-full shadow font-semibold"
+              >
+                {program}
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+        {/* BENEFITS */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+
+          {selectedUniversity.benefits?.map((benefit: any, index: number) => (
+
+            <div
+              key={index}
+              className="bg-[#F7FAFC] rounded-3xl p-6 shadow text-center"
+            >
+
+              <img
+                src={benefit.icon}
+                alt={benefit.title}
+                className="w-14 h-14 mx-auto mb-4 object-contain"
+              />
+
+              <h4 className="text-lg font-bold text-[#0B1F4D]">
+                {benefit.title}
+              </h4>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        {/* APPLY BUTTON */}
+
+        <div className="pt-10">
+
+          <a
+            href="https://wa.me/919998920644"
+            target="_blank"
+            className="w-full block text-center bg-[#0B1F4D] hover:bg-[#102A63] text-white py-5 rounded-full text-lg font-semibold transition shadow-xl"
+          >
+            Apply Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+)}
+
+</main>
 
   );
 }
