@@ -543,4 +543,3 @@ export const universities = [
   },
 
 ];
-```
