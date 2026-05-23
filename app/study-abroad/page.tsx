@@ -230,27 +230,27 @@ export default function StudyAbroadPage() {
 
       {/* NAVBAR */}
 
-<nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
+<nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200">
 
-<div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+<div className="max-w-7xl mx-auto px-3 lg:px-8 py-3 flex items-center justify-between">
 
   {/* LOGO */}
 
-  <a href="/" className="flex items-center gap-3">
+  <a href="/" className="flex items-center gap-2">
 
     <img
       src="/logo.png"
       alt="Eduaccess"
-      className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
+      className="w-[42px] h-[42px] lg:w-[60px] lg:h-[60px] object-contain"
     />
 
     <div>
 
-      <h1 className="text-xl lg:text-2xl font-bold text-[#0B1F4D]">
+      <h1 className="text-[18px] lg:text-2xl font-bold leading-none text-[#0B1F4D]">
         EDU<span className="text-[#D4AF37]">ACCESS</span>
       </h1>
 
-      <p className="text-[10px] lg:text-xs text-gray-500">
+      <p className="hidden lg:block text-xs text-gray-500 mt-1">
         Your Access To Education
       </p>
 
@@ -282,7 +282,7 @@ export default function StudyAbroadPage() {
 
   {/* MOBILE MENU */}
 
-  <div className="flex lg:hidden items-center gap-4 text-sm font-semibold text-[#0B1F4D]">
+  <div className="flex lg:hidden items-center gap-4 text-[15px] font-semibold text-[#0B1F4D]">
 
     <a href="/">
       Home
