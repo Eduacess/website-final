@@ -6,9 +6,7 @@ import { universities } from '../../data/studyIndiaUniversities';
 export default function StudyIndiaPage() {
 
   const [selectedUniversity, setSelectedUniversity] = useState<any>(null);
-
   const [search, setSearch] = useState('');
-
   const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
@@ -169,6 +167,7 @@ export default function StudyIndiaPage() {
 
                   <img
                     src={university.image}
+                    alt={university.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
 
@@ -235,6 +234,7 @@ export default function StudyIndiaPage() {
 
               <img
                 src={selectedUniversity.image}
+                alt={selectedUniversity.name}
                 className="w-full h-full object-cover"
               />
 
@@ -250,6 +250,7 @@ export default function StudyIndiaPage() {
 
                   <img
                     src={selectedUniversity.flag}
+                    alt="flag"
                     className="w-8 h-6 rounded-sm object-cover"
                   />
 
@@ -275,7 +276,7 @@ export default function StudyIndiaPage() {
                     Programs Offered
                   </h3>
 
-                  {selectedUniversity.programs.ug.length > 0 && (
+                  {selectedUniversity.programs?.ug?.length > 0 && (
 
                     <div className="mb-6">
 
@@ -302,7 +303,7 @@ export default function StudyIndiaPage() {
 
                   )}
 
-                  {selectedUniversity.programs.pg.length > 0 && (
+                  {selectedUniversity.programs?.pg?.length > 0 && (
 
                     <div>
 
@@ -341,7 +342,7 @@ export default function StudyIndiaPage() {
 
                   <div className="grid grid-cols-2 gap-5">
 
-                    {selectedUniversity.benefits.map((benefit: any, i: number) => (
+                    {selectedUniversity.benefits?.map((benefit: any, i: number) => (
 
                       <div
                         key={i}
