@@ -371,7 +371,160 @@ export const universities = [
       },
     ],
   },
+{
+  name: 'Golden Gate University',
+  type: 'UG + PG',
+  flag: 'https://flagcdn.com/w40/us.png',
+  location: 'USA',
+  image:
+    'https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=1400&auto=format&fit=crop',
+  programs: {
+    ug: ['BBA', 'Business Management'],
+    pg: ['MBA', 'Data Science'],
+  },
+  benefits: [
+    {
+      title: 'US Based University',
+      icon: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
+    },
+    {
+      title: 'Industry Focused',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
+    },
+    {
+      title: 'Flexible Learning',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
+    },
+    {
+      title: 'Placement Opportunities',
+      icon: 'https://cdn-icons-png.flaticon.com/512/2910/2910791.png',
+    },
+  ],
+},
 
+{
+  name: 'Sikkim Manipal Online',
+  type: 'UG + PG',
+  flag: 'https://flagcdn.com/w40/in.png',
+  location: 'India',
+  image:
+    'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1400&auto=format&fit=crop',
+  programs: {
+    ug: ['BBA', 'BCA', 'BA'],
+    pg: ['MBA', 'MCA', 'MA'],
+  },
+  benefits: [
+    {
+      title: 'NAAC A+ Accredited',
+      icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+    },
+    {
+      title: 'Top Ranked University',
+      icon: 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+    },
+    {
+      title: 'Online Learning',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
+    },
+    {
+      title: 'Placement Opportunities',
+      icon: 'https://cdn-icons-png.flaticon.com/512/2910/2910791.png',
+    },
+  ],
+},
+
+{
+  name: 'Uttaranchal University Online',
+  type: 'UG + PG',
+  flag: 'https://flagcdn.com/w40/in.png',
+  location: 'India',
+  image:
+    'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400&auto=format&fit=crop',
+  programs: {
+    ug: ['BBA', 'BCA', 'B.Com'],
+    pg: ['MBA', 'MCA'],
+  },
+  benefits: [
+    {
+      title: 'NAAC Accredited',
+      icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+    },
+    {
+      title: 'Industry Ready',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
+    },
+    {
+      title: 'Flexible Learning',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
+    },
+    {
+      title: 'Placement Opportunities',
+      icon: 'https://cdn-icons-png.flaticon.com/512/2910/2910791.png',
+    },
+  ],
+},
+
+{
+  name: 'Parul University Online',
+  type: 'UG + PG',
+  flag: 'https://flagcdn.com/w40/in.png',
+  location: 'India',
+  image:
+    'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1400&auto=format&fit=crop',
+  programs: {
+    ug: ['BBA', 'BCA', 'B.Com'],
+    pg: ['MBA', 'MCA'],
+  },
+  benefits: [
+    {
+      title: 'NAAC A++ Accredited',
+      icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+    },
+    {
+      title: 'Modern Learning',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
+    },
+    {
+      title: 'Industry Focused',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
+    },
+    {
+      title: 'Placement Opportunities',
+      icon: 'https://cdn-icons-png.flaticon.com/512/2910/2910791.png',
+    },
+  ],
+},
+
+{
+  name: 'IILM University Online',
+  type: 'UG + PG',
+  flag: 'https://flagcdn.com/w40/in.png',
+  location: 'India',
+  image:
+    'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1400&auto=format&fit=crop',
+  programs: {
+    ug: ['BBA', 'BCA'],
+    pg: ['MBA', 'MCA'],
+  },
+  benefits: [
+    {
+      title: 'NAAC Accredited',
+      icon: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+    },
+    {
+      title: 'Career Focused',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3281/3281289.png',
+    },
+    {
+      title: 'Flexible Learning',
+      icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
+    },
+    {
+      title: 'Placement Opportunities',
+      icon: 'https://cdn-icons-png.flaticon.com/512/2910/2910791.png',
+    },
+  ],
+},
   {
     name: 'Others',
     type: 'Find Your Program',
