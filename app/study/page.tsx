@@ -33,93 +33,81 @@ export default function StudyPage() {
 
       {/* NAVBAR */}
 
-      <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
+<nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
 
-        <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
+<div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
 
-          <a href="/" className="flex items-center gap-4">
+  {/* LOGO */}
 
-            <img
-              src="/logo.png"
-              alt="Eduaccess"
-              className="w-[60px] h-[60px] object-contain"
-            />
+  <a href="/" className="flex items-center gap-3">
 
-            <div>
+    <img
+      src="/logo.png"
+      alt="Eduaccess"
+      className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
+    />
 
-              <h1 className="text-2xl font-bold tracking-wide text-[#0B1F4D]">
-                EDU<span className="text-[#D4AF37]">ACCESS</span>
-              </h1>
+    <div>
 
-              <p className="text-xs text-gray-500">
-                Your Access To Education
-              </p>
+      <h1 className="text-xl lg:text-2xl font-bold text-[#0B1F4D]">
+        EDU<span className="text-[#D4AF37]">ACCESS</span>
+      </h1>
 
-            </div>
+      <p className="text-[10px] lg:text-xs text-gray-500">
+        Your Access To Education
+      </p>
 
-          </a>
+    </div>
 
-          {/* NAVIGATION */}
+  </a>
 
-          <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
+  {/* DESKTOP MENU */}
 
-            <a href="/" className="hover:text-[#D4AF37] transition">
-              Home
-            </a>
+  <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
 
-            <div className="relative group">
+    <a href="/" className="hover:text-[#D4AF37] transition">
+      Home
+    </a>
 
-              <a
-                href="/study"
-                className="text-[#D4AF37]"
-              >
-                Study
-              </a>
+    <a href="/study" className="text-[#D4AF37]">
+      Study
+    </a>
 
-              <div className="absolute top-10 left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-white rounded-3xl shadow-2xl w-72 p-4 border border-gray-100">
+    <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
+      Visitor Visa
+    </a>
 
-                <div className="flex flex-col">
+    <a href="/connect-us" className="hover:text-[#D4AF37] transition">
+      Connect Us
+    </a>
 
-                  <a
-                    href="/study-abroad"
-                    className="px-5 py-4 rounded-2xl hover:bg-[#F7FAFC] transition font-semibold"
-                  >
-                    Study Abroad
-                  </a>
+  </div>
 
-                  <a
-                    href="/study-online"
-                    className="px-5 py-4 rounded-2xl hover:bg-[#F7FAFC] transition font-semibold"
-                  >
-                    Study Online
-                  </a>
+  {/* MOBILE MENU */}
 
-                  <a
-                    href="/study-india"
-                    className="px-5 py-4 rounded-2xl hover:bg-[#F7FAFC] transition font-semibold"
-                  >
-                    Study In India
-                  </a>
+  <div className="flex lg:hidden items-center gap-4 text-sm font-semibold text-[#0B1F4D]">
 
-                </div>
+    <a href="/">
+      Home
+    </a>
 
-              </div>
+    <a href="/study" className="text-[#D4AF37]">
+      Study
+    </a>
 
-            </div>
+    <a href="/visitor-visa">
+      Visa
+    </a>
 
-            <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
-              Visitor Visa
-            </a>
+    <a href="/connect-us">
+      Contact
+    </a>
 
-            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
-              Connect Us
-            </a>
+  </div>
 
-          </div>
+</div>
 
-        </div>
-
-      </nav>
+</nav>
 
       {/* HERO */}
 

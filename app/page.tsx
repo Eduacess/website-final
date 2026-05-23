@@ -46,67 +46,83 @@ export default function Home() {
   return (
     <main className="bg-[#F7FAFC] text-[#0B1F4D] overflow-hidden">
 
-      {/* NAVBAR */}
+     {/* NAVBAR */}
 
-      <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
+<nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
 
-        <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
+<div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
 
-          {/* LEFT SIDE LOGO */}
+  {/* LOGO */}
 
-          <div className="flex items-center gap-4">
+  <a href="/" className="flex items-center gap-3">
 
-            <Image
-              src="/logo.png"
-              alt="Eduaccess"
-              width={65}
-              height={65}
-              className="object-contain"
-            />
+    <img
+      src="/logo.png"
+      alt="Eduaccess"
+      className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
+    />
 
-            <div>
+    <div>
 
-              <h1 className="text-2xl font-bold tracking-wide">
-                EDU<span className="text-[#D4AF37]">ACCESS</span>
-              </h1>
+      <h1 className="text-xl lg:text-2xl font-bold text-[#0B1F4D]">
+        EDU<span className="text-[#D4AF37]">ACCESS</span>
+      </h1>
 
-              <p className="text-xs text-gray-500">
-                Your Access To Education
-              </p>
+      <p className="text-[10px] lg:text-xs text-gray-500">
+        Your Access To Education
+      </p>
 
-            </div>
+    </div>
 
-          </div>
+  </a>
 
-          {/* RIGHT SIDE NAVIGATION */}
+  {/* DESKTOP MENU */}
 
-          <div className="hidden lg:flex items-center gap-12 font-medium text-[16px]">
+  <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
 
-            <a href="#" className="hover:text-[#D4AF37] transition">
-              Home
-            </a>
+    <a href="/" className="hover:text-[#D4AF37] transition">
+      Home
+    </a>
 
-            <a href="/study" className="hover:text-[#D4AF37] transition">
-              Study
-            </a>
+    <a href="/study" className="text-[#D4AF37]">
+      Study
+    </a>
 
-            <a href="/visitor-visa"
-  className="hover:text-[#D4AF37] transition"
->
-  Visitor Visa
-</a>
+    <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
+      Visitor Visa
+    </a>
 
-<a href="/connect-us">
-  Connect Us
-</a>
+    <a href="/connect-us" className="hover:text-[#D4AF37] transition">
+      Connect Us
+    </a>
 
+  </div>
 
-          </div>
+  {/* MOBILE MENU */}
 
-        </div>
+  <div className="flex lg:hidden items-center gap-4 text-sm font-semibold text-[#0B1F4D]">
 
-      </nav>
+    <a href="/">
+      Home
+    </a>
 
+    <a href="/study" className="text-[#D4AF37]">
+      Study
+    </a>
+
+    <a href="/visitor-visa">
+      Visa
+    </a>
+
+    <a href="/connect-us">
+      Contact
+    </a>
+
+  </div>
+
+</div>
+
+</nav>
       {/* HERO */}
 
       <section className="relative pt-36 pb-24 overflow-hidden">
