@@ -1,9 +1,4 @@
-Yes.
-DELETE everything from `data/onlineUniversities.ts`
 
-Then paste this COMPLETE combined code:
-
-```ts
 export const universities = [
 
   {
