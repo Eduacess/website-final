@@ -19,11 +19,11 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Monash_University_logo.svg/512px-Monash_University_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Deakin_University_logo.svg/512px-Deakin_University_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/University_of_Melbourne_logo.svg/512px-University_of_Melbourne_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/3/39/RMIT_University_Logo.svg/512px-RMIT_University_Logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Macquarie_University_logo.svg/512px-Macquarie_University_logo.svg.png',
+      'https://logo.clearbit.com/monash.edu',
+      'https://logo.clearbit.com/deakin.edu.au',
+      'https://logo.clearbit.com/unimelb.edu.au',
+      'https://logo.clearbit.com/rmit.edu.au',
+      'https://logo.clearbit.com/mq.edu.au',
     ],
 
     dependents: 'Yes',
@@ -45,9 +45,9 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/en/thumb/3/37/University_of_Auckland_logo.svg/512px-University_of_Auckland_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Massey_University_logo.svg/512px-Massey_University_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/University_of_Waikato_logo.svg/512px-University_of_Waikato_logo.svg.png',
+      'https://logo.clearbit.com/auckland.ac.nz',
+      'https://logo.clearbit.com/massey.ac.nz',
+      'https://logo.clearbit.com/waikato.ac.nz',
     ],
 
     dependents: 'Yes',
@@ -70,9 +70,9 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Harvard_University_logo.svg/512px-Harvard_University_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Stanford_University_seal_2003.svg/512px-Stanford_University_seal_2003.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/University_of_California%2C_Berkeley_logo.svg/512px-University_of_California%2C_Berkeley_logo.svg.png',
+      'https://logo.clearbit.com/harvard.edu',
+      'https://logo.clearbit.com/stanford.edu',
+      'https://logo.clearbit.com/berkeley.edu',
     ],
 
     dependents: 'Yes',
@@ -94,9 +94,9 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/University_of_Oxford_logo.svg/512px-University_of_Oxford_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/University_of_Cambridge_logo.svg/512px-University_of_Cambridge_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/King%27s_College_London_logo.svg/512px-King%27s_College_London_logo.svg.png',
+      'https://logo.clearbit.com/ox.ac.uk',
+      'https://logo.clearbit.com/cam.ac.uk',
+      'https://logo.clearbit.com/kcl.ac.uk',
     ],
 
     dependents: 'Yes',
@@ -118,9 +118,9 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/University_of_Toronto_coat_of_arms.svg/512px-University_of_Toronto_coat_of_arms.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/University_of_British_Columbia_logo.svg/512px-University_of_British_Columbia_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/McGill_University_CoA.svg/512px-McGill_University_CoA.svg.png',
+      'https://logo.clearbit.com/utoronto.ca',
+      'https://logo.clearbit.com/ubc.ca',
+      'https://logo.clearbit.com/mcgill.ca',
     ],
 
     dependents: 'Yes',
@@ -142,8 +142,8 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Sorbonne_University_logo.svg/512px-Sorbonne_University_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/HEC_Paris.svg/512px-HEC_Paris.svg.png',
+      'https://logo.clearbit.com/sorbonne-universite.fr',
+      'https://logo.clearbit.com/hec.edu',
     ],
 
     dependents: 'Yes',
@@ -165,8 +165,8 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/TUM_Logo.svg/512px-TUM_Logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/LMU_Muenchen_Logo.svg/512px-LMU_Muenchen_Logo.svg.png',
+      'https://logo.clearbit.com/tum.de',
+      'https://logo.clearbit.com/lmu.de',
     ],
 
     dependents: 'Yes',
@@ -185,7 +185,7 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/University_of_Tokyo_logo.svg/512px-University_of_Tokyo_logo.svg.png',
+      'https://logo.clearbit.com/u-tokyo.ac.jp',
     ],
 
     dependents: 'Yes',
@@ -206,8 +206,8 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://upload.wikimedia.org/wikipedia/en/thumb/9/91/NUS_coat_of_arms.svg/512px-NUS_coat_of_arms.svg.png',
-      'https://upload.wikimedia.org/wikipedia/en/thumb/0/0d/Nanyang_Technological_University_logo.svg/512px-Nanyang_Technological_University_logo.svg.png',
+      'https://logo.clearbit.com/nus.edu.sg',
+      'https://logo.clearbit.com/ntu.edu.sg',
     ],
 
     dependents: 'No',
@@ -281,6 +281,8 @@ export default function StudyAbroadPage() {
 
       </nav>
 
+      {/* HERO */}
+
       <section className="pt-40 pb-16 px-5">
 
         <div className="max-w-7xl mx-auto">
@@ -292,6 +294,8 @@ export default function StudyAbroadPage() {
             </h1>
 
           </div>
+
+          {/* COUNTRY CARDS */}
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
 
@@ -347,13 +351,13 @@ export default function StudyAbroadPage() {
 
       {selectedCountry && (
 
-        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md flex items-center justify-center p-5">
+        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md overflow-y-auto flex items-start justify-center p-5 py-10">
 
-          <div className="relative bg-white w-full max-w-6xl rounded-[35px] overflow-hidden shadow-2xl grid lg:grid-cols-2">
+          <div className="relative bg-white w-full max-w-6xl max-h-[92vh] overflow-y-auto rounded-[35px] shadow-2xl grid lg:grid-cols-2">
 
             <button
               onClick={() => setSelectedCountry(null)}
-              className="absolute top-5 right-5 z-50 bg-white w-12 h-12 rounded-full text-3xl shadow-xl"
+              className="sticky top-5 ml-auto mr-5 mt-5 z-50 bg-white w-12 h-12 rounded-full text-3xl shadow-xl"
             >
               ×
             </button>
@@ -429,9 +433,9 @@ export default function StudyAbroadPage() {
                     Top Universities
                   </h3>
 
-                  <div className="flex gap-8 animate-[scroll_20s_linear_infinite] whitespace-nowrap">
+                  <div className="flex gap-8 overflow-x-auto pb-4">
 
-                    {[...selectedCountry.universityLogos, ...selectedCountry.universityLogos].map((logo: string, index: number) => (
+                    {selectedCountry.universityLogos.map((logo: string, index: number) => (
 
                       <div
                         key={index}
