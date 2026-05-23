@@ -1,4 +1,4 @@
-```ts
+
 export const universities = [
 
   {
