@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 
 const countries = [
 
@@ -46,8 +46,8 @@ const countries = [
 
     universityLogos: [
       'https://logo.clearbit.com/auckland.ac.nz',
-      'https://logo.clearbit.com/massey.ac.nz',
       'https://logo.clearbit.com/waikato.ac.nz',
+      'https://logo.clearbit.com/massey.ac.nz',
     ],
 
     dependents: 'Yes',
@@ -73,6 +73,7 @@ const countries = [
       'https://logo.clearbit.com/harvard.edu',
       'https://logo.clearbit.com/stanford.edu',
       'https://logo.clearbit.com/berkeley.edu',
+      'https://logo.clearbit.com/mit.edu',
     ],
 
     dependents: 'Yes',
@@ -97,6 +98,7 @@ const countries = [
       'https://logo.clearbit.com/ox.ac.uk',
       'https://logo.clearbit.com/cam.ac.uk',
       'https://logo.clearbit.com/kcl.ac.uk',
+      'https://logo.clearbit.com/manchester.ac.uk',
     ],
 
     dependents: 'Yes',
@@ -121,6 +123,7 @@ const countries = [
       'https://logo.clearbit.com/utoronto.ca',
       'https://logo.clearbit.com/ubc.ca',
       'https://logo.clearbit.com/mcgill.ca',
+      'https://logo.clearbit.com/concordia.ca',
     ],
 
     dependents: 'Yes',
@@ -142,13 +145,13 @@ const countries = [
     ],
 
     universityLogos: [
-      'https://logo.clearbit.com/sorbonne-universite.fr',
       'https://logo.clearbit.com/hec.edu',
+      'https://logo.clearbit.com/sorbonne-universite.fr',
     ],
 
     dependents: 'Yes',
     stayback: '2 Years',
-    pr: 'Yes',
+    pr: 'Moderate',
   },
 
   {
@@ -190,7 +193,7 @@ const countries = [
 
     dependents: 'Yes',
     stayback: '1 Year',
-    pr: 'No',
+    pr: 'Moderate',
   },
 
   {
@@ -220,10 +223,6 @@ const countries = [
 export default function StudyAbroadPage() {
 
   const [selectedCountry, setSelectedCountry] = useState<any>(null);
-
-  const displayedCountries = useMemo(() => {
-    return countries;
-  }, []);
 
   return (
 
@@ -299,7 +298,7 @@ export default function StudyAbroadPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
 
-            {displayedCountries.map((country, index) => (
+            {countries.map((country, index) => (
 
               <div
                 key={index}
@@ -312,7 +311,7 @@ export default function StudyAbroadPage() {
                   <img
                     src={country.image}
                     alt={country.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
@@ -327,7 +326,7 @@ export default function StudyAbroadPage() {
                         className="w-8 h-6 rounded-sm object-cover"
                       />
 
-                      <h2 className="text-3xl font-bold text-white">
+                      <h2 className="text-3xl font-bold">
                         {country.name}
                       </h2>
 
@@ -351,18 +350,20 @@ export default function StudyAbroadPage() {
 
       {selectedCountry && (
 
-        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md overflow-y-auto flex items-start justify-center p-5 py-10">
+        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md overflow-y-auto p-5">
 
-          <div className="relative bg-white w-full max-w-6xl max-h-[92vh] overflow-y-auto rounded-[35px] shadow-2xl grid lg:grid-cols-2">
+          <div className="relative bg-white w-full max-w-6xl mx-auto rounded-[35px] overflow-hidden shadow-2xl grid lg:grid-cols-2 my-10">
+
+            {/* CLOSE BUTTON */}
 
             <button
               onClick={() => setSelectedCountry(null)}
-              className="sticky top-5 ml-auto mr-5 mt-5 z-50 bg-white w-12 h-12 rounded-full text-3xl shadow-xl"
+              className="absolute top-5 right-5 z-50 bg-white w-12 h-12 rounded-full text-3xl shadow-xl"
             >
               ×
             </button>
 
-            {/* LEFT */}
+            {/* LEFT IMAGE */}
 
             <div className="relative min-h-[750px]">
 
@@ -394,107 +395,103 @@ export default function StudyAbroadPage() {
 
             </div>
 
-            {/* RIGHT */}
+            {/* RIGHT SIDE */}
 
-            <div className="p-10 overflow-y-auto flex flex-col justify-between">
+            <div className="p-10 bg-white">
+
+              {/* STUDY LEVELS */}
 
               <div>
 
-                {/* STUDY LEVELS */}
+                <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
+                  What Can You Study?
+                </h3>
 
-                <div>
+                <div className="flex flex-wrap gap-4">
 
-                  <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
-                    What Can You Study?
-                  </h3>
+                  {selectedCountry.studyLevels.map((level: string, index: number) => (
 
-                  <div className="flex flex-wrap gap-4">
+                    <div
+                      key={index}
+                      className="bg-[#F7FAFC] px-6 py-3 rounded-full shadow font-semibold text-[#0B1F4D]"
+                    >
+                      {level}
+                    </div>
 
-                    {selectedCountry.studyLevels.map((level: string, index: number) => (
-
-                      <div
-                        key={index}
-                        className="bg-[#F7FAFC] px-6 py-3 rounded-full shadow font-semibold text-[#0B1F4D]"
-                      >
-                        {level}
-                      </div>
-
-                    ))}
-
-                  </div>
+                  ))}
 
                 </div>
 
-                {/* UNIVERSITIES */}
+              </div>
 
-                <div className="mt-12 overflow-hidden">
+              {/* UNIVERSITIES */}
 
-                  <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
-                    Top Universities
-                  </h3>
+              <div className="mt-12">
 
-                  <div className="flex gap-8 overflow-x-auto pb-4">
+                <h3 className="text-3xl font-bold text-[#0B1F4D] mb-6">
+                  Top Universities
+                </h3>
 
-                    {selectedCountry.universityLogos.map((logo: string, index: number) => (
+                <div className="flex flex-wrap gap-5">
 
-                      <div
-                        key={index}
-                        className="bg-white shadow-lg rounded-2xl p-5 min-w-[160px] h-[100px] flex items-center justify-center"
-                      >
+                  {selectedCountry.universityLogos.map((logo: string, index: number) => (
 
-                        <img
-                          src={logo}
-                          alt="University Logo"
-                          className="max-h-[60px] object-contain"
-                        />
+                    <div
+                      key={index}
+                      className="bg-[#F7FAFC] rounded-2xl shadow p-5 w-[140px] h-[90px] flex items-center justify-center"
+                    >
 
-                      </div>
+                      <img
+                        src={logo}
+                        alt="University Logo"
+                        className="max-h-[50px] object-contain"
+                      />
 
-                    ))}
+                    </div>
 
-                  </div>
+                  ))}
 
                 </div>
 
-                {/* INFO CARDS */}
+              </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
+              {/* INFO CARDS */}
 
-                  <div className="bg-[#F7FAFC] rounded-3xl p-6 shadow text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
 
-                    <h4 className="text-lg font-bold text-[#0B1F4D]">
-                      Dependents Allowed
-                    </h4>
+                <div className="bg-[#F7FAFC] rounded-3xl p-6 shadow text-center">
 
-                    <p className="text-[#D4AF37] text-2xl font-bold mt-4">
-                      {selectedCountry.dependents}
-                    </p>
+                  <h4 className="text-lg font-bold text-[#0B1F4D]">
+                    Dependents Allowed
+                  </h4>
 
-                  </div>
+                  <p className="text-[#D4AF37] text-2xl font-bold mt-4">
+                    {selectedCountry.dependents}
+                  </p>
 
-                  <div className="bg-[#F7FAFC] rounded-3xl p-6 shadow text-center">
+                </div>
 
-                    <h4 className="text-lg font-bold text-[#0B1F4D]">
-                      Stayback Option
-                    </h4>
+                <div className="bg-[#F7FAFC] rounded-3xl p-6 shadow text-center">
 
-                    <p className="text-[#D4AF37] text-2xl font-bold mt-4">
-                      {selectedCountry.stayback}
-                    </p>
+                  <h4 className="text-lg font-bold text-[#0B1F4D]">
+                    Stayback Option
+                  </h4>
 
-                  </div>
+                  <p className="text-[#D4AF37] text-2xl font-bold mt-4">
+                    {selectedCountry.stayback}
+                  </p>
 
-                  <div className="bg-[#F7FAFC] rounded-3xl p-6 shadow text-center">
+                </div>
 
-                    <h4 className="text-lg font-bold text-[#0B1F4D]">
-                      PR Possibility
-                    </h4>
+                <div className="bg-[#F7FAFC] rounded-3xl p-6 shadow text-center">
 
-                    <p className="text-[#D4AF37] text-2xl font-bold mt-4">
-                      {selectedCountry.pr}
-                    </p>
+                  <h4 className="text-lg font-bold text-[#0B1F4D]">
+                    PR Possibility
+                  </h4>
 
-                  </div>
+                  <p className="text-[#D4AF37] text-2xl font-bold mt-4">
+                    {selectedCountry.pr}
+                  </p>
 
                 </div>
 
