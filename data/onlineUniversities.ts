@@ -1,4 +1,3 @@
-
 export const universities = [
 
   {
@@ -406,4 +405,3 @@ export const universities = [
   },
 
 ];
-```
