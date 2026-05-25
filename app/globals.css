@@ -38,3 +38,16 @@ body {
 .animate-\[scroll_25s_linear_infinite\] {
   animation: scroll 25s linear infinite;
 }
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-slider {
+  animation: scrollLogos 25s linear infinite;
+}

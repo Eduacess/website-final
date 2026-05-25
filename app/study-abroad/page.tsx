@@ -463,7 +463,7 @@ export default function StudyAbroadPage() {
 
                 <div className="overflow-hidden w-full">
 
-                  <div className="flex gap-6 animate-[scroll_25s_linear_infinite] w-max">
+                <div className="flex gap-6 logo-slider w-max">
 
                     {[...selectedCountry.universities, ...selectedCountry.universities].map((logo: string, index: number) => (
 
