@@ -15,26 +15,37 @@ export default function ConnectUsPage() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
+
+    let value = e.target.value;
+
+    if (e.target.name === 'number') {
+      value = value.replace(/\D/g, '');
+    }
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     });
+
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
 
     e.preventDefault();
-  
+
     const form = new FormData();
-  
-    form.append('access_key', 'f3bd830c-43a7-4a36-bfed-d0838fdb7635');
-  
+
+    form.append(
+      'access_key',
+      'f3bd830c-43a7-4a36-bfed-d0838fdb7635'
+    );
+
     form.append('name', formData.name);
     form.append('phone', formData.number);
     form.append('email', formData.email);
     form.append('assistance', formData.assistance);
     form.append('country', formData.country);
-  
+
     const response = await fetch(
       'https://api.web3forms.com/submit',
       {
@@ -42,13 +53,13 @@ export default function ConnectUsPage() {
         body: form,
       }
     );
-  
+
     const result = await response.json();
-  
+
     if (result.success) {
-  
+
       alert('Inquiry Submitted Successfully');
-  
+
       setFormData({
         name: '',
         number: '',
@@ -56,95 +67,73 @@ export default function ConnectUsPage() {
         assistance: '',
         country: '',
       });
-  
+
     } else {
-  
+
       alert('Something went wrong');
-  
+
     }
-  
+
   };
 
   return (
+
     <main className="bg-[#F7FAFC] min-h-screen">
 
-     {/* NAVBAR */}
+      {/* NAVBAR */}
 
-<nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200">
 
-<div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 py-3 flex items-center justify-between">
 
-  {/* LOGO */}
+          {/* LEFT LOGO */}
 
-  <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-2 min-w-0">
 
-    <img
-      src="/logo.png"
-      alt="Eduaccess"
-      className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
-    />
+            <img
+              src="/logo.png"
+              alt="Eduaccess"
+              className="w-[36px] h-[36px] object-contain flex-shrink-0"
+            />
 
-    <div>
+            <h1 className="text-[15px] lg:text-2xl font-bold text-[#0B1F4D] whitespace-nowrap">
+              EDU<span className="text-[#D4AF37]">ACCESS</span>
+            </h1>
 
-      <h1 className="text-xl lg:text-2xl font-bold text-[#0B1F4D]">
-        EDU<span className="text-[#D4AF37]">ACCESS</span>
-      </h1>
+          </a>
 
-      <p className="text-[10px] lg:text-xs text-gray-500">
-        Your Access To Education
-      </p>
+          {/* MENU */}
 
-    </div>
+          <div className="flex items-center gap-3 lg:gap-6 text-[13px] lg:text-[16px] font-semibold text-[#0B1F4D]">
 
-  </a>
+            <a href="/" className="hover:text-[#D4AF37] transition">
+              Home
+            </a>
 
-  {/* DESKTOP MENU */}
+            <a href="/study" className="text-[#D4AF37]">
+              Study
+            </a>
 
-  <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
+            <a
+              href="/visitor-visa"
+              className="hover:text-[#D4AF37] transition whitespace-nowrap"
+            >
+              Visitor Visa
+            </a>
 
-    <a href="/" className="hover:text-[#D4AF37] transition">
-      Home
-    </a>
+            <a
+              href="/connect-us"
+              className="hover:text-[#D4AF37] transition"
+            >
+              Contact
+            </a>
 
-    <a href="/study" className="text-[#D4AF37]">
-      Study
-    </a>
+          </div>
 
-    <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
-      Visitor Visa
-    </a>
+        </div>
 
-    <a href="/connect-us" className="hover:text-[#D4AF37] transition">
-      Connect Us
-    </a>
+      </nav>
 
-  </div>
-
-  {/* MOBILE MENU */}
-
-  <div className="flex lg:hidden items-center gap-4 text-sm font-semibold text-[#0B1F4D]">
-
-    <a href="/">
-      Home
-    </a>
-
-    <a href="/study" className="text-[#D4AF37]">
-      Study
-    </a>
-
-    <a href="/visitor-visa">
-      Visa
-    </a>
-
-    <a href="/connect-us">
-      Contact
-    </a>
-
-  </div>
-
-</div>
-
-</nav>
       {/* HERO */}
 
       <section className="pt-40 pb-20 text-center px-5">
@@ -223,6 +212,9 @@ export default function ConnectUsPage() {
                   value={formData.number}
                   onChange={handleChange}
                   placeholder="Enter your phone number"
+                  pattern="[0-9]{10}"
+                  maxLength={10}
+                  inputMode="numeric"
                   className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#D4AF37]"
                 />
 
@@ -243,6 +235,7 @@ export default function ConnectUsPage() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email address"
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                   className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#D4AF37]"
                 />
 
@@ -370,10 +363,10 @@ export default function ConnectUsPage() {
                   </h3>
 
                   <a
-                    href="mailto:connect.eduaccessess@outlook.com"
+                    href="mailto:connect.eduaccess@outlook.com"
                     className="text-gray-600 mt-3 block hover:text-[#D4AF37]"
                   >
-                    connect.eduaccessess@outlook.com
+                    connect.eduaccess@outlook.com
                   </a>
 
                 </div>
@@ -447,5 +440,6 @@ export default function ConnectUsPage() {
       </a>
 
     </main>
+
   );
 }
