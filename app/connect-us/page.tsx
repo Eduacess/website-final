@@ -21,18 +21,48 @@ export default function ConnectUsPage() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault();
-
-    alert('Form Submitted Successfully');
-
-    setFormData({
-      name: '',
-      number: '',
-      email: '',
-      assistance: '',
-      country: '',
-    });
+  
+    const form = new FormData();
+  
+    form.append('access_key', 'f3bd830c-43a7-4a36-bfed-d0838fdb7635');
+  
+    form.append('name', formData.name);
+    form.append('phone', formData.number);
+    form.append('email', formData.email);
+    form.append('assistance', formData.assistance);
+    form.append('country', formData.country);
+  
+    const response = await fetch(
+      'https://api.web3forms.com/submit',
+      {
+        method: 'POST',
+        body: form,
+      }
+    );
+  
+    const result = await response.json();
+  
+    if (result.success) {
+  
+      alert('Inquiry Submitted Successfully');
+  
+      setFormData({
+        name: '',
+        number: '',
+        email: '',
+        assistance: '',
+        country: '',
+      });
+  
+    } else {
+  
+      alert('Something went wrong');
+  
+    }
+  
   };
 
   return (

@@ -19,11 +19,15 @@ const countries = [
     ],
 
     universities: [
-      'Monash University',
-      'Deakin University',
-      'University of Melbourne',
-      'RMIT University',
-      'Macquarie University',
+      '/studyAbroad/aus/ECU.png',
+      '/studyAbroad/aus/GRIFFITH.png',
+      '/studyAbroad/aus/LATROB.png',
+      '/studyAbroad/aus/MURDOCH.png',
+      '/studyAbroad/aus/NEWCASTLE.png',
+      '/studyAbroad/aus/RMIT.png',
+      '/studyAbroad/aus/SWINBURNE.png',
+      '/studyAbroad/aus/TASMANIA.jfif',
+      '/studyAbroad/aus/UTS.png',
     ],
 
     dependents: 'Yes',
@@ -45,9 +49,12 @@ const countries = [
     ],
 
     universities: [
-      'University of Auckland',
-      'University of Waikato',
-      'Massey University',
+      '/studyAbroad/nz/aut.png',
+      '/studyAbroad/nz/lincoln.png',
+      '/studyAbroad/nz/manukau.png',
+      '/studyAbroad/nz/otago.png',
+      '/studyAbroad/nz/weltech.png',
+      '/studyAbroad/nz/whiteria.png',
     ],
 
     dependents: 'Yes',
@@ -70,10 +77,13 @@ const countries = [
     ],
 
     universities: [
-      'Harvard University',
-      'Stanford University',
-      'University of California Berkeley',
-      'MIT',
+      '/studyAbroad/usa/american.png',
+      '/studyAbroad/usa/AU.jpg',
+      '/studyAbroad/usa/images (1).png',
+      '/studyAbroad/usa/images (2).png',
+      '/studyAbroad/usa/pepperdine.png',
+      '/studyAbroad/usa/uis.png',
+      '/studyAbroad/usa/virginia.png',
     ],
 
     dependents: 'Yes',
@@ -95,10 +105,13 @@ const countries = [
     ],
 
     universities: [
-      'University of Oxford',
-      'University of Cambridge',
-      'King’s College London',
-      'University of Manchester',
+      '/studyAbroad/uk/bcu.png',
+      '/studyAbroad/uk/edinburg.png',
+      '/studyAbroad/uk/kingston uni.png',
+      '/studyAbroad/uk/mdx.png',
+      '/studyAbroad/uk/portsmouth.png',
+      '/studyAbroad/uk/rhul.jfif',
+      '/studyAbroad/uk/uel.png',
     ],
 
     dependents: 'Yes',
@@ -120,10 +133,13 @@ const countries = [
     ],
 
     universities: [
-      'University of Toronto',
-      'University of British Columbia',
-      'McGill University',
-      'Concordia University',
+      '/studyAbroad/canada/algoma.png',
+      '/studyAbroad/canada/canadore.png',
+      '/studyAbroad/canada/canada west.png',
+      '/studyAbroad/canada/humber.png',
+      '/studyAbroad/canada/mc master.png',
+      '/studyAbroad/canada/niagara falls.png',
+      '/studyAbroad/canada/sault.jfif',
     ],
 
     dependents: 'Yes',
@@ -144,10 +160,7 @@ const countries = [
       'Fashion',
     ],
 
-    universities: [
-      'HEC Paris',
-      'Sorbonne University',
-    ],
+    universities: [],
 
     dependents: 'Yes',
     stayback: '2 Years',
@@ -167,10 +180,7 @@ const countries = [
       'PhD',
     ],
 
-    universities: [
-      'Technical University of Munich',
-      'LMU Munich',
-    ],
+    universities: [],
 
     dependents: 'Yes',
     stayback: '18 Months',
@@ -187,9 +197,7 @@ const countries = [
       'Nursing',
     ],
 
-    universities: [
-      'University of Tokyo',
-    ],
+    universities: [],
 
     dependents: 'Yes',
     stayback: '1 Year',
@@ -208,10 +216,7 @@ const countries = [
       'MBA',
     ],
 
-    universities: [
-      'National University of Singapore',
-      'Nanyang Technological University',
-    ],
+    universities: [],
 
     dependents: 'No',
     stayback: '1 Year',
@@ -230,81 +235,75 @@ export default function StudyAbroadPage() {
 
       {/* NAVBAR */}
 
-<nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200">
 
-<div className="max-w-7xl mx-auto px-3 lg:px-8 py-3 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 lg:px-8 py-3 flex items-center justify-between">
 
-  {/* LOGO */}
+          <a href="/" className="flex items-center gap-2">
 
-  <a href="/" className="flex items-center gap-2">
+            <img
+              src="/logo.png"
+              alt="Eduaccess"
+              className="w-[42px] h-[42px] lg:w-[60px] lg:h-[60px] object-contain"
+            />
 
-    <img
-      src="/logo.png"
-      alt="Eduaccess"
-      className="w-[42px] h-[42px] lg:w-[60px] lg:h-[60px] object-contain"
-    />
+            <div>
 
-    <div>
+              <h1 className="text-[18px] lg:text-2xl font-bold leading-none text-[#0B1F4D]">
+                EDU<span className="text-[#D4AF37]">ACCESS</span>
+              </h1>
 
-      <h1 className="text-[18px] lg:text-2xl font-bold leading-none text-[#0B1F4D]">
-        EDU<span className="text-[#D4AF37]">ACCESS</span>
-      </h1>
+              <p className="hidden lg:block text-xs text-gray-500 mt-1">
+                Your Access To Education
+              </p>
 
-      <p className="hidden lg:block text-xs text-gray-500 mt-1">
-        Your Access To Education
-      </p>
+            </div>
 
-    </div>
+          </a>
 
-  </a>
+          <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
 
-  {/* DESKTOP MENU */}
+            <a href="/" className="hover:text-[#D4AF37] transition">
+              Home
+            </a>
 
-  <div className="hidden lg:flex items-center gap-12 font-medium text-[16px] text-[#0B1F4D]">
+            <a href="/study" className="text-[#D4AF37]">
+              Study
+            </a>
 
-    <a href="/" className="hover:text-[#D4AF37] transition">
-      Home
-    </a>
+            <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
+              Visitor Visa
+            </a>
 
-    <a href="/study" className="text-[#D4AF37]">
-      Study
-    </a>
+            <a href="/connect-us" className="hover:text-[#D4AF37] transition">
+              Connect Us
+            </a>
 
-    <a href="/visitor-visa" className="hover:text-[#D4AF37] transition">
-      Visitor Visa
-    </a>
+          </div>
 
-    <a href="/connect-us" className="hover:text-[#D4AF37] transition">
-      Connect Us
-    </a>
+          <div className="flex lg:hidden items-center gap-4 text-[14px] font-semibold text-[#0B1F4D]">
 
-  </div>
+            <a href="/">
+              Home
+            </a>
 
-  {/* MOBILE MENU */}
+            <a href="/study" className="text-[#D4AF37]">
+              Study
+            </a>
 
-  <div className="flex lg:hidden items-center gap-4 text-[15px] font-semibold text-[#0B1F4D]">
+            <a href="/visitor-visa">
+              Visitor Visa
+            </a>
 
-    <a href="/">
-      Home
-    </a>
+            <a href="/connect-us">
+              Contact
+            </a>
 
-    <a href="/study" className="text-[#D4AF37]">
-      Study
-    </a>
+          </div>
 
-    <a href="/visitor-visa">
-      Visa
-    </a>
+        </div>
 
-    <a href="/connect-us">
-      Contact
-    </a>
-
-  </div>
-
-</div>
-
-</nav>
+      </nav>
 
       {/* HERO */}
 
@@ -325,8 +324,6 @@ export default function StudyAbroadPage() {
             </p>
 
           </div>
-
-          {/* COUNTRY CARDS */}
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
 
@@ -382,7 +379,7 @@ export default function StudyAbroadPage() {
 
       {selectedCountry && (
 
-        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md overflow-y-auto p-5">
+        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md overflow-y-auto p-4">
 
           <div className="relative bg-white w-full max-w-6xl mx-auto rounded-[35px] overflow-hidden shadow-2xl grid lg:grid-cols-2 my-10">
 
@@ -397,7 +394,7 @@ export default function StudyAbroadPage() {
 
             {/* LEFT */}
 
-            <div className="relative min-h-[750px]">
+            <div className="relative min-h-[350px] lg:min-h-[750px]">
 
               <img
                 src={selectedCountry.image}
@@ -417,7 +414,7 @@ export default function StudyAbroadPage() {
                     className="w-10 h-7 rounded-sm object-cover"
                   />
 
-                  <h2 className="text-5xl font-bold">
+                  <h2 className="text-4xl lg:text-5xl font-bold">
                     {selectedCountry.name}
                   </h2>
 
@@ -429,7 +426,7 @@ export default function StudyAbroadPage() {
 
             {/* RIGHT */}
 
-            <div className="p-10 bg-white">
+            <div className="p-6 lg:p-10 bg-white overflow-y-auto">
 
               {/* STUDY LEVELS */}
 
@@ -464,22 +461,28 @@ export default function StudyAbroadPage() {
                   Top Universities
                 </h3>
 
-                <div className="flex flex-wrap gap-5">
+                <div className="overflow-hidden w-full">
 
-                  {selectedCountry.universities.map((university: string, index: number) => (
+                  <div className="flex gap-6 animate-[scroll_25s_linear_infinite] w-max">
 
-                    <div
-                      key={index}
-                      className="bg-[#F7FAFC] rounded-2xl shadow px-6 py-5 min-w-[220px] flex items-center justify-center"
-                    >
+                    {[...selectedCountry.universities, ...selectedCountry.universities].map((logo: string, index: number) => (
 
-                      <p className="text-center font-bold text-[#0B1F4D] text-lg leading-7">
-                        {university}
-                      </p>
+                      <div
+                        key={index}
+                        className="bg-white rounded-2xl shadow-lg p-5 w-[180px] h-[110px] flex items-center justify-center flex-shrink-0"
+                      >
 
-                    </div>
+                        <img
+                          src={logo}
+                          alt="University Logo"
+                          className="max-h-[70px] max-w-[140px] object-contain"
+                        />
 
-                  ))}
+                      </div>
+
+                    ))}
+
+                  </div>
 
                 </div>
 
